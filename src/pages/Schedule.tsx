@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Calendar, Clock, User, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, User, CheckCircle, BookOpen } from 'lucide-react';
 
 const Schedule = () => {
   const [selectedCourse, setSelectedCourse] = useState('');
