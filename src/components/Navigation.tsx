@@ -21,8 +21,8 @@ const Navigation = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-16 z-40 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg">
+        <div className="flex justify-between items-center h-16 bg-white rounded-xl shadow-sm mx-2 px-6">
           {/* Logo and Brand Name */}
           <div className="flex items-center space-x-3">
             <div className="bg-blue-600 p-2 rounded-lg">
@@ -35,7 +35,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -62,7 +62,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t animate-fade-in">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t animate-fade-in rounded-b-xl mx-2 shadow-sm">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
