@@ -11,6 +11,11 @@ import Testimonials from "./components/Testimonials";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Packages from "./pages/Packages";
+import Payments from "./pages/Payments";
+import Careers from "./pages/Careers";
+import Download from "./pages/Download";
+import Blog from "./pages/Blog";
 import Schedule from "./pages/Schedule";
 import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
@@ -31,6 +36,11 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/payments" element={<Payments />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/download" element={<Download />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/contact" element={<Contact />} />
