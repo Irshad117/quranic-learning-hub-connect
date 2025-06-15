@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, BookOpen } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +21,19 @@ const Navigation = () => {
 
   return (
     <nav className="bg-transparent backdrop-blur-md sticky top-16 z-40">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center items-center h-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg mx-4 px-6 border border-white/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg mx-4 px-6 border border-white/20">
+          {/* Logo and Academy Name */}
+          <div className="flex items-center space-x-3">
+            <div className="bg-blue-600 p-2 rounded-lg">
+              <BookOpen className="h-6 w-6 text-white" />
+            </div>
+            <div className="hidden sm:block">
+              <div className="font-bold text-lg text-gray-800">Al-Sirat al-Mustaqim</div>
+              <div className="text-sm text-blue-600 font-medium">الصراط المستقيم</div>
+            </div>
+          </div>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-4">
             {navItems.map((item) => (
