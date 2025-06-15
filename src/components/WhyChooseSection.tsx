@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Globe, Clock, Users, Award, BookOpen, Languages, Certificate } from 'lucide-react';
+import { Globe, Clock, Users, Award, BookOpen, Languages } from 'lucide-react';
 
 const WhyChooseSection = () => {
   const features = [
@@ -43,7 +43,7 @@ const WhyChooseSection = () => {
     {
       title: "Completion Certificate",
       description: "Official certificates and Ijazah upon successful course completion",
-      icon: Certificate,
+      icon: Award,
       color: "bg-teal-500"
     }
   ];
