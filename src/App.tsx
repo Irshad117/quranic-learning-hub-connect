@@ -32,6 +32,22 @@ const App = () => (
       <BrowserRouter>
         <div className="min-h-screen bg-gray-50 w-full">
           <TopNavbar />
+          
+          {/* Academy Name positioned on the left side */}
+          <div className="fixed left-6 top-32 z-30 hidden lg:block">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-4 border border-white/20">
+              <div className="flex flex-col items-center space-y-2">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <BookOpen className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="font-bold text-lg text-gray-800">Al-Sirat al-Mustaqim</div>
+                  <div className="text-sm text-blue-600 font-medium">الصراط المستقيم</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <Navigation />
           <Routes>
             <Route path="/" element={<Index />} />
