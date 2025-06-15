@@ -22,10 +22,10 @@ const Navigation = () => {
   return (
     <nav className="bg-transparent backdrop-blur-md sticky top-16 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg mx-4 px-6 border border-white/20">
+        <div className="flex justify-between items-center h-16 bg-white/20 backdrop-blur-xl rounded-2xl shadow-lg mx-4 px-6 border border-white/30">
           {/* Logo and Academy Name */}
           <div className="flex items-center space-x-3">
-            <div className="bg-blue-600 p-2 rounded-lg">
+            <div className="bg-blue-600/90 p-2 rounded-lg backdrop-blur-sm">
               <BookOpen className="h-6 w-6 text-white" />
             </div>
             <div className="hidden sm:block">
@@ -40,7 +40,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-blue-50/70 relative group"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-white/30 relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -62,12 +62,12 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/90 backdrop-blur-sm border-t animate-fade-in rounded-b-2xl mx-4 shadow-lg border border-white/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/20 backdrop-blur-xl border-t animate-fade-in rounded-b-2xl mx-4 shadow-lg border border-white/30">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:bg-blue-50/70"
+                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:bg-white/30"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
