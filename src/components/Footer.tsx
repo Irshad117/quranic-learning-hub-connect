@@ -1,38 +1,11 @@
+'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone, Mail, MapPin, Send, BookOpen } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Email functionality will be implemented with a backend service
-    const emailData = {
-      to: 'irshadm791@gmail.com',
-      subject: 'New Contact Form Submission',
-      body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`
-    };
-    
-    // For now, we'll use mailto as a fallback
-    const mailtoLink = `mailto:irshadm791@gmail.com?subject=Contact Form Submission&body=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`;
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
+  const [state, handleSubmit] = useForm("mdkzzvkl");
 
   const quickLinks = [
     { name: 'Home', path: '/' },
@@ -64,78 +37,82 @@ const Footer = () => {
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/20">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full p-3 bg-white/10 border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-300 text-white placeholder-white/70"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-white mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full p-3 bg-white/10 border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-300 text-white placeholder-white/70"
-                    placeholder="Enter your email"
-                  />
-                </div>
-
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-white mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full p-3 bg-white/10 border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-300 text-white placeholder-white/70"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-white mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={4}
-                    className="w-full p-3 bg-white/10 border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-300 text-white placeholder-white/70"
-                    placeholder="Tell us how we can help you..."
-                  />
-                </div>
+            {state.succeeded ? (
+              <div className="text-center text-white py-12">
+                <h3 className="text-2xl font-semibold mb-4">Thank you!</h3>
+                <p>We’ve received your message and will get back to you shortly.</p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      className="w-full p-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
 
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center mx-auto group"
-                >
-                  <Send className="h-5 w-5 mr-2 group-hover:animate-pulse" />
-                  Send Message
-                </button>
-              </div>
-            </form>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      required
+                      className="w-full p-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                      placeholder="Enter your email"
+                    />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-white mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      className="w-full p-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      className="w-full p-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                      placeholder="Tell us how we can help you..."
+                    />
+                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center mx-auto group"
+                  >
+                    <Send className="h-5 w-5 mr-2 group-hover:animate-pulse" />
+                    {state.submitting ? 'Sending...' : 'Send Message'}
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </section>
@@ -147,11 +124,12 @@ const Footer = () => {
             {/* Academy Info */}
             <div className="md:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="bg-blue-600 p-2 rounded-lg">
-                  <BookOpen className="h-6 w-6 text-white" />
+                <div className="">
+                  {/* <BookOpen className="h-6 w-6 text-white" /> */}
+                  <img src="/assets/Logo/2.svg" alt="Logo" className="h-14 w-14 rounded-full" />
                 </div>
                 <div>
-                  <div className="font-bold text-lg text-white">Al-Sirat al-Mustaqim</div>
+                  <div className="font-bold text-lg text-white">Sirat al-Mustaqim</div>
                   <div className="text-sm text-blue-300">الصراط المستقيم</div>
                 </div>
               </div>
@@ -204,8 +182,8 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-4 w-4 text-blue-300 flex-shrink-0" />
-                  <a href="mailto:irshadm791@gmail.com" className="text-sm text-blue-200 hover:text-white transition-colors duration-300">
-                    irshadm791@gmail.com
+                  <a href="mailto:alsiratalmustaqim0@gmail.com" className="text-sm text-blue-200 hover:text-white transition-colors duration-300">
+                    alsiratalmustaqim0@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -218,17 +196,17 @@ const Footer = () => {
               <div className="mt-6">
                 <h4 className="text-sm font-medium mb-3 text-blue-300">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg">📘</span>
+                  <a href='https://www.facebook.com/profile.php?id=61577423111420' className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/fb.svg" alt="FB" /></span>
                   </a>
-                  <a href="#" className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg">📷</span>
+                  <a href='https://www.instagram.com/alsiratalmustaqim0/' className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/insta.svg" alt="" /></span>
                   </a>
-                  <a href="#" className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg">💼</span>
+                  <a href='https://www.tiktok.com/@alsiratalmustaqim0' className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/tiktok.svg" alt="" /></span>
                   </a>
-                  <a href="#" className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg">📺</span>
+                  <a href='https://www.youtube.com/@Al-Siratal-Mustaqim-o6k9y' className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/youtue.svg" alt="" /></span>
                   </a>
                 </div>
               </div>
@@ -238,7 +216,7 @@ const Footer = () => {
           {/* Bottom Copyright */}
           <div className="border-t border-blue-800 pt-8 text-center">
             <p className="text-blue-300 text-sm">
-              © 2024 Al-Sirat al-Mustaqim Academy. All rights reserved.
+              © 2024 Sirat al-Mustaqim Academy. All rights reserved.
             </p>
           </div>
         </div>

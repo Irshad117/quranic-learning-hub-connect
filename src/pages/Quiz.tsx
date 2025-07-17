@@ -11,7 +11,7 @@ const Quiz = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
   const [showResults, setShowResults] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(3600); // 60 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(180); // 03 minutes in seconds
 
   const quizzes = {
     'noorani-qaida': {
@@ -161,7 +161,154 @@ const Quiz = () => {
           correct: "Option A"
         }))
       ]
-    }
+    },
+    'namaz': {
+    title: 'Namaz Quiz',
+    description: 'Test your understanding of the daily prayers and their rules',
+    questions: [
+      {
+        question: "How many daily prayers are there in Islam?",
+        options: ["3", "4", "5", "6"],
+        correct: "5"
+      },
+      {
+        question: "What is the name of the dawn prayer?",
+        options: ["Maghrib", "Isha", "Fajr", "Asr"],
+        correct: "Fajr"
+      },
+      {
+        question: "Which direction do Muslims face during prayer?",
+        options: ["East", "West", "Qibla", "Kaaba"],
+        correct: "Kaaba"
+      },
+      {
+        question: "What is 'Wudu'?",
+        options: ["A prayer", "A type of fast", "A purification method", "A verse"],
+        correct: "A purification method"
+      },
+      {
+        question: "What is the position called when you bow in prayer?",
+        options: ["Ruku", "Sujood", "Qiyam", "Tashahhud"],
+        correct: "Ruku"
+      },
+      ...Array.from({ length: 35 }, (_, i) => ({
+        question: `Sample question ${i + 6} for Namaz?`,
+        options: ["Option A", "Option B", "Option C", "Option D"],
+        correct: "Option A"
+      }))
+    ]
+  },
+
+  'duas': {
+    title: "Dua's Quiz",
+    description: 'Test your memory of important Islamic supplications',
+    questions: [
+      {
+        question: "Which dua is said before eating?",
+        options: ["Bismillah", "Alhamdulillah", "SubhanAllah", "Astaghfirullah"],
+        correct: "Bismillah"
+      },
+      {
+        question: "What is the meaning of 'Alhamdulillah'?",
+        options: ["Thank You", "Praise be to Allah", "Peace", "God is Great"],
+        correct: "Praise be to Allah"
+      },
+      {
+        question: "Which dua is for seeking forgiveness?",
+        options: ["SubhanAllah", "Bismillah", "Astaghfirullah", "Allahu Akbar"],
+        correct: "Astaghfirullah"
+      },
+      {
+        question: "Dua before sleeping?",
+        options: ["Bismillah", "Ayat-ul-Kursi", "Surah Fatiha", "Surah Ikhlas"],
+        correct: "Ayat-ul-Kursi"
+      },
+      {
+        question: "What is the dua for traveling?",
+        options: ["Dua Safar", "Dua Shifa", "Dua Maghfirah", "Dua Tawbah"],
+        correct: "Dua Safar"
+      },
+      ...Array.from({ length: 35 }, (_, i) => ({
+        question: `Sample question ${i + 6} for Duas?`,
+        options: ["Option A", "Option B", "Option C", "Option D"],
+        correct: "Option A"
+      }))
+    ]
+  },
+
+  'islamic-knowledge': {
+    title: 'Islamic Knowledge Quiz',
+    description: 'General Islamic knowledge on beliefs, history, and prophets',
+    questions: [
+      {
+        question: "Who is the last prophet in Islam?",
+        options: ["Isa", "Musa", "Muhammad (PBUH)", "Ibrahim"],
+        correct: "Muhammad (PBUH)"
+      },
+      {
+        question: "How many pillars of Islam are there?",
+        options: ["3", "4", "5", "6"],
+        correct: "5"
+      },
+      {
+        question: "What is the first pillar of Islam?",
+        options: ["Salah", "Shahadah", "Zakat", "Hajj"],
+        correct: "Shahadah"
+      },
+      {
+        question: "Which city is called the city of the Prophet?",
+        options: ["Makkah", "Madina", "Jerusalem", "Baghdad"],
+        correct: "Madina"
+      },
+      {
+        question: "What is the Islamic holy book called?",
+        options: ["Torah", "Bible", "Quran", "Zabur"],
+        correct: "Quran"
+      },
+      ...Array.from({ length: 35 }, (_, i) => ({
+        question: `Sample question ${i + 6} for Islamic Knowledge?`,
+        options: ["Option A", "Option B", "Option C", "Option D"],
+        correct: "Option A"
+      }))
+    ]
+  },
+
+  'kids-duas': {
+    title: "Kids Dua's Quiz",
+    description: 'Fun and easy duas for kids to learn and remember',
+    questions: [
+      {
+        question: "What do we say after sneezing?",
+        options: ["Alhamdulillah", "Bismillah", "InshaAllah", "SubhanAllah"],
+        correct: "Alhamdulillah"
+      },
+      {
+        question: "Dua before entering the toilet?",
+        options: ["Allahumma inni a'udhu bika...", "Alhamdulillah", "Astaghfirullah", "Bismillah"],
+        correct: "Allahumma inni a'udhu bika..."
+      },
+      {
+        question: "What do we say when waking up?",
+        options: ["Alhamdulillah", "Inna lillahi", "Allahu Akbar", "Bismillah"],
+        correct: "Alhamdulillah"
+      },
+      {
+        question: "Dua before sleeping?",
+        options: ["Bismika Allahumma amutu wa ahya", "SubhanAllah", "Astaghfirullah", "La ilaha illallah"],
+        correct: "Bismika Allahumma amutu wa ahya"
+      },
+      {
+        question: "What do we say before drinking water?",
+        options: ["Bismillah", "SubhanAllah", "Allahu Akbar", "Alhamdulillah"],
+        correct: "Bismillah"
+      },
+      ...Array.from({ length: 35 }, (_, i) => ({
+        question: `Sample question ${i + 6} for Kids Dua's?`,
+        options: ["Option A", "Option B", "Option C", "Option D"],
+        correct: "Option A"
+      }))
+    ]
+  }
   };
 
   const handleAnswerSelect = (value: string) => {
@@ -205,7 +352,7 @@ const Quiz = () => {
     setAnswers({});
     setSelectedAnswer('');
     setShowResults(false);
-    setTimeLeft(3600);
+    setTimeLeft(180); // Reset time to 03 minutes
   };
 
   const startNewQuiz = () => {
@@ -390,7 +537,7 @@ const Quiz = () => {
               Choose Your Quiz
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Select a quiz topic below. Each quiz contains 40 multiple-choice questions and has a 60-minute time limit.
+              Select a quiz topic below. Each quiz contains 40 multiple-choice questions and has a 03-minute time limit.
             </p>
           </div>
 
@@ -415,7 +562,7 @@ const Quiz = () => {
                 <CardContent>
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <span>40 Questions</span>
-                    <span>60 Minutes</span>
+                    <span>03 Minutes</span>
                   </div>
                   <Button 
                     onClick={() => setSelectedQuiz(key)}
@@ -443,7 +590,7 @@ const Quiz = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Time Limit</h4>
-                <p className="text-gray-600">You have 60 minutes to complete each quiz</p>
+                <p className="text-gray-600">You have 03 minutes to complete each quiz</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">

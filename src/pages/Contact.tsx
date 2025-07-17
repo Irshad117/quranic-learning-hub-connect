@@ -38,8 +38,8 @@ const Contact = () => {
       icon: Mail,
       title: "Email Support",
       description: "Get help via email",
-      details: "support@nooracademy.com",
-      action: "mailto:support@nooracademy.com",
+      details: "support@alsiratalmustaqim0@gmail.com",
+      action: "mailto:support@alsiratalmustaqim0@gmail.com",
       actionText: "Send Email",
       available: "Response within 24 hours"
     },
@@ -47,8 +47,8 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Support",
       description: "Speak with our team",
-      details: "+1 (555) 123-4567",
-      action: "tel:+15551234567",
+      details: "+923153465995",
+      action: "tel:+923153465995",
       actionText: "Call Now",
       available: "Mon-Fri, 9 AM - 6 PM EST"
     },
@@ -56,8 +56,8 @@ const Contact = () => {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Quick chat support",
-      details: "+1 (555) 987-6543",
-      action: "https://wa.me/15559876543",
+      details: "+923153465995",
+      action: "https://wa.me/923153465995",
       actionText: "Chat on WhatsApp",
       available: "24/7 Quick Response"
     }

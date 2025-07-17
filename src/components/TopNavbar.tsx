@@ -9,12 +9,12 @@ const TopNavbar = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: '📘', url: '#' },
-    { name: 'Instagram', icon: '📷', url: '#' },
-    { name: 'LinkedIn', icon: '💼', url: '#' },
-    { name: 'YouTube', icon: '📺', url: '#' },
-    { name: 'X (Twitter)', icon: '🐦', url: '#' },
-    { name: 'TikTok', icon: '🎵', url: '#' }
+    { name: 'Facebook', icon: <img src="/assets/socialMediaIcons/fb.svg" alt="FB" />, url: 'https://www.facebook.com/profile.php?id=61577423111420' },
+    { name: 'Instagram', icon: <img src="/assets/socialMediaIcons/insta.svg" alt="Insta" />, url: 'https://www.instagram.com/alsiratalmustaqim0/' },
+    { name: 'LinkedIn', icon: <img src="/assets/socialMediaIcons/linkedin.svg" alt="" />, url: 'https://www.linkedin.com/in/sirat-al-mustaqim-46107a375/' },
+    { name: 'YouTube', icon: <img src="/assets/socialMediaIcons/youtue.svg" alt="" />, url: 'https://www.youtube.com/@Al-Siratal-Mustaqim-o6k9y' },
+    { name: 'X (Twitter)', icon: <img src="/assets/socialMediaIcons/x.svg" alt="" />, url: 'https://x.com/sirat_almustqim' },
+    { name: 'TikTok', icon: <img src="/assets/socialMediaIcons/tiktok.svg" alt="" />, url: 'https://www.tiktok.com/@alsiratalmustaqim0' }
   ];
 
   const handleWhatsApp = (number: string) => {
@@ -41,8 +41,8 @@ const TopNavbar = () => {
             ))}
             <div className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-300">
               <Mail className="h-4 w-4" />
-              <a href="mailto:irshadm791@gmail.com" className="hidden sm:inline hover:underline">
-                irshadm791@gmail.com
+              <a href="mailto:alsiratalmustaqim0@gmail.com" className="hidden sm:inline hover:underline">
+                alsiratalmustaqim0@gmail.com
               </a>
             </div>
           </div>

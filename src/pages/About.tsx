@@ -49,7 +49,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-emerald-600">Noor Academy</span>
+              About <span className="text-emerald-600">Sirat-Al Mustaqim Academy</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Dedicated to spreading the light of Quranic knowledge across the globe through 
@@ -101,7 +101,7 @@ const About = () => {
             </h2>
             <div className="prose prose-lg text-gray-700 mx-auto">
               <p className="text-xl leading-relaxed mb-6">
-                Noor Academy was founded in 2008 with a simple yet profound vision: to bring 
+                Sirat Al-Mustaqim Academy was founded in 2008 with a simple yet profound vision: to bring 
                 the beauty and wisdom of the Quran to every corner of the world through modern 
                 technology while maintaining traditional Islamic teaching principles.
               </p>

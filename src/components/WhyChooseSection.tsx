@@ -53,7 +53,7 @@ const WhyChooseSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose <span className="text-blue-600">Al-Sirat al-Mustaqim</span>
+            Why Choose <span className="text-blue-600">Sirat al-Mustaqim</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover what makes us the preferred choice for Quranic education worldwide

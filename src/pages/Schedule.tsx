@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { Calendar, Clock, User, CheckCircle, BookOpen } from 'lucide-react';
 
 const Schedule = () => {
+  const [state, handleSubmit] = useForm("xgvynwoy");
+
   const [selectedCourse, setSelectedCourse] = useState('');
   const [selectedTeacher, setSelectedTeacher] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
@@ -50,301 +53,212 @@ const Schedule = () => {
     'UTC+08:00 (Singapore Time)'
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const isFormValid = selectedCourse && selectedTeacher && selectedDate && selectedTime &&
+    formData.name && formData.email && formData.timezone;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the data to your backend
-    alert('Trial class scheduled successfully! We will contact you soon.');
-    console.log('Form submitted:', {
-      ...formData,
-      selectedCourse,
-      selectedTeacher,
-      selectedDate,
-      selectedTime
-    });
-  };
-
-  const isFormValid = selectedCourse && selectedTeacher && selectedDate && selectedTime && 
-                     formData.name && formData.email && formData.timezone;
+  if (state.succeeded) {
+    return (
+      <div className="text-center py-20">
+        <h2 className="text-2xl font-bold text-emerald-600 mb-4">🎉 Thank you!</h2>
+        <p className="text-gray-700">Your free trial class request has been submitted. We'll contact you soon inshaAllah.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-teal-50 py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Schedule Your <span className="text-emerald-600">Free Trial</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Book a complimentary 30-minute session with one of our expert teachers
-            </p>
-          </div>
-        </div>
-      </section>
+      <section className="py-16 max-w-4xl mx-auto px-4">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
+            Schedule Your <span className="text-emerald-600">Free Trial</span>
+          </h1>
 
-      {/* Booking Form */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Course Selection */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Select Course *
-                </label>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {courses.map((course, index) => (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
-                        selectedCourse === course
-                          ? 'border-emerald-500 bg-emerald-50'
-                          : 'border-gray-200 hover:border-emerald-300'
-                      }`}
-                      onClick={() => setSelectedCourse(course)}
-                    >
-                      <div className="flex items-center">
-                        <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                          selectedCourse === course
-                            ? 'bg-emerald-500 border-emerald-500'
-                            : 'border-gray-300'
-                        }`}></div>
-                        <span className="font-medium text-gray-800">{course}</span>
+          <form onSubmit={handleSubmit} className="space-y-8">
+
+            {/* Hidden Inputs for Formspree */}
+            <input type="hidden" name="Course" value={selectedCourse} />
+            <input type="hidden" name="Teacher" value={selectedTeacher} />
+            <input type="hidden" name="Date" value={selectedDate} />
+            <input type="hidden" name="Time" value={selectedTime} />
+
+            {/* Course Selection */}
+            <div>
+              <label className="block text-lg font-semibold mb-2">Select Course *</label>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {courses.map((course, index) => (
+                  <div
+                    key={index}
+                    className={`p-3 rounded-lg border-2 cursor-pointer ${selectedCourse === course ? 'border-emerald-500 bg-emerald-50' : 'border-gray-200'}`}
+                    onClick={() => setSelectedCourse(course)}
+                  >
+                    {course}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Teacher Selection */}
+            <div>
+              <label className="block text-lg font-semibold mb-2">Choose Teacher *</label>
+              <div className="space-y-3">
+                {teachers.map((teacher, index) => (
+                  <div
+                    key={index}
+                    className={`p-3 rounded-lg border-2 cursor-pointer ${selectedTeacher === teacher.name ? 'border-emerald-500 bg-emerald-50' : 'border-gray-200'}`}
+                    onClick={() => setSelectedTeacher(teacher.name)}
+                  >
+                    <div className="flex justify-between">
+                      <div>
+                        <div className="font-medium">{teacher.name}</div>
+                        <div className="text-sm text-gray-500">{teacher.speciality}</div>
                       </div>
+                      <div className="text-sm text-emerald-600">{teacher.experience}</div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Date and Time */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block mb-2 font-medium">
+                  <Calendar className="inline h-5 w-5 mr-2" />
+                  Select Date *
+                </label>
+                <input
+                  type="date"
+                  value={selectedDate}
+                  onChange={(e) => setSelectedDate(e.target.value)}
+                  min={new Date().toISOString().split('T')[0]}
+                  className="w-full p-3 border border-gray-300 rounded-lg"
+                  required
+                />
               </div>
 
-              {/* Teacher Selection */}
               <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Choose Your Teacher *
+                <label className="block mb-2 font-medium">
+                  <Clock className="inline h-5 w-5 mr-2" />
+                  Select Time *
                 </label>
-                <div className="grid grid-cols-1 gap-4">
-                  {teachers.map((teacher, index) => (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
-                        selectedTeacher === teacher.name
-                          ? 'border-emerald-500 bg-emerald-50'
-                          : 'border-gray-200 hover:border-emerald-300'
-                      }`}
-                      onClick={() => setSelectedTeacher(teacher.name)}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <div className={`w-4 h-4 rounded-full border-2 mr-3 ${
-                            selectedTeacher === teacher.name
-                              ? 'bg-emerald-500 border-emerald-500'
-                              : 'border-gray-300'
-                          }`}></div>
-                          <div>
-                            <span className="font-medium text-gray-800">{teacher.name}</span>
-                            <p className="text-sm text-gray-600">{teacher.speciality}</p>
-                          </div>
-                        </div>
-                        <span className="text-sm text-emerald-600">{teacher.experience}</span>
-                      </div>
-                    </div>
+                <select
+                  value={selectedTime}
+                  onChange={(e) => setSelectedTime(e.target.value)}
+                  className="w-full p-3 border border-gray-300 rounded-lg"
+                  required
+                >
+                  <option value="">Choose Time</option>
+                  {timeSlots.map((time, index) => (
+                    <option key={index} value={time}>{time}</option>
                   ))}
-                </div>
+                </select>
               </div>
+            </div>
 
-              {/* Date and Time Selection */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Personal Info */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">
+                <User className="inline h-5 w-5 mr-2" /> Personal Info
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-lg font-semibold text-gray-900 mb-4">
-                    <Calendar className="inline h-5 w-5 mr-2" />
-                    Select Date *
-                  </label>
+                  <label className="block mb-1 text-sm">Full Name *</label>
                   <input
-                    type="date"
-                    value={selectedDate}
-                    onChange={(e) => setSelectedDate(e.target.value)}
-                    min={new Date().toISOString().split('T')[0]}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    required
+                  />
+                  <ValidationError prefix="Name" field="name" errors={state.errors} />
+                </div>
+
+                <div>
+                  <label className="block mb-1 text-sm">Email Address *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    required
+                  />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} />
+                </div>
+
+                <div>
+                  <label className="block mb-1 text-sm">Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full p-3 border border-gray-300 rounded-lg"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-lg font-semibold text-gray-900 mb-4">
-                    <Clock className="inline h-5 w-5 mr-2" />
-                    Select Time *
-                  </label>
+                  <label className="block mb-1 text-sm">Age</label>
+                  <input
+                    type="number"
+                    name="age"
+                    value={formData.age}
+                    onChange={(e) => setFormData({ ...formData, age: e.target.value })}
+                    className="w-full p-3 border border-gray-300 rounded-lg"
+                  />
+                </div>
+
+                <div className="md:col-span-2">
+                  <label className="block mb-1 text-sm">Timezone *</label>
                   <select
-                    value={selectedTime}
-                    onChange={(e) => setSelectedTime(e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    name="timezone"
+                    value={formData.timezone}
+                    onChange={(e) => setFormData({ ...formData, timezone: e.target.value })}
+                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    required
                   >
-                    <option value="">Choose time</option>
-                    {timeSlots.map((time, index) => (
-                      <option key={index} value={time}>{time}</option>
+                    <option value="">Select Timezone</option>
+                    {timezones.map((tz, i) => (
+                      <option key={i} value={tz}>{tz}</option>
                     ))}
                   </select>
                 </div>
-              </div>
 
-              {/* Personal Information */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  <User className="inline h-5 w-5 mr-2" />
-                  Personal Information
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Age
-                    </label>
-                    <input
-                      type="number"
-                      name="age"
-                      value={formData.age}
-                      onChange={handleInputChange}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                      placeholder="Your age"
-                    />
-                  </div>
-
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Timezone *
-                    </label>
-                    <select
-                      name="timezone"
-                      value={formData.timezone}
-                      onChange={handleInputChange}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                    >
-                      <option value="">Select your timezone</option>
-                      {timezones.map((timezone, index) => (
-                        <option key={index} value={timezone}>{timezone}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Previous Quran Learning Experience
-                    </label>
-                    <textarea
-                      name="experience"
-                      value={formData.experience}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                      placeholder="Tell us about your previous experience with Quran learning (optional)"
-                    />
-                  </div>
+                <div className="md:col-span-2">
+                  <label className="block mb-1 text-sm">Previous Experience</label>
+                  <textarea
+                    name="experience"
+                    value={formData.experience}
+                    onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
+                    rows={3}
+                    className="w-full p-3 border border-gray-300 rounded-lg"
+                    placeholder="Optional"
+                  />
                 </div>
               </div>
-
-              {/* Submit Button */}
-              <div className="text-center">
-                <button
-                  type="submit"
-                  disabled={!isFormValid}
-                  className={`px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 ${
-                    isFormValid
-                      ? 'bg-emerald-600 text-white hover:bg-emerald-700 transform hover:scale-105'
-                      : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                  }`}
-                >
-                  <CheckCircle className="inline h-5 w-5 mr-2" />
-                  Schedule Free Trial Class
-                </button>
-                <p className="text-sm text-gray-600 mt-4">
-                  * Required fields. We'll contact you within 24 hours to confirm your appointment.
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 bg-emerald-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What to Expect in Your Trial Class
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <User className="h-8 w-8 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Meet Your Teacher</h3>
-              <p className="text-gray-600">Get acquainted with your instructor and discuss your learning goals</p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="h-8 w-8 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Sample Lesson</h3>
-              <p className="text-gray-600">Experience our teaching methodology with a mini lesson</p>
+            {/* Submit Button */}
+            <div className="text-center">
+              <button
+                type="submit"
+                disabled={state.submitting || !isFormValid}
+                className={`px-8 py-4 rounded-lg text-lg font-semibold ${
+                  isFormValid
+                    ? 'bg-emerald-600 text-white hover:bg-emerald-700'
+                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                }`}
+              >
+                <CheckCircle className="inline h-5 w-5 mr-2" />
+                Schedule Free Trial Class
+              </button>
+              <p className="text-sm text-gray-600 mt-4">
+                * Required fields. We’ll contact you within 24 hours.
+              </p>
             </div>
-
-            <div className="text-center p-6">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-8 w-8 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Personalized Plan</h3>
-              <p className="text-gray-600">Receive a customized learning plan based on your needs</p>
-            </div>
-          </div>
+          </form>
         </div>
       </section>
     </div>
