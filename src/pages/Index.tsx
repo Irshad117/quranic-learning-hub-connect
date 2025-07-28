@@ -23,59 +23,62 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       <HeroSection />
       <AboutSection />
       <ServicesSection />
       <WhyChooseSection />
 
-{/* Quiz Preview Section */}
-<section className="py-20 bg-gray-50">
-  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-      Test Your Islamic <span className="text-blue-600">Knowledge</span>
-    </h2>
-    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-      Take a fun and interactive quiz on Quran Reading, Tajweed, Noorani Qaida, and more. Great for all ages!
-    </p>
+      {/* Quiz Preview Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Test Your Islamic <span className="text-blue-600">Knowledge</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+            Take a fun and interactive quiz on Quran Reading, Tajweed, Noorani
+            Qaida, and more. Great for all ages!
+          </p>
 
-    {/* Single Quiz Card */}
-    <div className="flex justify-center">
-      <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-        <div className="flex items-center justify-center mb-6">
-          <BookOpen className="w-12 h-12 text-blue-600" />
+          {/* Single Quiz Card */}
+          <div className="flex justify-center">
+            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="flex items-center justify-center mb-6">
+                <BookOpen className="w-12 h-12 text-blue-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Islamic Quiz
+              </h3>
+              <p className="text-gray-600 mb-6">
+                40 questions · 2 minutes · Instant feedback
+              </p>
+              <Link
+                to="/quiz"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+              >
+                Start Quiz
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA Below */}
+          <div className="mt-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Want to Learn More?
+            </h3>
+            <p className="text-gray-600 mb-6 text-xl">
+              Book a free trial class and begin your Quran learning journey with
+              expert teachers.
+            </p>
+            <Link
+              to="/schedule"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-all duration-200 transform hover:scale-105 mt-2"
+            >
+              Book Free Trial Now
+            </Link>
+          </div>
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Islamic Quiz</h3>
-        <p className="text-gray-600 mb-6">
-          40 questions · 2 minutes · Instant feedback
-        </p>
-        <Link
-          to="/quiz"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Start Quiz
-        </Link>
-      </div>
-    </div>
-
-    {/* CTA Below */}
-    <div className="mt-16">
-      <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Want to Learn More?
-      </h3>
-      <p className="text-gray-600 mb-6 text-xl">
-        Book a free trial class and begin your Quran learning journey with expert teachers.
-      </p>
-      <Link
-        to="/schedule"
-        className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-all duration-200 transform hover:scale-105 mt-2"
-      >
-        Book Free Trial Now
-      </Link>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Stats Section */}
       <section className="py-12 bg-white overflow-hidden group cursor-pointer">

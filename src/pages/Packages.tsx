@@ -350,29 +350,35 @@ const Packages: React.FC = () => {
   return (
     <div className="py-10 bg-white font-poppins">
       {/* Top Text Section */}
-      <div className="max-w-4xl mx-auto text-center px-4 mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Pricing Plans</h2>
-        <p className="text-gray-700 text-lg mb-4">
-          The below mentioned fee is implemented on Monthly basis for all courses after the satisfaction of Free trial session.
-        </p>
-        <h3 className="text-2xl font-semibold text-orange-500 mb-2">Family Discount Package:</h3>
-        <p className="text-gray-700 text-lg mb-2">
-          We know that families often have to make sacrifices to afford tuition fee. That’s why we have made our Fee Packages as affordable as possible.
-        </p>
-        <p className="text-gray-700 text-lg mb-2">
-          <strong>20%</strong> tuition discount will be awarded to 2nd sibling & subsequent children of a family. <br />
-          Fee is accepted via credit, debit cards or PayPal.
-        </p>
-        <p className="mt-4 text-lg text-black font-semibold">
-          5 Days/Week Fee Plan: <em>Most Popular</em>
-        </p>
-        <p className="text-gray-800 mt-1">
-          <strong>Class Type:</strong> 1 on 1 Live Classes.
-        </p>
-        <p className="text-gray-800">
-          <strong>Class Duration:</strong> 30 Minutes each Session.
-        </p>
-      </div>
+      <div className="max-w-4xl mx-auto text-center px-4 mb-16">
+  <h2 className="text-4xl font-bold text-gray-900 mb-4">
+    Flexible & Affordable <span className="text-blue-600">Pricing Plans</span>
+  </h2>
+  <p className="text-lg text-gray-700 mb-6">
+    Our pricing is designed to be transparent and student-friendly. The following monthly fee structure applies after a successful <span className="text-blue-400">Free Trial Class</span>.
+  </p>
+
+  <h3 className="text-2xl font-semibold text-orange-500 mb-3">
+    Special Family Discount
+  </h3>
+  <p className="text-lg text-gray-700 mb-4">
+    We understand the financial commitment families make for quality education. That’s why we offer generous discounts to ease the burden.
+  </p>
+  <p className="text-lg text-gray-700 mb-4">
+    <strong className="text-emerald-600">20% discount</strong> is applied to the second and every additional child from the same family.
+    <br />
+    Payments can be made through <strong>Credit/Debit Cards</strong> or <strong>PayPal</strong>.
+  </p>
+
+  <div className="mt-6 text-lg text-gray-900 font-semibold">
+    <p>
+      <span className="text-emerald-600">⭐ 5 Days/Week Plan:</span> <em className="text-orange-500">Most Popular</em>
+    </p>
+    <p className="mt-2"><strong>Class Type:</strong> One-on-One Live Sessions</p>
+    <p><strong>Session Duration:</strong> 30 Minutes per Class</p>
+  </div>
+</div>
+
 
       {/* Region Selector */}
       <div className="flex flex-wrap justify-center gap-4 mb-6">

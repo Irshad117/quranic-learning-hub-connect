@@ -119,7 +119,9 @@ const AboutSection = () => {
             <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-6 border-4 border-blue-100">
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-600">9+</div>
-                <div className="text-sm text-gray-600 font-medium">Years Serving</div>
+                <div className="text-sm text-gray-600 font-medium">
+                  Years Serving
+                </div>
               </div>
             </div>
           </div>
@@ -135,15 +137,27 @@ const AboutSection = () => {
             </h2>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Sirat al-Mustaqim Quran Academy is dedicated to providing exceptional Quranic education to students worldwide. Our mission is to make the Holy Quran accessible to everyone, regardless of their location, age, or background.
+              Sirat al-Mustaqim Quran Academy is dedicated to providing
+              exceptional Quranic education to students worldwide. Our mission
+              is to make the Holy Quran accessible to everyone, regardless of
+              their location, age, or background.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              With over 15 years of experience in Islamic education, we have successfully guided thousands of students from different countries on their spiritual journey. Our team of qualified teachers combines traditional Islamic teaching methods with modern educational technology to create an engaging and effective learning experience.
+              With over 9<sup className="bold">+</sup> years of experience in
+              Islamic education, we have successfully guided thousands of
+              students from different countries on their spiritual journey. Our
+              team of qualified teachers combines traditional Islamic teaching
+              methods with modern educational technology to create an engaging
+              and effective learning experience.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              We believe that learning the Quran is not just about recitation, but about understanding, implementing, and living by its teachings. Our comprehensive programs are designed to nurture both the mind and soul, helping students develop a deep connection with Allah's word.
+              We believe that learning the Quran is not just about recitation,
+              but about understanding, implementing, and living by its
+              teachings. Our comprehensive programs are designed to nurture both
+              the mind and soul, helping students develop a deep connection with
+              Allah's word.
             </p>
 
             {/* Mission Statement */}
@@ -165,7 +179,9 @@ const AboutSection = () => {
                   Our Mission
                 </h3>
                 <p className="text-lg text-gray-700 italic leading-relaxed max-w-3xl">
-                  "To spread the light of Quranic knowledge across the globe, making quality Islamic education accessible to every Muslim seeking to strengthen their faith and understanding."
+                  "To spread the light of Quranic knowledge across the globe,
+                  making quality Islamic education accessible to every Muslim
+                  seeking to strengthen their faith and understanding."
                 </p>
               </div>
             </motion.div>
@@ -200,9 +216,12 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Core <span className="text-blue-600">Values</span></h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Core <span className="text-blue-600">Values</span>
+            </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide our teaching methodology and student relationships
+              The principles that guide our teaching methodology and student
+              relationships
             </p>
           </motion.div>
 
@@ -219,8 +238,12 @@ const AboutSection = () => {
                 <div className="bg-blue-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors duration-300">
                   <value.icon className="h-10 w-10 text-blue-600" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  {value.title}
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -234,7 +257,10 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Why Students Choose <span className="text-blue-600">Sirat al-Mustaqim</span></h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            Why Students Choose{" "}
+            <span className="text-blue-600">Sirat al-Mustaqim</span>
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl"
@@ -243,8 +269,13 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Experienced Faculty</h4>
-              <p className="text-gray-700">Learn from qualified scholars and certified teachers with decades of combined experience in Islamic education.</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Experienced Faculty
+              </h4>
+              <p className="text-gray-700">
+                Learn from qualified scholars and certified teachers with
+                decades of combined experience in Islamic education.
+              </p>
             </motion.div>
             <motion.div
               className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl"
@@ -253,8 +284,13 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Flexible Learning</h4>
-              <p className="text-gray-700">Study at your own pace with flexible scheduling options that accommodate students from all time zones.</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Flexible Learning
+              </h4>
+              <p className="text-gray-700">
+                Study at your own pace with flexible scheduling options that
+                accommodate students from all time zones.
+              </p>
             </motion.div>
             <motion.div
               className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl"
@@ -263,8 +299,13 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Proven Results</h4>
-              <p className="text-gray-700">Join thousands of successful students who have achieved their Quranic learning goals through our programs.</p>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Proven Results
+              </h4>
+              <p className="text-gray-700">
+                Join thousands of successful students who have achieved their
+                Quranic learning goals through our programs.
+              </p>
             </motion.div>
           </div>
         </motion.div>

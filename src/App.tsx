@@ -21,6 +21,7 @@ import Schedule from "./pages/Schedule";
 import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import WhatsAppButton from "./components/watsApp";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <WhatsAppButton />
           <Testimonials />
           <Footer />
         </div>
