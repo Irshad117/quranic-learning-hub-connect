@@ -53,6 +53,7 @@ const TopNavbar = () => {
               <a
                 key={index}
                 href={social.url}
+                target="_blank"
                 className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12"
                 title={social.name}
               >

@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <>
       {/* Contact Form Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-20">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-18">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -126,27 +126,27 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="">
                   {/* <BookOpen className="h-6 w-6 text-white" /> */}
-                  <img src="/assets/Logo/2.svg" alt="Logo" className="h-14 w-14 rounded-full" />
+                  <img src="/assets/Logo/2.svg" alt="Logo" className="h-18 w-18 rounded-full" />
                 </div>
                 <div>
                   <div className="font-bold text-lg text-white">Sirat al-Mustaqim</div>
                   <div className="text-sm text-blue-300">الصراط المستقيم</div>
                 </div>
               </div>
-              <p className="text-blue-200 text-sm leading-relaxed">
+              <p className="text-blue-200 text-base leading-relaxed">
                 Dedicated to providing quality Quranic education and Islamic studies through modern teaching methods and experienced instructors.
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-blue-300">Quick Links</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-300">Quick Links</h3>
               <div className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.path}
-                    className="block text-blue-200 hover:text-white transition-colors duration-300 text-sm"
+                    className="block text-blue-200 hover:text-white transition-colors duration-300 text-lg"
                   >
                     {link.name}
                   </a>
@@ -156,12 +156,12 @@ const Footer = () => {
 
             {/* Course Catalog */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-blue-300">Our Courses</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-300">Our Courses</h3>
               <div className="space-y-3">
                 {courses.map((course, index) => (
                   <div
                     key={index}
-                    className="text-blue-200 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
+                    className="text-blue-200 hover:text-white transition-colors duration-300 text-lg cursor-pointer"
                   >
                     {course}
                   </div>
@@ -171,42 +171,48 @@ const Footer = () => {
 
             {/* Contact Information */}
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-blue-300">Contact Us</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-300">Contact Us</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <Phone className="h-4 w-4 text-blue-300 mt-1 flex-shrink-0" />
-                  <div className="text-sm text-blue-200">
+                  <div className="text-lg text-blue-200">
                     <div>+92 315 3465995</div>
                     <div>+92 332 9959017</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-4 w-4 text-blue-300 flex-shrink-0" />
-                  <a href="mailto:alsiratalmustaqim0@gmail.com" className="text-sm text-blue-200 hover:text-white transition-colors duration-300">
+                  <a href="mailto:alsiratalmustaqim0@gmail.com" className="text-lg text-blue-200 hover:text-white transition-colors duration-300">
                     alsiratalmustaqim0@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-4 w-4 text-blue-300 flex-shrink-0" />
-                  <span className="text-sm text-blue-200">Online Academy</span>
+                  <span className="text-lg text-blue-200">Online Academy</span>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="mt-6">
-                <h4 className="text-sm font-medium mb-3 text-blue-300">Follow Us</h4>
+                <h4 className="text-lg font-medium mb-8 text-blue-300">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <a href='https://www.facebook.com/profile.php?id=61577423111420' className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg"><img src="/assets/socialMediaIcons/fb.svg" alt="FB" /></span>
+                  <a href='https://www.facebook.com/profile.php?id=61577423111420' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300" >
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/fb.svg" alt="FB" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12 w-9 h-9"  /></span>
                   </a>
-                  <a href='https://www.instagram.com/alsiratalmustaqim0/' className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg"><img src="/assets/socialMediaIcons/insta.svg" alt="" /></span>
+                  <a href='https://www.instagram.com/alsiratalmustaqim0/' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/insta.svg" alt="" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12  w-9 h-9" /></span>
                   </a>
-                  <a href='https://www.tiktok.com/@alsiratalmustaqim0' className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg"><img src="/assets/socialMediaIcons/tiktok.svg" alt="" /></span>
+                  <a href='https://www.linkedin.com/in/sirat-al-mustaqim-46107a375/' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/linkedin.svg" alt="" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12  w-8 h-8 mt-1" /></span>
                   </a>
-                  <a href='https://www.youtube.com/@Al-Siratal-Mustaqim-o6k9y' className="text-blue-200 hover:text-white transition-colors duration-300">
-                    <span className="text-lg"><img src="/assets/socialMediaIcons/youtue.svg" alt="" /></span>
+                  <a href='https://www.youtube.com/@Al-Siratal-Mustaqim-o6k9y' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/youtue.svg" alt="" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12  w-9 h-9" /></span>
+                  </a>
+                  <a href='https://x.com/sirat_almustqim' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/x.svg" alt="" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12  w-9 h-9" /></span>
+                  </a>
+                  <a href='https://www.tiktok.com/@alsiratalmustaqim0' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
+                    <span className="text-lg"><img src="/assets/socialMediaIcons/tiktok.svg" alt="" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12  w-9 h-9" /></span>
                   </a>
                 </div>
               </div>
@@ -215,7 +221,7 @@ const Footer = () => {
 
           {/* Bottom Copyright */}
           <div className="border-t border-blue-800 pt-8 text-center">
-            <p className="text-blue-300 text-sm">
+            <p className="text-blue-300 text-lg">
               © 2024 Sirat al-Mustaqim Academy. All rights reserved.
             </p>
           </div>
