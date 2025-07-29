@@ -1,0 +1,808 @@
+{
+  "category": "islamic-prayer",
+  "title": "Complete Namaz (Salah) Quiz",
+  "description": "Test your knowledge about Islamic prayer with questions on rulings, conditions, pillars, and sunnah acts",
+  "total": 80,
+  "questions": [
+    {
+      "id": 1,
+      "question": "How many obligatory (fard) prayers are there in a day?",
+      "options": ["3", "4", "5", "6"],
+      "correct": "5",
+      "difficulty": "easy",
+      "topic": "prayer-basics",
+      "reference": "Quran 17:78, Hadith (Bukhari 527)"
+    },
+    {
+      "id": 2,
+      "question": "Which prayer is known as 'the middle prayer' in the Quran?",
+      "options": ["Fajr", "Dhuhr", "Asr", "Isha"],
+      "correct": "Asr",
+      "difficulty": "medium",
+      "topic": "prayer-times",
+      "reference": "Quran 2:238"
+    },
+    {
+      "id": 3,
+      "question": "What is the minimum number of rak'ahs in Fajr prayer?",
+      "options": ["2", "3", "4", "5"],
+      "correct": "2",
+      "difficulty": "easy",
+      "topic": "rakahs",
+      "reference": "Hadith (Muslim 1123)"
+    },
+    {
+      "id": 4,
+      "question": "Which pillar of Islam comes immediately after Shahadah?",
+      "options": ["Zakat", "Sawm", "Salah", "Hajj"],
+      "correct": "Salah",
+      "difficulty": "easy",
+      "topic": "pillars-of-islam",
+      "reference": "Hadith (Bukhari 8)"
+    },
+    {
+      "id": 5,
+      "question": "What is the first obligatory act when starting prayer?",
+      "options": ["Takbiratul Ihram", "Qiyam", "Ruku", "Sujood"],
+      "correct": "Takbiratul Ihram",
+      "difficulty": "medium",
+      "topic": "prayer-pillars",
+      "reference": "Hadith (Abu Dawud 618)"
+    },
+    {
+      "id": 6,
+      "question": "Which Surah is recited in every rak'ah of prayer?",
+      "options": ["Al-Ikhlas", "Al-Falaq", "An-Nas", "Al-Fatiha"],
+      "correct": "Al-Fatiha",
+      "difficulty": "easy",
+      "topic": "recitation",
+      "reference": "Hadith (Bukhari 756)"
+    },
+    {
+      "id": 7,
+      "question": "What invalidates wudu during prayer?",
+      "options": [
+        "Blinking eyes",
+        "Passing wind",
+        "Moving fingers",
+        "Swallowing saliva"
+      ],
+      "correct": "Passing wind",
+      "difficulty": "easy",
+      "topic": "nullifiers",
+      "reference": "Quran 5:6, Hadith (Bukhari 135)"
+    },
+    {
+      "id": 8,
+      "question": "How many sunnah rak'ahs are there before Dhuhr prayer?",
+      "options": ["2", "4", "6", "8"],
+      "correct": "4",
+      "difficulty": "medium",
+      "topic": "sunnah-prayers",
+      "reference": "Hadith (Muslim 1176)"
+    },
+    {
+      "id": 9,
+      "question": "What is the position called when standing straight in prayer?",
+      "options": ["Qiyam", "Ruku", "Sujood", "Jalsah"],
+      "correct": "Qiyam",
+      "difficulty": "easy",
+      "topic": "prayer-positions",
+      "reference": "Hadith (Bukhari 6667)"
+    },
+    {
+      "id": 10,
+      "question": "Which prayer has no sunnah before it?",
+      "options": ["Fajr", "Dhuhr", "Asr", "Maghrib"],
+      "correct": "Asr",
+      "difficulty": "medium",
+      "topic": "sunnah-prayers",
+      "reference": "Hadith (Tirmidhi 381)"
+    },
+    {
+      "id": 11,
+      "question": "What is the minimum number of takbirs in Eid prayer?",
+      "options": ["3", "6", "9", "12"],
+      "correct": "6",
+      "difficulty": "hard",
+      "topic": "eid-prayer",
+      "reference": "Hadith (Abu Dawud 1150)"
+    },
+    {
+      "id": 12,
+      "question": "Which direction should Muslims face during prayer?",
+      "options": ["East", "West", "Qiblah", "North"],
+      "correct": "Qiblah",
+      "difficulty": "easy",
+      "topic": "prayer-conditions",
+      "reference": "Quran 2:144"
+    },
+    {
+      "id": 13,
+      "question": "What is the name of the Friday congregational prayer?",
+      "options": ["Jumu'ah", "Taraweeh", "Tahajjud", "Witr"],
+      "correct": "Jumu'ah",
+      "difficulty": "easy",
+      "topic": "friday-prayer",
+      "reference": "Quran 62:9"
+    },
+    {
+      "id": 14,
+      "question": "How many rak'ahs are in Maghrib prayer?",
+      "options": ["2", "3", "4", "5"],
+      "correct": "3",
+      "difficulty": "easy",
+      "topic": "rakahs",
+      "reference": "Hadith (Bukhari 536)"
+    },
+    {
+      "id": 15,
+      "question": "What is the supplication called between two prostrations?",
+      "options": ["Tashahhud", "Qunut", "Jalsa", "Tasbeeh"],
+      "correct": "Jalsa",
+      "difficulty": "medium",
+      "topic": "prayer-positions",
+      "reference": "Hadith (Abu Dawud 860)"
+    },
+    {
+      "id": 16,
+      "question": "Which prayer is performed during lunar eclipse?",
+      "options": ["Istisqa", "Kusuf", "Taraweeh", "Tahajjud"],
+      "correct": "Kusuf",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "Hadith (Bukhari 1040)"
+    },
+    {
+      "id": 17,
+      "question": "What invalidates prayer if done intentionally?",
+      "options": [
+        "Smiling",
+        "Eating/drinking",
+        "Looking around",
+        "All of the above"
+      ],
+      "correct": "All of the above",
+      "difficulty": "medium",
+      "topic": "nullifiers",
+      "reference": "Hadith (Abu Dawud 714)"
+    },
+    {
+      "id": 18,
+      "question": "How many rak'ahs are in Witr prayer?",
+      "options": ["1", "3", "5", "All of these"],
+      "correct": "All of these",
+      "difficulty": "medium",
+      "topic": "night-prayers",
+      "reference": "Hadith (Abu Dawud 1199)"
+    },
+    {
+      "id": 19,
+      "question": "What is the minimum number of people required for Jumu'ah prayer?",
+      "options": ["2", "3", "4", "40"],
+      "correct": "3",
+      "difficulty": "hard",
+      "topic": "friday-prayer",
+      "reference": "Islamic jurisprudence"
+    },
+    {
+      "id": 20,
+      "question": "Which prayer is performed after Isha during Ramadan?",
+      "options": ["Tahajjud", "Taraweeh", "Witr", "Duha"],
+      "correct": "Taraweeh",
+      "difficulty": "easy",
+      "topic": "ramadan-prayers",
+      "reference": "Hadith (Bukhari 1906)"
+    },
+    {
+      "id": 21,
+      "question": "What is the opening takbir called?",
+      "options": [
+        "Takbiratul Ihram",
+        "Takbiratul Intiqal",
+        "Takbiratul Qunut",
+        "Takbiratul Tasreeq"
+      ],
+      "correct": "Takbiratul Ihram",
+      "difficulty": "medium",
+      "topic": "prayer-components",
+      "reference": "Hadith (Abu Dawud 618)"
+    },
+    {
+      "id": 22,
+      "question": "How many sunnah rak'ahs are after Maghrib?",
+      "options": ["0", "2", "4", "6"],
+      "correct": "2",
+      "difficulty": "medium",
+      "topic": "sunnah-prayers",
+      "reference": "Hadith (Muslim 1233)"
+    },
+    {
+      "id": 23,
+      "question": "What is the minimum recitation required in prayer?",
+      "options": [
+        "Surah Fatiha only",
+        "Fatiha + short surah",
+        "Any 3 Quranic verses",
+        "Tasbeeh only"
+      ],
+      "correct": "Fatiha + short surah",
+      "difficulty": "hard",
+      "topic": "recitation",
+      "reference": "Hadith (Abu Dawud 822)"
+    },
+    {
+      "id": 24,
+      "question": "Which prayer is performed for rain?",
+      "options": ["Istisqa", "Kusuf", "Khauf", "Janazah"],
+      "correct": "Istisqa",
+      "difficulty": "medium",
+      "topic": "special-prayers",
+      "reference": "Hadith (Bukhari 1013)"
+    },
+    {
+      "id": 25,
+      "question": "What is the position called when sitting between two prostrations?",
+      "options": ["Jalsah", "Qa'dah", "Iftirash", "Tawarruk"],
+      "correct": "Jalsah",
+      "difficulty": "medium",
+      "topic": "prayer-positions",
+      "reference": "Hadith (Abu Dawud 730)"
+    },
+    {
+      "id": 26,
+      "question": "How many takbirs are in Janazah prayer?",
+      "options": ["3", "4", "5", "6"],
+      "correct": "4",
+      "difficulty": "hard",
+      "topic": "funeral-prayer",
+      "reference": "Hadith (Muslim 963)"
+    },
+    {
+      "id": 27,
+      "question": "What is recited during Ruku?",
+      "options": [
+        "Subhana Rabbiyal A'la",
+        "Subhana Rabbiyal Adheem",
+        "Sami' Allahu liman hamidah",
+        "Rabbana lakal hamd"
+      ],
+      "correct": "Subhana Rabbiyal Adheem",
+      "difficulty": "easy",
+      "topic": "ruku",
+      "reference": "Hadith (Abu Dawud 730)"
+    },
+    {
+      "id": 28,
+      "question": "Which prayer is performed in congregation during Ramadan?",
+      "options": ["Tahajjud", "Taraweeh", "Witr", "Ishraq"],
+      "correct": "Taraweeh",
+      "difficulty": "easy",
+      "topic": "ramadan-prayers",
+      "reference": "Hadith (Bukhari 1906)"
+    },
+    {
+      "id": 29,
+      "question": "What is the final sitting position in prayer called?",
+      "options": ["Jalsah", "Qa'dah", "Iftirash", "Tawarruk"],
+      "correct": "Qa'dah",
+      "difficulty": "medium",
+      "topic": "prayer-positions",
+      "reference": "Hadith (Abu Dawud 730)"
+    },
+    {
+      "id": 30,
+      "question": "How many rak'ahs are in Isha prayer?",
+      "options": ["2", "3", "4", "5"],
+      "correct": "4",
+      "difficulty": "easy",
+      "topic": "rakahs",
+      "reference": "Hadith (Bukhari 536)"
+    },
+    {
+      "id": 31,
+      "question": "What is the supplication called at the end of prayer?",
+      "options": ["Qunut", "Tashahhud", "Sajdah", "Ruku"],
+      "correct": "Tashahhud",
+      "difficulty": "easy",
+      "topic": "prayer-components",
+      "reference": "Hadith (Muslim 402)"
+    },
+    {
+      "id": 32,
+      "question": "Which prayer is performed when in danger?",
+      "options": ["Khauf", "Kusuf", "Istisqa", "Janazah"],
+      "correct": "Khauf",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "Quran 4:101"
+    },
+    {
+      "id": 33,
+      "question": "What is the minimum number of rak'ahs for Taraweeh?",
+      "options": ["8", "11", "20", "No minimum"],
+      "correct": "8",
+      "difficulty": "medium",
+      "topic": "ramadan-prayers",
+      "reference": "Hadith (Bukhari 1906)"
+    },
+    {
+      "id": 34,
+      "question": "Which prayer is performed at night after sleeping?",
+      "options": ["Tahajjud", "Taraweeh", "Witr", "Duha"],
+      "correct": "Tahajjud",
+      "difficulty": "medium",
+      "topic": "night-prayers",
+      "reference": "Quran 17:79"
+    },
+    {
+      "id": 35,
+      "question": "What is recited during Sujood?",
+      "options": [
+        "Subhana Rabbiyal A'la",
+        "Subhana Rabbiyal Adheem",
+        "Sami' Allahu liman hamidah",
+        "Rabbana lakal hamd"
+      ],
+      "correct": "Subhana Rabbiyal A'la",
+      "difficulty": "easy",
+      "topic": "sujood",
+      "reference": "Hadith (Abu Dawud 730)"
+    },
+    {
+      "id": 36,
+      "question": "How many sunnah rak'ahs are after Isha?",
+      "options": ["0", "2", "4", "6"],
+      "correct": "2",
+      "difficulty": "medium",
+      "topic": "sunnah-prayers",
+      "reference": "Hadith (Muslim 1233)"
+    },
+    {
+      "id": 37,
+      "question": "What is the prayer performed when entering the mosque?",
+      "options": ["Tahiyyatul Masjid", "Ishraq", "Duha", "Awwabeen"],
+      "correct": "Tahiyyatul Masjid",
+      "difficulty": "medium",
+      "topic": "voluntary-prayers",
+      "reference": "Hadith (Muslim 714)"
+    },
+    {
+      "id": 38,
+      "question": "Which prayer is performed at mid-morning?",
+      "options": ["Ishraq", "Duha", "Tahajjud", "Witr"],
+      "correct": "Duha",
+      "difficulty": "medium",
+      "topic": "voluntary-prayers",
+      "reference": "Hadith (Muslim 748)"
+    },
+    {
+      "id": 39,
+      "question": "What is the minimum number of rak'ahs for Tahajjud?",
+      "options": ["2", "4", "8", "No minimum"],
+      "correct": "2",
+      "difficulty": "hard",
+      "topic": "night-prayers",
+      "reference": "Hadith (Bukhari 990)"
+    },
+    {
+      "id": 40,
+      "question": "Which prayer is performed when seeking guidance?",
+      "options": ["Istikhara", "Istisqa", "Kusuf", "Khauf"],
+      "correct": "Istikhara",
+      "difficulty": "medium",
+      "topic": "special-prayers",
+      "reference": "Hadith (Bukhari 1162)"
+    },
+    {
+      "id": 41,
+      "question": "What is the prayer performed after sunrise?",
+      "options": ["Ishraq", "Duha", "Tahajjud", "Witr"],
+      "correct": "Ishraq",
+      "difficulty": "hard",
+      "topic": "voluntary-prayers",
+      "reference": "Hadith (Tirmidhi 586)"
+    },
+    {
+      "id": 42,
+      "question": "How many rak'ahs are in Dhuhr prayer?",
+      "options": ["2", "3", "4", "5"],
+      "correct": "4",
+      "difficulty": "easy",
+      "topic": "rakahs",
+      "reference": "Hadith (Bukhari 536)"
+    },
+    {
+      "id": 43,
+      "question": "What is the prayer performed when waking up at night?",
+      "options": ["Tahajjud", "Witr", "Tahiyyatul Wudhu", "Awwabeen"],
+      "correct": "Tahajjud",
+      "difficulty": "easy",
+      "topic": "night-prayers",
+      "reference": "Quran 17:79"
+    },
+    {
+      "id": 44,
+      "question": "Which prayer is performed during solar eclipse?",
+      "options": ["Istisqa", "Kusuf", "Khauf", "Janazah"],
+      "correct": "Kusuf",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "Hadith (Bukhari 1040)"
+    },
+    {
+      "id": 45,
+      "question": "What is the prayer performed after ablution?",
+      "options": [
+        "Tahiyyatul Wudhu",
+        "Tahiyyatul Masjid",
+        "Ishraq",
+        "Duha"
+      ],
+      "correct": "Tahiyyatul Wudhu",
+      "difficulty": "medium",
+      "topic": "voluntary-prayers",
+      "reference": "Hadith (Muslim 234)"
+    },
+    {
+      "id": 46,
+      "question": "How many sunnah rak'ahs are before Fajr?",
+      "options": ["1", "2", "3", "4"],
+      "correct": "2",
+      "difficulty": "easy",
+      "topic": "sunnah-prayers",
+      "reference": "Hadith (Bukhari 1163)"
+    },
+    {
+      "id": 47,
+      "question": "What is the prayer performed when traveling?",
+      "options": ["Qasr", "Jam'", "Khauf", "All of these"],
+      "correct": "All of these",
+      "difficulty": "hard",
+      "topic": "travel-prayers",
+      "reference": "Quran 4:101"
+    },
+    {
+      "id": 48,
+      "question": "Which prayer is shortened during travel?",
+      "options": ["Fajr", "Dhuhr", "Asr", "Maghrib"],
+      "correct": "Dhuhr",
+      "difficulty": "medium",
+      "topic": "travel-prayers",
+      "reference": "Hadith (Bukhari 1081)"
+    },
+    {
+      "id": 49,
+      "question": "What is the minimum number of rak'ahs for Witr?",
+      "options": ["1", "3", "5", "7"],
+      "correct": "1",
+      "difficulty": "medium",
+      "topic": "night-prayers",
+      "reference": "Hadith (Abu Dawud 1199)"
+    },
+    {
+      "id": 50,
+      "question": "Which prayer is performed for the deceased?",
+      "options": ["Janazah", "Istisqa", "Kusuf", "Khauf"],
+      "correct": "Janazah",
+      "difficulty": "easy",
+      "topic": "funeral-prayer",
+      "reference": "Hadith (Bukhari 1245)"
+    },
+    {
+      "id": 51,
+      "question": "What is the prayer performed between Maghrib and Isha?",
+      "options": ["Awwabeen", "Tahajjud", "Duha", "Ishraq"],
+      "correct": "Awwabeen",
+      "difficulty": "hard",
+      "topic": "voluntary-prayers",
+      "reference": "Hadith (Muslim 748)"
+    },
+    {
+      "id": 52,
+      "question": "How many rak'ahs are in Friday prayer?",
+      "options": ["1", "2", "3", "4"],
+      "correct": "2",
+      "difficulty": "easy",
+      "topic": "friday-prayer",
+      "reference": "Hadith (Bukhari 929)"
+    },
+    {
+      "id": 53,
+      "question": "What is the prayer performed when entering a new city?",
+      "options": [
+        "Salatul Istikhara",
+        "Salatul Hajah",
+        "Salatul Istisqa",
+        "No specific prayer"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 54,
+      "question": "Which prayer is performed with congregation only?",
+      "options": ["Fajr", "Jumu'ah", "Asr", "Isha"],
+      "correct": "Jumu'ah",
+      "difficulty": "easy",
+      "topic": "friday-prayer",
+      "reference": "Quran 62:9"
+    },
+    {
+      "id": 55,
+      "question": "What is the prayer performed when seeking needs?",
+      "options": ["Hajah", "Istikhara", "Tawbah", "Tasbeeh"],
+      "correct": "Hajah",
+      "difficulty": "medium",
+      "topic": "special-prayers",
+      "reference": "Hadith (Tirmidhi 480)"
+    },
+    {
+      "id": 56,
+      "question": "How many takbirs are in Eid prayer?",
+      "options": ["6", "7", "8", "9"],
+      "correct": "6",
+      "difficulty": "hard",
+      "topic": "eid-prayer",
+      "reference": "Hadith (Abu Dawud 1150)"
+    },
+    {
+      "id": 57,
+      "question": "What is the prayer performed when repenting?",
+      "options": ["Salatul Tawbah", "Salatul Hajah", "Salatul Istikhara", "Salatul Tasbeeh"],
+      "correct": "Salatul Tawbah",
+      "difficulty": "medium",
+      "topic": "special-prayers",
+      "reference": "Hadith (Abu Dawud 1317)"
+    },
+    {
+      "id": 58,
+      "question": "Which prayer is performed in two rak'ahs only?",
+      "options": ["Fajr", "Dhuhr", "Asr", "Maghrib"],
+      "correct": "Fajr",
+      "difficulty": "easy",
+      "topic": "rakahs",
+      "reference": "Hadith (Bukhari 536)"
+    },
+    {
+      "id": 59,
+      "question": "What is the prayer performed when extremely fearful?",
+      "options": ["Salatul Khauf", "Salatul Kusuf", "Salatul Istisqa", "Salatul Janazah"],
+      "correct": "Salatul Khauf",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "Quran 4:101"
+    },
+    {
+      "id": 60,
+      "question": "How many sunnah rak'ahs are after Dhuhr?",
+      "options": ["0", "2", "4", "6"],
+      "correct": "2",
+      "difficulty": "medium",
+      "topic": "sunnah-prayers",
+      "reference": "Hadith (Muslim 1233)"
+    },
+    {
+      "id": 61,
+      "question": "What is the prayer performed when making a decision?",
+      "options": ["Salatul Istikhara", "Salatul Hajah", "Salatul Tawbah", "Salatul Tasbeeh"],
+      "correct": "Salatul Istikhara",
+      "difficulty": "medium",
+      "topic": "special-prayers",
+      "reference": "Hadith (Bukhari 1162)"
+    },
+    {
+      "id": 62,
+      "question": "Which prayer is performed with loud recitation?",
+      "options": ["Fajr", "Dhuhr", "Asr", "All of these"],
+      "correct": "Fajr",
+      "difficulty": "easy",
+      "topic": "recitation",
+      "reference": "Hadith (Bukhari 735)"
+    },
+    {
+      "id": 63,
+      "question": "What is the prayer performed when traveling by vehicle?",
+      "options": ["Qasr", "Jam'", "On foot only", "Can combine all methods"],
+      "correct": "Can combine all methods",
+      "difficulty": "hard",
+      "topic": "travel-prayers",
+      "reference": "Hadith (Muslim 704)"
+    },
+    {
+      "id": 64,
+      "question": "How many rak'ahs are in Taraweeh prayer?",
+      "options": ["8", "11", "20", "All of these"],
+      "correct": "All of these",
+      "difficulty": "medium",
+      "topic": "ramadan-prayers",
+      "reference": "Hadith (Bukhari 1906)"
+    },
+    {
+      "id": 65,
+      "question": "What is the prayer performed when seeing the new moon?",
+      "options": [
+        "Salatul Hilal",
+        "Salatul Ayat",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 66,
+      "question": "Which prayer is performed with silent recitation?",
+      "options": ["Fajr", "Dhuhr", "Maghrib", "Isha"],
+      "correct": "Dhuhr",
+      "difficulty": "medium",
+      "topic": "recitation",
+      "reference": "Hadith (Muslim 398)"
+    },
+    {
+      "id": 67,
+      "question": "What is the prayer performed when entering a new home?",
+      "options": [
+        "Salatul Istikhara",
+        "Salatul Hajah",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 68,
+      "question": "How many takbirs are in funeral prayer?",
+      "options": ["3", "4", "5", "6"],
+      "correct": "4",
+      "difficulty": "hard",
+      "topic": "funeral-prayer",
+      "reference": "Hadith (Muslim 963)"
+    },
+    {
+      "id": 69,
+      "question": "What is the prayer performed when seeing a bad dream?",
+      "options": [
+        "Salatul Istikhara",
+        "Salatul Hajah",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 70,
+      "question": "Which prayer is performed with two khutbahs?",
+      "options": ["Jumu'ah", "Eid", "Both", "None"],
+      "correct": "Both",
+      "difficulty": "medium",
+      "topic": "khutbah",
+      "reference": "Hadith (Bukhari 929, 956)"
+    },
+    {
+      "id": 71,
+      "question": "What is the prayer performed when completing the Quran?",
+      "options": [
+        "Salatul Khatm",
+        "Salatul Hajah",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 72,
+      "question": "How many rak'ahs are in Witr prayer according to Hanafi school?",
+      "options": ["1", "3", "5", "All of these"],
+      "correct": "3",
+      "difficulty": "hard",
+      "topic": "night-prayers",
+      "reference": "Hanafi jurisprudence"
+    },
+    {
+      "id": 73,
+      "question": "What is the prayer performed when seeing a miracle?",
+      "options": [
+        "Salatul Ayat",
+        "Salatul Shukr",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 74,
+      "question": "Which prayer is performed with qunut?",
+      "options": ["Fajr", "Witr", "Both", "None"],
+      "correct": "Witr",
+      "difficulty": "medium",
+      "topic": "qunut",
+      "reference": "Hadith (Abu Dawud 1213)"
+    },
+    {
+      "id": 75,
+      "question": "What is the prayer performed when feeling anxious?",
+      "options": [
+        "Salatul Istikhara",
+        "Salatul Hajah",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 76,
+      "question": "How many rak'ahs are in Salatul Tasbeeh?",
+      "options": ["1", "2", "4", "All of these"],
+      "correct": "4",
+      "difficulty": "hard",
+      "topic": "voluntary-prayers",
+      "reference": "Hadith (Tirmidhi 481)"
+    },
+    {
+      "id": 77,
+      "question": "What is the prayer performed when seeing a calamity?",
+      "options": [
+        "Salatul Istisqa",
+        "Salatul Kusuf",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 78,
+      "question": "Which prayer is performed with extra sujood?",
+      "options": ["Salatul Hajah", "Salatul Khawf", "Salatul Tasbeeh", "None"],
+      "correct": "None",
+      "difficulty": "hard",
+      "topic": "special-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 79,
+      "question": "What is the prayer performed when starting a journey?",
+      "options": [
+        "Salatul Safar",
+        "Salatul Hajah",
+        "No specific prayer",
+        "Salatul Tasbeeh"
+      ],
+      "correct": "No specific prayer",
+      "difficulty": "hard",
+      "topic": "travel-prayers",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 80,
+      "question": "How many rak'ahs are in Salatul Istikhara?",
+      "options": ["1", "2", "4", "No fixed number"],
+      "correct": "2",
+      "difficulty": "medium",
+      "topic": "special-prayers",
+      "reference": "Hadith (Bukhari 1162)"
+    }
+  ]
+}

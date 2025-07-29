@@ -142,23 +142,28 @@ const Services = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative bg-gradient-to-br from-emerald-50 to-teal-50 bg-cover bg-center bg-no-repeat min-h-[60vh] flex items-center"
+        className="relative bg-gradient-to-br from-emerald-50 to-teal-50 min-h-[60vh] flex items-center justify-center text-center px-4"
         style={{
           backgroundImage: `url('/assets/socialMediaIcons/our-services.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        {/* Optional overlay */}
-        <div className="absolute inset-0 bg-white bg-opacity-0"></div>
-
-        {/* <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-      Our <span className="text-blue-600">Courses</span>
-    </h1>
-    <p className="text-xl md:text-2xl text-yellow-600 max-w-4xl mx-auto leading-relaxed">
-      Comprehensive Quranic education programs tailored to your learning
-      needs and goals
-    </p>
-  </div> */}
+        <div className="bg-black/50 p-6 rounded-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Explore Our Quran Programs
+          </h1>
+          <p className="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto">
+            Expert-led, flexible, and spiritually enriching online Quran
+            courses.
+          </p>
+          <Link
+            to="/schedule"
+            className="bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-100 transition"
+          >
+            Start Free Trial
+          </Link>
+        </div>
       </section>
 
       {/* Courses Grid */}
@@ -294,7 +299,7 @@ const Services = () => {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-emerald-500 border border-transparent"
               >
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                <h3 className="text-xl font-semibold text-blue-600 mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -313,7 +318,8 @@ const Services = () => {
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
           </h2>
           <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
-            Start To Learn Quran  <span className="text-blue-600">In 3 Easy Steps</span>
+            Start To Learn Quran{" "}
+            <span className="text-blue-600">In 3 Easy Steps</span>
           </h3>
           <p className="text-lg text-gray-600 mb-12">
             You can join our Online Quran Academy by following just

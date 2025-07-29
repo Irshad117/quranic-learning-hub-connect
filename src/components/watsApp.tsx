@@ -18,28 +18,32 @@ const WhatsAppButton = () => {
     };
 
     triggerAnimation(); // initial
-    const interval = setInterval(triggerAnimation, 1 * 30 * 1000); // every 30 seconds
+    const interval = setInterval(triggerAnimation, 1 * 5 * 1000); // every 30 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <a
-  href="https://wa.me/923153465995"
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-lg shadow-lg group transition-all duration-300 ease-in-out ${
-    animate ? "animate-shake-slow" : ""
-  }`}
-  aria-label="Chat on WhatsApp"
->
-  <img src="/assets/Logo/whatsapp-icon.png" alt="contact" className="w-12 h-12" />
-  {showLabel && (
-    <span className="whitespace-nowrap animate-slide-in text-sm font-medium text-blue-300 pr-1">
-      Click Here
-    </span>
-  )}
-</a>
+      href="https://wa.me/923153465995"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-lg shadow-lg group transition-all duration-300 ease-in-out ${
+        animate ? "animate-shake-slow" : "animate-bounce"
+      }`}
+      aria-label="Chat on WhatsApp"
+    >
+      <img
+        src="/assets/Logo/whatsapp-icon.png"
+        alt="contact"
+        className="w-12 h-12"
+      />
+      {showLabel && (
+        <span className="whitespace-nowrap animate-slide-in text-sm font-medium text-blue-300 pr-1">
+          Click Here
+        </span>
+      )}
+    </a>
   );
 };
 

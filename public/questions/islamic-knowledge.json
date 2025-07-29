@@ -1,0 +1,803 @@
+{
+  "category": "islamic-knowledge",
+  "title": "Comprehensive Islamic Knowledge Quiz",
+  "description": "Test your knowledge of Islam with questions on faith, history, practices, and Islamic culture",
+  "total": 80,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the first pillar of Islam?",
+      "options": [
+        "Salah (Prayer)",
+        "Shahadah (Declaration of Faith)",
+        "Zakat (Charity)",
+        "Hajj (Pilgrimage)"
+      ],
+      "correct": "Shahadah (Declaration of Faith)",
+      "difficulty": "easy",
+      "topic": "pillars-of-islam",
+      "reference": "Hadith (Bukhari 8)"
+    },
+    {
+      "id": 2,
+      "question": "How many times a day are Muslims required to pray?",
+      "options": ["3", "4", "5", "6"],
+      "correct": "5",
+      "difficulty": "easy",
+      "topic": "prayer",
+      "reference": "Quran 17:78"
+    },
+    {
+      "id": 3,
+      "question": "Which angel is responsible for delivering revelations to prophets?",
+      "options": ["Mika'il", "Israfil", "Jibril", "Izra'il"],
+      "correct": "Jibril",
+      "difficulty": "easy",
+      "topic": "angels",
+      "reference": "Quran 2:97"
+    },
+    {
+      "id": 4,
+      "question": "What is the Islamic calendar based on?",
+      "options": [
+        "Solar cycles",
+        "Lunar cycles",
+        "Both solar and lunar",
+        "Gregorian system"
+      ],
+      "correct": "Lunar cycles",
+      "difficulty": "easy",
+      "topic": "calendar",
+      "reference": "Quran 9:36"
+    },
+    {
+      "id": 5,
+      "question": "Which Surah is called the 'Heart of the Quran'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Yaseen", "Al-Ikhlas"],
+      "correct": "Yaseen",
+      "difficulty": "medium",
+      "topic": "quran",
+      "reference": "Hadith (Tirmidhi 2887)"
+    },
+    {
+      "id": 6,
+      "question": "How many days is fasting required during Ramadan?",
+      "options": ["28", "29", "30", "29 or 30"],
+      "correct": "29 or 30",
+      "difficulty": "easy",
+      "topic": "fasting",
+      "reference": "Hadith (Bukhari 1900)"
+    },
+    {
+      "id": 7,
+      "question": "What was the first mosque built in Islam?",
+      "options": [
+        "Masjid al-Haram",
+        "Masjid an-Nabawi",
+        "Masjid Quba",
+        "Masjid al-Aqsa"
+      ],
+      "correct": "Masjid Quba",
+      "difficulty": "medium",
+      "topic": "history",
+      "reference": "Quran 9:108"
+    },
+    {
+      "id": 8,
+      "question": "Which prophet is mentioned most frequently in the Quran?",
+      "options": ["Adam (AS)", "Ibrahim (AS)", "Musa (AS)", "Nuh (AS)"],
+      "correct": "Musa (AS)",
+      "difficulty": "hard",
+      "topic": "prophets",
+      "reference": "Quran (mentioned 136 times)"
+    },
+    {
+      "id": 9,
+      "question": "What is the name of the Islamic declaration of faith?",
+      "options": ["Takbir", "Tasbih", "Shahadah", "Tahmid"],
+      "correct": "Shahadah",
+      "difficulty": "easy",
+      "topic": "beliefs",
+      "reference": "Hadith (Muslim 34)"
+    },
+    {
+      "id": 10,
+      "question": "Which companion was known as the 'Sword of Allah'?",
+      "options": [
+        "Abu Bakr (RA)",
+        "Umar (RA)",
+        "Uthman (RA)",
+        "Khalid ibn al-Walid (RA)"
+      ],
+      "correct": "Khalid ibn al-Walid (RA)",
+      "difficulty": "medium",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 11,
+      "question": "What is the night journey of the Prophet (PBUH) called?",
+      "options": ["Hijrah", "Mi'raj", "Isra", "Jihad"],
+      "correct": "Isra",
+      "difficulty": "medium",
+      "topic": "prophet-life",
+      "reference": "Quran 17:1"
+    },
+    {
+      "id": 12,
+      "question": "Which Surah begins without 'Bismillah'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "At-Tawbah", "Yaseen"],
+      "correct": "At-Tawbah",
+      "difficulty": "hard",
+      "topic": "quran",
+      "reference": "Quran 9:1"
+    },
+    {
+      "id": 13,
+      "question": "What is the Islamic term for lawful or permissible?",
+      "options": ["Haram", "Halal", "Makruh", "Mustahabb"],
+      "correct": "Halal",
+      "difficulty": "easy",
+      "topic": "terminology",
+      "reference": "Quran 2:168"
+    },
+    {
+      "id": 14,
+      "question": "Which prophet built the Kaaba?",
+      "options": [
+        "Adam (AS)",
+        "Ibrahim (AS) and Ismail (AS)",
+        "Sulaiman (AS)",
+        "Nuh (AS)"
+      ],
+      "correct": "Ibrahim (AS) and Ismail (AS)",
+      "difficulty": "medium",
+      "topic": "prophets",
+      "reference": "Quran 2:127"
+    },
+    {
+      "id": 15,
+      "question": "What is the name of the Islamic new year?",
+      "options": ["Muharram", "Hijri", "Ramadan", "Shawwal"],
+      "correct": "Hijri",
+      "difficulty": "easy",
+      "topic": "calendar",
+      "reference": "Historical event"
+    },
+    {
+      "id": 16,
+      "question": "Which battle is known as the 'Battle of the Trench'?",
+      "options": ["Badr", "Uhud", "Khandaq", "Hunayn"],
+      "correct": "Khandaq",
+      "difficulty": "medium",
+      "topic": "battles",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 17,
+      "question": "What is the name of the Islamic will?",
+      "options": ["Wasiyyah", "Talaq", "Nikah", "Ijara"],
+      "correct": "Wasiyyah",
+      "difficulty": "medium",
+      "topic": "inheritance",
+      "reference": "Quran 2:180"
+    },
+    {
+      "id": 18,
+      "question": "Which companion was the first martyr in Islam?",
+      "options": [
+        "Sumayyah (RA)",
+        "Bilal (RA)",
+        "Hamzah (RA)",
+        "Abu Bakr (RA)"
+      ],
+      "correct": "Sumayyah (RA)",
+      "difficulty": "hard",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 19,
+      "question": "What is the name of the Islamic funeral prayer?",
+      "options": ["Janazah", "Taraweeh", "Tahajjud", "Witr"],
+      "correct": "Janazah",
+      "difficulty": "medium",
+      "topic": "prayer",
+      "reference": "Hadith (Bukhari 1245)"
+    },
+    {
+      "id": 20,
+      "question": "Which prophet is known as the 'Friend of Allah'?",
+      "options": ["Musa (AS)", "Ibrahim (AS)", "Isa (AS)", "Yusuf (AS)"],
+      "correct": "Ibrahim (AS)",
+      "difficulty": "easy",
+      "topic": "prophets",
+      "reference": "Quran 4:125"
+    },
+    {
+      "id": 21,
+      "question": "What is the Islamic term for pilgrimage to Mecca?",
+      "options": ["Umrah", "Hajj", "Ziyarah", "Safar"],
+      "correct": "Hajj",
+      "difficulty": "easy",
+      "topic": "pilgrimage",
+      "reference": "Quran 3:97"
+    },
+    {
+      "id": 22,
+      "question": "Which Surah is known as 'The Opening'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Al-Ikhlas", "Yaseen"],
+      "correct": "Al-Fatiha",
+      "difficulty": "easy",
+      "topic": "quran",
+      "reference": "Quran 1:1"
+    },
+    {
+      "id": 23,
+      "question": "What is the name of the Islamic tax on wealth?",
+      "options": ["Sadaqah", "Zakat", "Khums", "Jizyah"],
+      "correct": "Zakat",
+      "difficulty": "easy",
+      "topic": "charity",
+      "reference": "Quran 9:103"
+    },
+    {
+      "id": 24,
+      "question": "Which companion was known as the 'Father of the Poor'?",
+      "options": [
+        "Abu Bakr (RA)",
+        "Umar (RA)",
+        "Abu Dharr (RA)",
+        "Salman (RA)"
+      ],
+      "correct": "Abu Dharr (RA)",
+      "difficulty": "hard",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 25,
+      "question": "What is the name of the Islamic month of fasting?",
+      "options": ["Shawwal", "Ramadan", "Muharram", "Dhul-Hijjah"],
+      "correct": "Ramadan",
+      "difficulty": "easy",
+      "topic": "fasting",
+      "reference": "Quran 2:185"
+    },
+    {
+      "id": 26,
+      "question": "Which prophet was swallowed by a whale?",
+      "options": ["Yunus (AS)", "Musa (AS)", "Nuh (AS)", "Hud (AS)"],
+      "correct": "Yunus (AS)",
+      "difficulty": "easy",
+      "topic": "prophets",
+      "reference": "Quran 37:142"
+    },
+    {
+      "id": 27,
+      "question": "What is the Islamic term for striving in the way of Allah?",
+      "options": ["Hijrah", "Jihad", "Da'wah", "Ijtihad"],
+      "correct": "Jihad",
+      "difficulty": "medium",
+      "topic": "terminology",
+      "reference": "Quran 29:69"
+    },
+    {
+      "id": 28,
+      "question": "Which city was the Prophet Muhammad (PBUH) born in?",
+      "options": ["Medina", "Mecca", "Taif", "Jerusalem"],
+      "correct": "Mecca",
+      "difficulty": "easy",
+      "topic": "prophet-life",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 29,
+      "question": "What is the name of the Islamic call to prayer?",
+      "options": ["Takbir", "Adhan", "Tasbih", "Tahmid"],
+      "correct": "Adhan",
+      "difficulty": "easy",
+      "topic": "prayer",
+      "reference": "Hadith (Bukhari 604)"
+    },
+    {
+      "id": 30,
+      "question": "Which companion compiled the Quran into one book?",
+      "options": [
+        "Abu Bakr (RA)",
+        "Umar (RA)",
+        "Uthman (RA)",
+        "Ali (RA)"
+      ],
+      "correct": "Uthman (RA)",
+      "difficulty": "medium",
+      "topic": "quran",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 31,
+      "question": "What is the name of the Islamic Friday prayer?",
+      "options": ["Jumu'ah", "Eid", "Taraweeh", "Tahajjud"],
+      "correct": "Jumu'ah",
+      "difficulty": "easy",
+      "topic": "prayer",
+      "reference": "Quran 62:9"
+    },
+    {
+      "id": 32,
+      "question": "Which prophet is known for his patience?",
+      "options": ["Ayyub (AS)", "Yusuf (AS)", "Ibrahim (AS)", "Nuh (AS)"],
+      "correct": "Ayyub (AS)",
+      "difficulty": "medium",
+      "topic": "prophets",
+      "reference": "Quran 21:83"
+    },
+    {
+      "id": 33,
+      "question": "What is the name of the Islamic greeting?",
+      "options": ["Salam", "Takbir", "Tasbih", "Tahmid"],
+      "correct": "Salam",
+      "difficulty": "easy",
+      "topic": "etiquette",
+      "reference": "Quran 24:61"
+    },
+    {
+      "id": 34,
+      "question": "Which Surah is the longest in the Quran?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Yaseen", "Al-Mulk"],
+      "correct": "Al-Baqarah",
+      "difficulty": "easy",
+      "topic": "quran",
+      "reference": "Quran (286 verses)"
+    },
+    {
+      "id": 35,
+      "question": "What is the name of the Islamic charity given at Eid?",
+      "options": ["Zakat", "Sadaqah", "Zakat al-Fitr", "Khums"],
+      "correct": "Zakat al-Fitr",
+      "difficulty": "medium",
+      "topic": "charity",
+      "reference": "Hadith (Bukhari 1503)"
+    },
+    {
+      "id": 36,
+      "question": "Which prophet was known for his wisdom?",
+      "options": ["Sulaiman (AS)", "Dawud (AS)", "Ibrahim (AS)", "Musa (AS)"],
+      "correct": "Sulaiman (AS)",
+      "difficulty": "medium",
+      "topic": "prophets",
+      "reference": "Quran 21:79"
+    },
+    {
+      "id": 37,
+      "question": "What is the name of the Islamic marriage contract?",
+      "options": ["Talaq", "Nikah", "Khula", "Ijab"],
+      "correct": "Nikah",
+      "difficulty": "easy",
+      "topic": "marriage",
+      "reference": "Quran 4:21"
+    },
+    {
+      "id": 38,
+      "question": "Which companion was the Prophet's (PBUH) first wife?",
+      "options": [
+        "Aisha (RA)",
+        "Khadija (RA)",
+        "Hafsa (RA)",
+        "Sawda (RA)"
+      ],
+      "correct": "Khadija (RA)",
+      "difficulty": "easy",
+      "topic": "prophet-life",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 39,
+      "question": "What is the Islamic term for the Day of Judgment?",
+      "options": ["Qiyamah", "Barzakh", "Akhirah", "Mahshar"],
+      "correct": "Qiyamah",
+      "difficulty": "easy",
+      "topic": "beliefs",
+      "reference": "Quran 75:1"
+    },
+    {
+      "id": 40,
+      "question": "Which prophet was given the Psalms?",
+      "options": ["Musa (AS)", "Dawud (AS)", "Isa (AS)", "Ibrahim (AS)"],
+      "correct": "Dawud (AS)",
+      "difficulty": "medium",
+      "topic": "prophets",
+      "reference": "Quran 4:163"
+    },
+    {
+      "id": 41,
+      "question": "What is the name of the Islamic month of pilgrimage?",
+      "options": ["Ramadan", "Shawwal", "Dhul-Hijjah", "Muharram"],
+      "correct": "Dhul-Hijjah",
+      "difficulty": "medium",
+      "topic": "pilgrimage",
+      "reference": "Quran 2:197"
+    },
+    {
+      "id": 42,
+      "question": "Which Surah is known as 'The Purity'?",
+      "options": ["Al-Fatiha", "Al-Ikhlas", "Yaseen", "Al-Mulk"],
+      "correct": "Al-Ikhlas",
+      "difficulty": "easy",
+      "topic": "quran",
+      "reference": "Hadith (Tirmidhi 2900)"
+    },
+    {
+      "id": 43,
+      "question": "What is the Islamic term for religious innovation?",
+      "options": ["Sunnah", "Bid'ah", "Fiqh", "Ijtihad"],
+      "correct": "Bid'ah",
+      "difficulty": "medium",
+      "topic": "terminology",
+      "reference": "Hadith (Muslim 867)"
+    },
+    {
+      "id": 44,
+      "question": "Which prophet was known as the 'Father of Mankind'?",
+      "options": ["Nuh (AS)", "Adam (AS)", "Ibrahim (AS)", "Idris (AS)"],
+      "correct": "Adam (AS)",
+      "difficulty": "easy",
+      "topic": "prophets",
+      "reference": "Quran 3:33"
+    },
+    {
+      "id": 45,
+      "question": "What is the name of the Islamic divorce?",
+      "options": ["Nikah", "Khula", "Talaq", "Ijab"],
+      "correct": "Talaq",
+      "difficulty": "medium",
+      "topic": "marriage",
+      "reference": "Quran 2:229"
+    },
+    {
+      "id": 46,
+      "question": "Which companion was known as the 'Possessor of Two Lights'?",
+      "options": [
+        "Uthman (RA)",
+        "Ali (RA)",
+        "Abu Bakr (RA)",
+        "Umar (RA)"
+      ],
+      "correct": "Uthman (RA)",
+      "difficulty": "hard",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 47,
+      "question": "What is the Islamic term for lawful warfare?",
+      "options": ["Fitna", "Jihad", "Hirabah", "Qital"],
+      "correct": "Jihad",
+      "difficulty": "medium",
+      "topic": "terminology",
+      "reference": "Quran 22:39"
+    },
+    {
+      "id": 48,
+      "question": "Which prophet was known for his beautiful voice?",
+      "options": ["Dawud (AS)", "Musa (AS)", "Yunus (AS)", "Ibrahim (AS)"],
+      "correct": "Dawud (AS)",
+      "difficulty": "hard",
+      "topic": "prophets",
+      "reference": "Hadith (Bukhari 3420)"
+    },
+    {
+      "id": 49,
+      "question": "What is the name of the Islamic night prayer?",
+      "options": ["Taraweeh", "Tahajjud", "Witr", "Isha"],
+      "correct": "Tahajjud",
+      "difficulty": "medium",
+      "topic": "prayer",
+      "reference": "Quran 17:79"
+    },
+    {
+      "id": 50,
+      "question": "Which Surah is known as 'The Throne'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Ayat al-Kursi", "Yaseen"],
+      "correct": "Ayat al-Kursi",
+      "difficulty": "medium",
+      "topic": "quran",
+      "reference": "Quran 2:255"
+    },
+    {
+      "id": 51,
+      "question": "What is the Islamic term for the afterlife?",
+      "options": ["Dunya", "Akhirah", "Barzakh", "Qiyamah"],
+      "correct": "Akhirah",
+      "difficulty": "easy",
+      "topic": "beliefs",
+      "reference": "Quran 2:200"
+    },
+    {
+      "id": 52,
+      "question": "Which prophet was known as the 'Father of Prophets'?",
+      "options": ["Adam (AS)", "Nuh (AS)", "Ibrahim (AS)", "Musa (AS)"],
+      "correct": "Ibrahim (AS)",
+      "difficulty": "hard",
+      "topic": "prophets",
+      "reference": "Quran 2:124"
+    },
+    {
+      "id": 53,
+      "question": "What is the name of the Islamic voluntary charity?",
+      "options": ["Zakat", "Sadaqah", "Khums", "Jizyah"],
+      "correct": "Sadaqah",
+      "difficulty": "easy",
+      "topic": "charity",
+      "reference": "Quran 2:263"
+    },
+    {
+      "id": 54,
+      "question": "Which companion was the Prophet's (PBUH) uncle?",
+      "options": [
+        "Abu Bakr (RA)",
+        "Umar (RA)",
+        "Hamzah (RA)",
+        "Uthman (RA)"
+      ],
+      "correct": "Hamzah (RA)",
+      "difficulty": "medium",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 55,
+      "question": "What is the Islamic term for the prescribed prayers?",
+      "options": ["Du'a", "Salah", "Dhikr", "Tasbih"],
+      "correct": "Salah",
+      "difficulty": "easy",
+      "topic": "prayer",
+      "reference": "Quran 2:43"
+    },
+    {
+      "id": 56,
+      "question": "Which prophet was known for his dream interpretation?",
+      "options": ["Yusuf (AS)", "Ibrahim (AS)", "Musa (AS)", "Isa (AS)"],
+      "correct": "Yusuf (AS)",
+      "difficulty": "medium",
+      "topic": "prophets",
+      "reference": "Quran 12:6"
+    },
+    {
+      "id": 57,
+      "question": "What is the name of the Islamic declaration of faith?",
+      "options": ["Takbir", "Tasbih", "Shahadah", "Tahmid"],
+      "correct": "Shahadah",
+      "difficulty": "easy",
+      "topic": "beliefs",
+      "reference": "Hadith (Muslim 34)"
+    },
+    {
+      "id": 58,
+      "question": "Which companion was the first caliph?",
+      "options": [
+        "Umar (RA)",
+        "Abu Bakr (RA)",
+        "Uthman (RA)",
+        "Ali (RA)"
+      ],
+      "correct": "Abu Bakr (RA)",
+      "difficulty": "easy",
+      "topic": "history",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 59,
+      "question": "What is the Islamic term for the pilgrimage to Mecca?",
+      "options": ["Umrah", "Hajj", "Ziyarah", "Safar"],
+      "correct": "Hajj",
+      "difficulty": "easy",
+      "topic": "pilgrimage",
+      "reference": "Quran 3:97"
+    },
+    {
+      "id": 60,
+      "question": "Which prophet was known as the 'Father of Arabs'?",
+      "options": ["Ismail (AS)", "Ibrahim (AS)", "Nuh (AS)", "Hud (AS)"],
+      "correct": "Ismail (AS)",
+      "difficulty": "hard",
+      "topic": "prophets",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 61,
+      "question": "What is the name of the Islamic month before Ramadan?",
+      "options": ["Shaban", "Rajab", "Sha'ban", "Muharram"],
+      "correct": "Sha'ban",
+      "difficulty": "hard",
+      "topic": "calendar",
+      "reference": "Hadith (Bukhari 1868)"
+    },
+    {
+      "id": 62,
+      "question": "Which Surah is known as 'The Cow'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Al-Imran", "An-Nisa"],
+      "correct": "Al-Baqarah",
+      "difficulty": "easy",
+      "topic": "quran",
+      "reference": "Quran 2:1"
+    },
+    {
+      "id": 63,
+      "question": "What is the Islamic term for the prescribed alms?",
+      "options": ["Sadaqah", "Zakat", "Khums", "Jizyah"],
+      "correct": "Zakat",
+      "difficulty": "easy",
+      "topic": "charity",
+      "reference": "Quran 9:103"
+    },
+    {
+      "id": 64,
+      "question": "Which companion was known as the 'Lion of Allah'?",
+      "options": [
+        "Ali (RA)",
+        "Hamzah (RA)",
+        "Khalid ibn al-Walid (RA)",
+        "Umar (RA)"
+      ],
+      "correct": "Hamzah (RA)",
+      "difficulty": "hard",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 65,
+      "question": "What is the Islamic term for the remembrance of Allah?",
+      "options": ["Du'a", "Dhikr", "Tasbih", "Tahmid"],
+      "correct": "Dhikr",
+      "difficulty": "easy",
+      "topic": "worship",
+      "reference": "Quran 33:41"
+    },
+    {
+      "id": 66,
+      "question": "Which prophet was known as the 'Speaker to Allah'?",
+      "options": ["Musa (AS)", "Ibrahim (AS)", "Isa (AS)", "Yusuf (AS)"],
+      "correct": "Musa (AS)",
+      "difficulty": "medium",
+      "topic": "prophets",
+      "reference": "Quran 4:164"
+    },
+    {
+      "id": 67,
+      "question": "What is the name of the Islamic voluntary fast?",
+      "options": ["Ramadan", "Sha'ban", "Mondays/Thursdays", "All of these"],
+      "correct": "All of these",
+      "difficulty": "hard",
+      "topic": "fasting",
+      "reference": "Hadith (Muslim 1162)"
+    },
+    {
+      "id": 68,
+      "question": "Which companion was the Prophet's (PBUH) cousin?",
+      "options": [
+        "Abu Bakr (RA)",
+        "Umar (RA)",
+        "Ali (RA)",
+        "Uthman (RA)"
+      ],
+      "correct": "Ali (RA)",
+      "difficulty": "easy",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 69,
+      "question": "What is the Islamic term for the minor pilgrimage?",
+      "options": ["Hajj", "Umrah", "Ziyarah", "Safar"],
+      "correct": "Umrah",
+      "difficulty": "medium",
+      "topic": "pilgrimage",
+      "reference": "Quran 2:196"
+    },
+    {
+      "id": 70,
+      "question": "Which prophet was known as the 'Father of Prophets'?",
+      "options": ["Adam (AS)", "Nuh (AS)", "Ibrahim (AS)", "Musa (AS)"],
+      "correct": "Ibrahim (AS)",
+      "difficulty": "hard",
+      "topic": "prophets",
+      "reference": "Quran 2:124"
+    },
+    {
+      "id": 71,
+      "question": "What is the name of the Islamic month of fasting?",
+      "options": ["Shawwal", "Ramadan", "Muharram", "Dhul-Hijjah"],
+      "correct": "Ramadan",
+      "difficulty": "easy",
+      "topic": "fasting",
+      "reference": "Quran 2:185"
+    },
+    {
+      "id": 72,
+      "question": "Which Surah is known as 'The Purity'?",
+      "options": ["Al-Fatiha", "Al-Ikhlas", "Yaseen", "Al-Mulk"],
+      "correct": "Al-Ikhlas",
+      "difficulty": "easy",
+      "topic": "quran",
+      "reference": "Hadith (Tirmidhi 2900)"
+    },
+    {
+      "id": 73,
+      "question": "What is the Islamic term for religious innovation?",
+      "options": ["Sunnah", "Bid'ah", "Fiqh", "Ijtihad"],
+      "correct": "Bid'ah",
+      "difficulty": "medium",
+      "topic": "terminology",
+      "reference": "Hadith (Muslim 867)"
+    },
+    {
+      "id": 74,
+      "question": "Which prophet was known as the 'Father of Mankind'?",
+      "options": ["Nuh (AS)", "Adam (AS)", "Ibrahim (AS)", "Idris (AS)"],
+      "correct": "Adam (AS)",
+      "difficulty": "easy",
+      "topic": "prophets",
+      "reference": "Quran 3:33"
+    },
+    {
+      "id": 75,
+      "question": "What is the name of the Islamic divorce?",
+      "options": ["Nikah", "Khula", "Talaq", "Ijab"],
+      "correct": "Talaq",
+      "difficulty": "medium",
+      "topic": "marriage",
+      "reference": "Quran 2:229"
+    },
+    {
+      "id": 76,
+      "question": "Which companion was known as the 'Possessor of Two Lights'?",
+      "options": [
+        "Uthman (RA)",
+        "Ali (RA)",
+        "Abu Bakr (RA)",
+        "Umar (RA)"
+      ],
+      "correct": "Uthman (RA)",
+      "difficulty": "hard",
+      "topic": "companions",
+      "reference": "Historical sources"
+    },
+    {
+      "id": 77,
+      "question": "What is the Islamic term for lawful warfare?",
+      "options": ["Fitna", "Jihad", "Hirabah", "Qital"],
+      "correct": "Jihad",
+      "difficulty": "medium",
+      "topic": "terminology",
+      "reference": "Quran 22:39"
+    },
+    {
+      "id": 78,
+      "question": "Which prophet was known for his beautiful voice?",
+      "options": ["Dawud (AS)", "Musa (AS)", "Yunus (AS)", "Ibrahim (AS)"],
+      "correct": "Dawud (AS)",
+      "difficulty": "hard",
+      "topic": "prophets",
+      "reference": "Hadith (Bukhari 3420)"
+    },
+    {
+      "id": 79,
+      "question": "What is the name of the Islamic night prayer?",
+      "options": ["Taraweeh", "Tahajjud", "Witr", "Isha"],
+      "correct": "Tahajjud",
+      "difficulty": "medium",
+      "topic": "prayer",
+      "reference": "Quran 17:79"
+    },
+    {
+      "id": 80,
+      "question": "Which Surah is known as 'The Throne'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Ayat al-Kursi", "Yaseen"],
+      "correct": "Ayat al-Kursi",
+      "difficulty": "medium",
+      "topic": "quran",
+      "reference": "Quran 2:255"
+    }
+  ]
+}

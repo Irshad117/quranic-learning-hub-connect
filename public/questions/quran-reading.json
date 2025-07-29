@@ -1,0 +1,648 @@
+{
+  "category": "quran-reading",
+  "title": "Quran Reading Quiz",
+  "description": "Test your Quranic recitation and pronunciation skills",
+  "total": 80,
+  "questions": [
+    {
+      "id": 1,
+      "question": "How many Surahs are in the Quran?",
+      "options": ["112", "113", "114", "115"],
+      "correct": "114",
+      "difficulty": "easy",
+      "topic": "quran-basics"
+    },
+    {
+      "id": 2,
+      "question": "Which Surah is called 'The Opening'?",
+      "options": ["Al-Baqarah", "Al-Fatiha", "Al-Ikhlas", "An-Nas"],
+      "correct": "Al-Fatiha",
+      "difficulty": "easy",
+      "topic": "surah-names"
+    },
+    {
+      "id": 3,
+      "question": "What does 'Bismillah' mean?",
+      "options": ["In the name of Allah", "Praise be to Allah", "Allah is great", "There is no god but Allah"],
+      "correct": "In the name of Allah",
+      "difficulty": "easy",
+      "topic": "arabic-meanings"
+    },
+    {
+      "id": 4,
+      "question": "How many verses are in Surah Al-Fatiha?",
+      "options": ["5", "6", "7", "8"],
+      "correct": "7",
+      "difficulty": "easy",
+      "topic": "verse-counts"
+    },
+    {
+      "id": 5,
+      "question": "What is the longest Surah in the Quran?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Al-Imran", "An-Nisa"],
+      "correct": "Al-Baqarah",
+      "difficulty": "easy",
+      "topic": "surah-facts"
+    },
+    {
+      "id": 6,
+      "question": "How many verses are in Surah Al-Baqarah?",
+      "options": ["286", "287", "285", "284"],
+      "correct": "286",
+      "difficulty": "easy",
+      "topic": "verse-counts"
+    },
+    {
+      "id": 7,
+      "question": "What is the shortest Surah in the Quran?",
+      "options": ["Al-Asr", "Al-Kawthar", "Al-Ikhlas", "An-Nasr"],
+      "correct": "Al-Kawthar",
+      "difficulty": "easy",
+      "topic": "surah-facts"
+    },
+    {
+      "id": 8,
+      "question": "How many verses are in Surah Al-Kawthar?",
+      "options": ["2", "3", "4", "5"],
+      "correct": "3",
+      "difficulty": "easy",
+      "topic": "verse-counts"
+    },
+    {
+      "id": 9,
+      "question": "What does 'Quran' literally mean?",
+      "options": ["Book", "Reading/Recitation", "Guidance", "Light"],
+      "correct": "Reading/Recitation",
+      "difficulty": "easy",
+      "topic": "quran-basics"
+    },
+    {
+      "id": 10,
+      "question": "In which language was the Quran revealed?",
+      "options": ["Hebrew", "Aramaic", "Arabic", "Persian"],
+      "correct": "Arabic",
+      "difficulty": "easy",
+      "topic": "quran-basics"
+    },
+    {
+      "id": 11,
+      "question": "What is the correct pronunciation of 'Rahman'?",
+      "options": ["Rah-man", "Reh-man", "Ra-man", "Ruh-man"],
+      "correct": "Rah-man",
+      "difficulty": "easy",
+      "topic": "pronunciation"
+    },
+    {
+      "id": 12,
+      "question": "How many verses are in Surah Al-Ikhlas?",
+      "options": ["3", "4", "5", "6"],
+      "correct": "4",
+      "difficulty": "easy",
+      "topic": "verse-counts"
+    },
+    {
+      "id": 13,
+      "question": "Which Surah is known as the 'Heart of the Quran'?",
+      "options": ["Al-Fatiha", "Ya-Sin", "Al-Baqarah", "Al-Mulk"],
+      "correct": "Ya-Sin",
+      "difficulty": "easy",
+      "topic": "surah-names"
+    },
+    {
+      "id": 14,
+      "question": "What does 'Alhamdulillahi Rabbil Alameen' mean?",
+      "options": ["In the name of Allah", "All praise is for Allah, Lord of the worlds", "Allah is the greatest", "There is no god but Allah"],
+      "correct": "All praise is for Allah, Lord of the worlds",
+      "difficulty": "easy",
+      "topic": "arabic-meanings"
+    },
+    {
+      "id": 15,
+      "question": "How many parts (Parahs) is the Quran divided into?",
+      "options": ["28", "29", "30", "31"],
+      "correct": "30",
+      "difficulty": "easy",
+      "topic": "quran-structure"
+    },
+    {
+      "id": 16,
+      "question": "What is each part of the Quran called?",
+      "options": ["Surah", "Ayah", "Para/Juz", "Ruku"],
+      "correct": "Para/Juz",
+      "difficulty": "easy",
+      "topic": "quran-structure"
+    },
+    {
+      "id": 17,
+      "question": "Which Surah comes after Al-Fatiha?",
+      "options": ["Al-Baqarah", "Al-Imran", "An-Nisa", "Al-Maidah"],
+      "correct": "Al-Baqarah",
+      "difficulty": "easy",
+      "topic": "surah-order"
+    },
+    {
+      "id": 18,
+      "question": "What does 'Ayah' mean?",
+      "options": ["Chapter", "Verse", "Word", "Letter"],
+      "correct": "Verse",
+      "difficulty": "easy",
+      "topic": "quran-terminology"
+    },
+    {
+      "id": 19,
+      "question": "Which Surah is recited in every unit of prayer?",
+      "options": ["Al-Baqarah", "Al-Fatiha", "Al-Ikhlas", "An-Nas"],
+      "correct": "Al-Fatiha",
+      "difficulty": "easy",
+      "topic": "prayer-surahs"
+    },
+    {
+      "id": 20,
+      "question": "What does 'Surah' mean?",
+      "options": ["Verse", "Chapter", "Word", "Page"],
+      "correct": "Chapter",
+      "difficulty": "easy",
+      "topic": "quran-terminology"
+    },
+    {
+      "id": 21,
+      "question": "Which city is mentioned most frequently in the Quran?",
+      "options": ["Makkah", "Madinah", "Jerusalem", "Egypt"],
+      "correct": "Makkah",
+      "difficulty": "medium",
+      "topic": "quranic-geography"
+    },
+    {
+      "id": 22,
+      "question": "How many times is the word 'Allah' mentioned in the Quran?",
+      "options": ["2698 times", "2699 times", "2700 times", "2701 times"],
+      "correct": "2699 times",
+      "difficulty": "medium",
+      "topic": "quran-statistics"
+    },
+    {
+      "id": 23,
+      "question": "Which Surah does not begin with Bismillah?",
+      "options": ["At-Tawbah", "Al-Fatiha", "Al-Baqarah", "Al-Imran"],
+      "correct": "At-Tawbah",
+      "difficulty": "medium",
+      "topic": "surah-features"
+    },
+    {
+      "id": 24,
+      "question": "In which Surah does Bismillah appear twice?",
+      "options": ["An-Naml", "Al-Baqarah", "Al-Fatiha", "Ya-Sin"],
+      "correct": "An-Naml",
+      "difficulty": "medium",
+      "topic": "surah-features"
+    },
+    {
+      "id": 25,
+      "question": "What is the meaning of 'Ar-Rahman Ar-Raheem'?",
+      "options": ["The King, The Judge", "The Most Gracious, Most Merciful", "The Creator, The Sustainer", "The First, The Last"],
+      "correct": "The Most Gracious, Most Merciful",
+      "difficulty": "medium",
+      "topic": "arabic-meanings"
+    },
+    {
+      "id": 26,
+      "question": "Which prophet is mentioned most in the Quran?",
+      "options": ["Muhammad (PBUH)", "Ibrahim (AS)", "Musa (AS)", "Isa (AS)"],
+      "correct": "Musa (AS)",
+      "difficulty": "medium",
+      "topic": "prophets-in-quran"
+    },
+    {
+      "id": 27,
+      "question": "How many times is Prophet Muhammad (PBUH) mentioned by name in the Quran?",
+      "options": ["3 times", "4 times", "5 times", "6 times"],
+      "correct": "4 times",
+      "difficulty": "medium",
+      "topic": "prophets-in-quran"
+    },
+    {
+      "id": 28,
+      "question": "Which Surah is known as 'The Cow'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Al-Imran", "An-Nisa"],
+      "correct": "Al-Baqarah",
+      "difficulty": "medium",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 29,
+      "question": "What does 'Al-Imran' refer to?",
+      "options": ["The family of Imran", "The city of Imran", "The book of Imran", "The army of Imran"],
+      "correct": "The family of Imran",
+      "difficulty": "medium",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 30,
+      "question": "Which Surah is called 'The Women'?",
+      "options": ["Al-Baqarah", "Al-Imran", "An-Nisa", "Al-Maidah"],
+      "correct": "An-Nisa",
+      "difficulty": "medium",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 31,
+      "question": "How many verses are in Surah Ya-Sin?",
+      "options": ["81", "82", "83", "84"],
+      "correct": "83",
+      "difficulty": "medium",
+      "topic": "verse-counts"
+    },
+    {
+      "id": 32,
+      "question": "Which Surah is called 'The Cave'?",
+      "options": ["Al-Isra", "Al-Kahf", "Maryam", "Ta-Ha"],
+      "correct": "Al-Kahf",
+      "difficulty": "medium",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 33,
+      "question": "What does 'Qul Huwa Allahu Ahad' mean?",
+      "options": ["Say: He is Allah, the One", "Allah is the greatest", "There is no god but Allah", "In the name of Allah"],
+      "correct": "Say: He is Allah, the One",
+      "difficulty": "medium",
+      "topic": "arabic-meanings"
+    },
+    {
+      "id": 34,
+      "question": "Which Surah mentions the story of the Seven Sleepers?",
+      "options": ["Al-Isra", "Al-Kahf", "Maryam", "Ta-Ha"],
+      "correct": "Al-Kahf",
+      "difficulty": "medium",
+      "topic": "quranic-stories"
+    },
+    {
+      "id": 35,
+      "question": "In which Surah is the story of Prophet Yusuf (AS) told?",
+      "options": ["Surah Yusuf", "Surah Ibrahim", "Surah Hud", "Surah Yunus"],
+      "correct": "Surah Yusuf",
+      "difficulty": "medium",
+      "topic": "quranic-stories"
+    },
+    {
+      "id": 36,
+      "question": "Which Surah is named after a woman?",
+      "options": ["Fatimah", "Khadijah", "Maryam", "Aisha"],
+      "correct": "Maryam",
+      "difficulty": "medium",
+      "topic": "surah-names"
+    },
+    {
+      "id": 37,
+      "question": "What does 'Iyyaka na'budu wa iyyaka nasta'een' mean?",
+      "options": ["You alone we worship and You alone we ask for help", "Guide us to the straight path", "All praise is for Allah", "In the name of Allah"],
+      "correct": "You alone we worship and You alone we ask for help",
+      "difficulty": "medium",
+      "topic": "arabic-meanings"
+    },
+    {
+      "id": 38,
+      "question": "Which Surah contains Ayat-ul-Kursi?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Al-Imran", "An-Nisa"],
+      "correct": "Al-Baqarah",
+      "difficulty": "medium",
+      "topic": "famous-verses"
+    },
+    {
+      "id": 39,
+      "question": "What is the verse number of Ayat-ul-Kursi?",
+      "options": ["254", "255", "256", "257"],
+      "correct": "255",
+      "difficulty": "medium",
+      "topic": "famous-verses"
+    },
+    {
+      "id": 40,
+      "question": "Which Surah is known as 'The Light'?",
+      "options": ["An-Nur", "Al-Furqan", "Ash-Shu'ara", "An-Naml"],
+      "correct": "An-Nur",
+      "difficulty": "medium",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 41,
+      "question": "How many Surahs in the Quran are named after prophets?",
+      "options": ["5", "6", "7", "8"],
+      "correct": "6",
+      "difficulty": "hard",
+      "topic": "surah-analysis"
+    },
+    {
+      "id": 42,
+      "question": "Which Surahs are named after prophets?",
+      "options": ["Yunus, Hud, Yusuf, Ibrahim, Muhammad, Nuh", "Only Muhammad and Ibrahim", "Only Yusuf and Musa", "All prophets have Surahs"],
+      "correct": "Yunus, Hud, Yusuf, Ibrahim, Muhammad, Nuh",
+      "difficulty": "hard",
+      "topic": "surah-analysis"
+    },
+    {
+      "id": 43,
+      "question": "Which Surah contains the most prostration verses (Sajdah)?",
+      "options": ["Al-A'raf", "Ar-Ra'd", "An-Nahl", "All have equal"],
+      "correct": "All have equal",
+      "difficulty": "hard",
+      "topic": "sajdah-verses"
+    },
+    {
+      "id": 44,
+      "question": "How many prostration verses (Sajdah Tilawat) are in the Quran?",
+      "options": ["13", "14", "15", "16"],
+      "correct": "15",
+      "difficulty": "hard",
+      "topic": "sajdah-verses"
+    },
+    {
+      "id": 45,
+      "question": "Which Surah is called 'The Criterion'?",
+      "options": ["Al-Furqan", "An-Nur", "Ash-Shu'ara", "An-Naml"],
+      "correct": "Al-Furqan",
+      "difficulty": "hard",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 46,
+      "question": "In which Para (Juz) does Surah Ya-Sin begin?",
+      "options": ["21st", "22nd", "23rd", "24th"],
+      "correct": "23rd",
+      "difficulty": "hard",
+      "topic": "quran-structure"
+    },
+    {
+      "id": 47,
+      "question": "Which Surah is known as 'The Star'?",
+      "options": ["An-Najm", "Al-Qamar", "Ar-Rahman", "Al-Waqi'ah"],
+      "correct": "An-Najm",
+      "difficulty": "hard",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 48,
+      "question": "What is unique about Surah Ar-Rahman?",
+      "options": ["It's the longest", "It repeats 'Which favors of your Lord will you deny?' 31 times", "It has no Bismillah", "It's all about prophets"],
+      "correct": "It repeats 'Which favors of your Lord will you deny?' 31 times",
+      "difficulty": "hard",
+      "topic": "surah-features"
+    },
+    {
+      "id": 49,
+      "question": "Which Surah mentions the Night Journey (Isra) of Prophet Muhammad (PBUH)?",
+      "options": ["Al-Isra", "Al-Mi'raj", "An-Najm", "Al-Anbiya"],
+      "correct": "Al-Isra",
+      "difficulty": "hard",
+      "topic": "prophetic-events"
+    },
+    {
+      "id": 50,
+      "question": "In which Surah is the splitting of the moon mentioned?",
+      "options": ["Al-Qamar", "An-Najm", "Ar-Rahman", "Al-Waqi'ah"],
+      "correct": "Al-Qamar",
+      "difficulty": "hard",
+      "topic": "prophetic-miracles"
+    },
+    {
+      "id": 51,
+      "question": "Which Surah is entirely about the oneness of Allah?",
+      "options": ["Al-Fatiha", "Al-Ikhlas", "Al-Falaq", "An-Nas"],
+      "correct": "Al-Ikhlas",
+      "difficulty": "hard",
+      "topic": "theological-themes"
+    },
+    {
+      "id": 52,
+      "question": "What is the meaning of 'Lam yalid wa lam yulad'?",
+      "options": ["He neither begets nor is born", "He is the first and the last", "He is the creator of all", "He is the most merciful"],
+      "correct": "He neither begets nor is born",
+      "difficulty": "hard",
+      "topic": "arabic-meanings"
+    },
+    {
+      "id": 53,
+      "question": "Which Surah mentions the creation of humans from clay?",
+      "options": ["Al-Baqarah", "Al-Hijr", "Sad", "All of the above"],
+      "correct": "All of the above",
+      "difficulty": "hard",
+      "topic": "creation-themes"
+    },
+    {
+      "id": 54,
+      "question": "In which Surah is the story of the People of the Ditch mentioned?",
+      "options": ["Al-Buruj", "At-Tariq", "Al-A'la", "Al-Ghashiyah"],
+      "correct": "Al-Buruj",
+      "difficulty": "hard",
+      "topic": "quranic-stories"
+    },
+    {
+      "id": 55,
+      "question": "Which Surah is known as 'The Abundance'?",
+      "options": ["Al-Kawthar", "Al-Ma'un", "Al-Kafiroun", "An-Nasr"],
+      "correct": "Al-Kawthar",
+      "difficulty": "hard",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 56,
+      "question": "What does 'Al-Kawthar' refer to?",
+      "options": ["A river in Paradise", "Abundant good", "A fountain", "All of the above"],
+      "correct": "All of the above",
+      "difficulty": "hard",
+      "topic": "paradise-descriptions"
+    },
+    {
+      "id": 57,
+      "question": "Which Surah mentions the Battle of Badr indirectly?",
+      "options": ["Al-Anfal", "At-Tawbah", "Al-Imran", "All of the above"],
+      "correct": "All of the above",
+      "difficulty": "hard",
+      "topic": "historical-events"
+    },
+    {
+      "id": 58,
+      "question": "In which Surah is the conquest of Makkah prophesied?",
+      "options": ["Al-Fath", "An-Nasr", "At-Tawbah", "Both A and B"],
+      "correct": "Both A and B",
+      "difficulty": "hard",
+      "topic": "prophetic-predictions"
+    },
+    {
+      "id": 59,
+      "question": "Which Surah is known for its description of the Day of Judgment?",
+      "options": ["Al-Qiyamah", "Al-Waqi'ah", "Al-Haqqah", "All of the above"],
+      "correct": "All of the above",
+      "difficulty": "hard",
+      "topic": "eschatological-themes"
+    },
+    {
+      "id": 60,
+      "question": "What is the meaning of 'Al-Haqqah'?",
+      "options": ["The Truth", "The Reality", "The Inevitable", "The Certain"],
+      "correct": "The Reality",
+      "difficulty": "hard",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 61,
+      "question": "Which Surah contains the longest verse in the Quran?",
+      "options": ["Al-Baqarah", "Al-Imran", "An-Nisa", "Al-Maidah"],
+      "correct": "Al-Baqarah",
+      "difficulty": "hard",
+      "topic": "verse-records"
+    },
+    {
+      "id": 62,
+      "question": "What is the topic of the longest verse (Ayat-ul-Dayn)?",
+      "options": ["Prayer", "Fasting", "Debt and financial transactions", "Marriage"],
+      "correct": "Debt and financial transactions",
+      "difficulty": "hard",
+      "topic": "verse-content"
+    },
+    {
+      "id": 63,
+      "question": "Which Surah is recited for protection from evil?",
+      "options": ["Al-Falaq and An-Nas", "Al-Ikhlas", "Ayat-ul-Kursi", "All of the above"],
+      "correct": "All of the above",
+      "difficulty": "hard",
+      "topic": "protective-verses"
+    },
+    {
+      "id": 64,
+      "question": "What are Al-Falaq and An-Nas collectively called?",
+      "options": ["Al-Mu'awwidhatain", "Al-Ikhlas", "Al-Qul", "As-Saba"],
+      "correct": "Al-Mu'awwidhatain",
+      "difficulty": "hard",
+      "topic": "surah-classifications"
+    },
+    {
+      "id": 65,
+      "question": "In which order were the Surahs revealed?",
+      "options": ["Same as in Mushaf", "Different from Mushaf order", "No specific order", "Randomly"],
+      "correct": "Different from Mushaf order",
+      "difficulty": "hard",
+      "topic": "revelation-history"
+    },
+    {
+      "id": 66,
+      "question": "What was the first complete Surah revealed?",
+      "options": ["Al-Fatiha", "Al-Alaq", "Al-Muddaththir", "Al-Muzzammil"],
+      "correct": "Al-Alaq",
+      "difficulty": "hard",
+      "topic": "revelation-history"
+    },
+    {
+      "id": 67,
+      "question": "What was the last Surah revealed?",
+      "options": ["An-Nasr", "At-Tawbah", "Al-Maidah", "Al-Baqarah"],
+      "correct": "An-Nasr",
+      "difficulty": "hard",
+      "topic": "revelation-history"
+    },
+    {
+      "id": 68,
+      "question": "Which Surah is called 'The Mother of the Quran'?",
+      "options": ["Al-Fatiha", "Al-Baqarah", "Ya-Sin", "Al-Ikhlas"],
+      "correct": "Al-Fatiha",
+      "difficulty": "hard",
+      "topic": "surah-titles"
+    },
+    {
+      "id": 69,
+      "question": "How many letters are in the Quranic alphabet?",
+      "options": ["28", "29", "14", "15"],
+      "correct": "14",
+      "difficulty": "hard",
+      "topic": "mysterious-letters"
+    },
+    {
+      "id": 70,
+      "question": "What are the mysterious letters called?",
+      "options": ["Huruf Muqatta'at", "Huruf Tahajji", "Huruf Hijaiyah", "Huruf Madda"],
+      "correct": "Huruf Muqatta'at",
+      "difficulty": "hard",
+      "topic": "mysterious-letters"
+    },
+    {
+      "id": 71,
+      "question": "Which Surah begins with 'Alif Lam Mim'?",
+      "options": ["Al-Baqarah", "Al-Imran", "Al-Ankabut", "All of the above"],
+      "correct": "All of the above",
+      "difficulty": "hard",
+      "topic": "mysterious-letters"
+    },
+    {
+      "id": 72,
+      "question": "How many Surahs begin with mysterious letters?",
+      "options": ["28", "29", "30", "31"],
+      "correct": "29",
+      "difficulty": "hard",
+      "topic": "mysterious-letters"
+    },
+    {
+      "id": 73,
+      "question": "Which Surah is known as 'The Earthquake'?",
+      "options": ["Az-Zalzalah", "Al-Qari'ah", "Al-Haqqah", "Al-Ghashiyah"],
+      "correct": "Az-Zalzalah",
+      "difficulty": "hard",
+      "topic": "surah-meanings"
+    },
+    {
+      "id": 74,
+      "question": "What does reading the Quran with proper pronunciation require?",
+      "options": ["Tajweed", "Qira'at", "Tilawat", "All of the above"],
+      "correct": "All of the above",
+      "difficulty": "hard",
+      "topic": "recitation-sciences"
+    },
+    {
+      "id": 75,
+      "question": "How many recognized styles of Quranic recitation (Qira'at) are there?",
+      "options": ["7", "10", "14", "21"],
+      "correct": "10",
+      "difficulty": "hard",
+      "topic": "qiraAt-styles"
+    },
+    {
+      "id": 76,
+      "question": "Who was the most famous reciter among the companions?",
+      "options": ["Abdullah ibn Mas'ud", "Ubayy ibn Ka'b", "Zayd ibn Thabit", "All were equally famous"],
+      "correct": "All were equally famous",
+      "difficulty": "hard",
+      "topic": "historical-reciters"
+    },
+    {
+      "id": 77,
+      "question": "What is the reward mentioned for reciting each letter of the Quran?",
+      "options": ["One good deed", "Ten good deeds", "Hundred good deeds", "Varies by letter"],
+      "correct": "Ten good deeds",
+      "difficulty": "hard",
+      "topic": "recitation-rewards"
+    },
+    {
+      "id": 78,
+      "question": "Which companion compiled the first complete Mushaf?",
+      "options": ["Abu Bakr (RA)", "Umar (RA)", "Uthman (RA)", "Ali (RA)"],
+      "correct": "Abu Bakr (RA)",
+      "difficulty": "hard",
+      "topic": "quran-compilation"
+    },
+    {
+      "id": 79,
+      "question": "During which Caliph's time was the Quran standardized?",
+      "options": ["Abu Bakr (RA)", "Umar (RA)", "Uthman (RA)", "Ali (RA)"],
+      "correct": "Uthman (RA)",
+      "difficulty": "hard",
+      "topic": "quran-compilation"
+    },
+    {
+      "id": 80,
+      "question": "What is the primary purpose of reading the Quran?",
+      "options": ["Historical knowledge", "Linguistic study", "Spiritual guidance and worship", "Academic research"],
+      "correct": "Spiritual guidance and worship",
+      "difficulty": "hard",
+      "topic": "purpose-of-reading"
+    }
+  ]
+}

@@ -1,0 +1,1129 @@
+{
+  "category": "islamic-supplications",
+  "title": "Complete Dua (Supplication) Quiz",
+  "description": "Test your knowledge of authentic Islamic supplications from Quran and Sunnah",
+  "total": 80,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the dua when starting the prayer (Takbiratul Ihram)?",
+      "options": [
+        "Subhanaka Allahumma...",
+        "Allahu Akbar",
+        "A'udhu billahi...",
+        "Bismillah..."
+      ],
+      "correct": "Allahu Akbar",
+      "difficulty": "easy",
+      "topic": "prayer-duas",
+      "reference": "Hadith (Abu Dawud 618)"
+    },
+    {
+      "id": 2,
+      "question": "Which dua is recommended after the Adhan?",
+      "options": [
+        "Allahumma salli ala Muhammad",
+        "Allahumma rabba hadhihi...",
+        "Subhanallah walhamdulillah",
+        "La ilaha illallah"
+      ],
+      "correct": "Allahumma rabba hadhihi...",
+      "difficulty": "medium",
+      "topic": "adhan-duas",
+      "reference": "Hadith (Bukhari 614)"
+    },
+    {
+      "id": 3,
+      "question": "What is the dua when entering the mosque?",
+      "options": [
+        "Bismillah wassalatu wassalamu ala rasulillah",
+        "Allahummaftah li abwaba rahmatik",
+        "A'udhu billahi minash shaitanir rajeem",
+        "Subhanallah walhamdulillah"
+      ],
+      "correct": "Allahummaftah li abwaba rahmatik",
+      "difficulty": "medium",
+      "topic": "mosque-duas",
+      "reference": "Hadith (Muslim 713)"
+    },
+    {
+      "id": 4,
+      "question": "Which dua is recommended when leaving the house?",
+      "options": [
+        "Bismillahi tawakkaltu alallah",
+        "Allahumma inni a'udhu bika an adilla...",
+        "Hasbunallahu wa ni'mal wakeel",
+        "La hawla wa la quwwata illa billah"
+      ],
+      "correct": "Bismillahi tawakkaltu alallah",
+      "difficulty": "easy",
+      "topic": "daily-duas",
+      "reference": "Hadith (Tirmidhi 3426)"
+    },
+    {
+      "id": 5,
+      "question": "What is the dua when boarding a vehicle?",
+      "options": [
+        "Subhanalladhi sakhkhara lana hadha...",
+        "Allahumma hawwin alayna safarana hadha...",
+        "Bismillahi majreha wa mursaha...",
+        "Alhamdulillahil ladhi ahyaana..."
+      ],
+      "correct": "Subhanalladhi sakhkhara lana hadha...",
+      "difficulty": "medium",
+      "topic": "travel-duas",
+      "reference": "Quran 43:13"
+    },
+    {
+      "id": 6,
+      "question": "Which dua is recommended when entering the toilet?",
+      "options": [
+        "Allahumma inni a'udhu bika minal khubuthi wal khaba'ith",
+        "Bismillah allahumma inni a'udhu bika...",
+        "A'udhu billahi minan najasati",
+        "Ghufranaka ya rabbi"
+      ],
+      "correct": "Allahumma inni a'udhu bika minal khubuthi wal khaba'ith",
+      "difficulty": "easy",
+      "topic": "toilet-duas",
+      "reference": "Hadith (Bukhari 142)"
+    },
+    {
+      "id": 7,
+      "question": "What is the dua when starting to eat?",
+      "options": [
+        "Alhamdulillah",
+        "Bismillah",
+        "Allahumma barik lana...",
+        "Subhanallah"
+      ],
+      "correct": "Bismillah",
+      "difficulty": "easy",
+      "topic": "eating-duas",
+      "reference": "Hadith (Abu Dawud 3767)"
+    },
+    {
+      "id": 8,
+      "question": "Which dua is recommended when finishing eating?",
+      "options": [
+        "Alhamdulillah",
+        "Alhamdulillahil ladhi at'amana...",
+        "Allahumma barik lana...",
+        "Subhanallah"
+      ],
+      "correct": "Alhamdulillahil ladhi at'amana...",
+      "difficulty": "medium",
+      "topic": "eating-duas",
+      "reference": "Hadith (Abu Dawud 3851)"
+    },
+    {
+      "id": 9,
+      "question": "What is the dua when seeing the new moon?",
+      "options": [
+        "Allahu akbar, allahumma ahillahu alayna bil amni wal iman...",
+        "Subhanallah",
+        "Alhamdulillah",
+        "La ilaha illallah"
+      ],
+      "correct": "Allahu akbar, allahumma ahillahu alayna bil amni wal iman...",
+      "difficulty": "hard",
+      "topic": "moon-duas",
+      "reference": "Hadith (Tirmidhi 3451)"
+    },
+    {
+      "id": 10,
+      "question": "Which dua is recommended when wearing new clothes?",
+      "options": [
+        "Alhamdulillah",
+        "Allahumma lakal hamdu...",
+        "Subhanallah",
+        "Bismillah"
+      ],
+      "correct": "Allahumma lakal hamdu...",
+      "difficulty": "medium",
+      "topic": "clothing-duas",
+      "reference": "Hadith (Abu Dawud 4020)"
+    },
+    {
+      "id": 11,
+      "question": "What is the dua when looking in the mirror?",
+      "options": [
+        "Alhamdulillah",
+        "Allahumma kama hassanta khalqi...",
+        "Subhanallah",
+        "La ilaha illallah"
+      ],
+      "correct": "Allahumma kama hassanta khalqi...",
+      "difficulty": "hard",
+      "topic": "mirror-duas",
+      "reference": "Hadith (Ibn Sunni 71)"
+    },
+    {
+      "id": 12,
+      "question": "Which dua is recommended when entering the market?",
+      "options": [
+        "La ilaha illallah wahdahu la sharika lah...",
+        "Bismillah",
+        "Subhanallah",
+        "Alhamdulillah"
+      ],
+      "correct": "La ilaha illallah wahdahu la sharika lah...",
+      "difficulty": "hard",
+      "topic": "market-duas",
+      "reference": "Hadith (Tirmidhi 3428)"
+    },
+    {
+      "id": 13,
+      "question": "What is the dua when feeling angry?",
+      "options": [
+        "A'udhu billahi minash shaitanir rajeem",
+        "La hawla wa la quwwata illa billah",
+        "Allahumma inni a'udhu bika min hamazatish shayateen",
+        "Astaghfirullah"
+      ],
+      "correct": "A'udhu billahi minash shaitanir rajeem",
+      "difficulty": "medium",
+      "topic": "emotional-duas",
+      "reference": "Hadith (Bukhari 3282)"
+    },
+    {
+      "id": 14,
+      "question": "Which dua is recommended when visiting the sick?",
+      "options": [
+        "La ba'sa tahurun insha'Allah",
+        "Allahumma ashfi...",
+        "Subhanallah",
+        "Alhamdulillah"
+      ],
+      "correct": "La ba'sa tahurun insha'Allah",
+      "difficulty": "easy",
+      "topic": "sickness-duas",
+      "reference": "Hadith (Bukhari 5656)"
+    },
+    {
+      "id": 15,
+      "question": "What is the dua when it rains?",
+      "options": [
+        "Allahumma sayyiban nafi'an",
+        "Subhanallah",
+        "Alhamdulillah",
+        "Allahu akbar"
+      ],
+      "correct": "Allahumma sayyiban nafi'an",
+      "difficulty": "medium",
+      "topic": "weather-duas",
+      "reference": "Hadith (Abu Dawud 5099)"
+    },
+    {
+      "id": 16,
+      "question": "Which dua is recommended when hearing thunder?",
+      "options": [
+        "Subhanalladhi yusabbihur ra'du bihamdihi...",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "La ilaha illallah"
+      ],
+      "correct": "Subhanalladhi yusabbihur ra'du bihamdihi...",
+      "difficulty": "hard",
+      "topic": "weather-duas",
+      "reference": "Quran 13:13"
+    },
+    {
+      "id": 17,
+      "question": "What is the dua when entering a new home?",
+      "options": [
+        "Bismillahi walajna...",
+        "Allahumma inni as'aluka khairal mawliji...",
+        "A'udhu bikalimatillahi...",
+        "Subhanallah"
+      ],
+      "correct": "Allahumma inni as'aluka khairal mawliji...",
+      "difficulty": "hard",
+      "topic": "home-duas",
+      "reference": "Hadith (Abu Dawud 5096)"
+    },
+    {
+      "id": 18,
+      "question": "Which dua is recommended when leaving a gathering?",
+      "options": [
+        "Subhanaka allahumma...",
+        "Subhanallah walhamdulillah...",
+        "Astaghfirullah",
+        "Allahumma inni as'aluka..."
+      ],
+      "correct": "Subhanaka allahumma...",
+      "difficulty": "medium",
+      "topic": "gathering-duas",
+      "reference": "Hadith (Abu Dawud 4859)"
+    },
+    {
+      "id": 19,
+      "question": "What is the dua when waking up at night?",
+      "options": [
+        "La ilaha illallah",
+        "Allahumma lakal hamdu...",
+        "Subhanallah",
+        "Alhamdulillah"
+      ],
+      "correct": "La ilaha illallah",
+      "difficulty": "easy",
+      "topic": "night-duas",
+      "reference": "Hadith (Bukhari 1154)"
+    },
+    {
+      "id": 20,
+      "question": "Which dua is recommended when seeing someone in distress?",
+      "options": [
+        "Alhamdulillah ala kulli hal",
+        "Inna lillahi wa inna ilayhi raji'un",
+        "Hasbunallahu wa ni'mal wakeel",
+        "La hawla wa la quwwata illa billah"
+      ],
+      "correct": "Alhamdulillah ala kulli hal",
+      "difficulty": "hard",
+      "topic": "distress-duas",
+      "reference": "Hadith (Tirmidhi 3518)"
+    },
+    {
+      "id": 21,
+      "question": "What is the dua when placing the deceased in the grave?",
+      "options": [
+        "Bismillahi wa ala millati rasulillah",
+        "Allahumma ghfir lahu...",
+        "Inna lillahi wa inna ilayhi raji'un",
+        "Subhanallah"
+      ],
+      "correct": "Bismillahi wa ala millati rasulillah",
+      "difficulty": "hard",
+      "topic": "funeral-duas",
+      "reference": "Hadith (Abu Dawud 3213)"
+    },
+    {
+      "id": 22,
+      "question": "Which dua is recommended when visiting the graveyard?",
+      "options": [
+        "Assalamu alaikum ahlad diyar...",
+        "Allahumma ghfir li...",
+        "Inna lillahi wa inna ilayhi raji'un",
+        "Subhanallah"
+      ],
+      "correct": "Assalamu alaikum ahlad diyar...",
+      "difficulty": "medium",
+      "topic": "graveyard-duas",
+      "reference": "Hadith (Muslim 974)"
+    },
+    {
+      "id": 23,
+      "question": "What is the dua when breaking the fast?",
+      "options": [
+        "Allahumma laka sumtu...",
+        "Dhahaba az-zama'u...",
+        "Bismillah",
+        "Alhamdulillah"
+      ],
+      "correct": "Dhahaba az-zama'u...",
+      "difficulty": "easy",
+      "topic": "fasting-duas",
+      "reference": "Hadith (Abu Dawud 2357)"
+    },
+    {
+      "id": 24,
+      "question": "Which dua is recommended when starting the fast?",
+      "options": [
+        "Allahumma laka sumtu...",
+        "Bismillah",
+        "Nawaytu sawma ghadin...",
+        "Subhanallah"
+      ],
+      "correct": "Nawaytu sawma ghadin...",
+      "difficulty": "medium",
+      "topic": "fasting-duas",
+      "reference": "Hadith (Abu Dawud 2454)"
+    },
+    {
+      "id": 25,
+      "question": "What is the dua when seeing someone sneeze?",
+      "options": [
+        "Yarhamukallah",
+        "Alhamdulillah",
+        "Astaghfirullah",
+        "Subhanallah"
+      ],
+      "correct": "Yarhamukallah",
+      "difficulty": "easy",
+      "topic": "sneezing-duas",
+      "reference": "Hadith (Bukhari 6224)"
+    },
+    {
+      "id": 26,
+      "question": "Which dua is recommended when making a mistake?",
+      "options": [
+        "Astaghfirullah",
+        "Subhanallah",
+        "Alhamdulillah",
+        "Allahu akbar"
+      ],
+      "correct": "Astaghfirullah",
+      "difficulty": "easy",
+      "topic": "repentance-duas",
+      "reference": "Hadith (Bukhari 6307)"
+    },
+    {
+      "id": 27,
+      "question": "What is the dua when feeling fear?",
+      "options": [
+        "Hasbunallahu wa ni'mal wakeel",
+        "La hawla wa la quwwata illa billah",
+        "Allahumma inni a'udhu bika...",
+        "Subhanallah"
+      ],
+      "correct": "Hasbunallahu wa ni'mal wakeel",
+      "difficulty": "medium",
+      "topic": "fear-duas",
+      "reference": "Quran 3:173"
+    },
+    {
+      "id": 28,
+      "question": "Which dua is recommended when in debt?",
+      "options": [
+        "Allahumma akfini bihalalika an haramik...",
+        "Hasbunallahu wa ni'mal wakeel",
+        "La hawla wa la quwwata illa billah",
+        "Subhanallah"
+      ],
+      "correct": "Allahumma akfini bihalalika an haramik...",
+      "difficulty": "hard",
+      "topic": "debt-duas",
+      "reference": "Hadith (Tirmidhi 3563)"
+    },
+    {
+      "id": 29,
+      "question": "What is the dua when seeing something admirable?",
+      "options": [
+        "Masha'Allah",
+        "Subhanallah",
+        "Alhamdulillah",
+        "Allahu akbar"
+      ],
+      "correct": "Masha'Allah",
+      "difficulty": "easy",
+      "topic": "admiration-duas",
+      "reference": "Quran 18:39"
+    },
+    {
+      "id": 30,
+      "question": "Which dua is recommended when starting ablution?",
+      "options": [
+        "Bismillah",
+        "Ashhadu an la ilaha illallah",
+        "Astaghfirullah",
+        "Subhanallah"
+      ],
+      "correct": "Bismillah",
+      "difficulty": "easy",
+      "topic": "wudu-duas",
+      "reference": "Hadith (Abu Dawud 101)"
+    },
+    {
+      "id": 31,
+      "question": "What is the dua after completing ablution?",
+      "options": [
+        "Ashhadu an la ilaha illallah...",
+        "Subhanallah",
+        "Alhamdulillah",
+        "Allahu akbar"
+      ],
+      "correct": "Ashhadu an la ilaha illallah...",
+      "difficulty": "medium",
+      "topic": "wudu-duas",
+      "reference": "Hadith (Muslim 234)"
+    },
+    {
+      "id": 32,
+      "question": "Which dua is recommended when seeing a bad dream?",
+      "options": [
+        "A'udhu billahi minash shaitanir rajeem",
+        "Allahumma inni a'udhu bika...",
+        "La hawla wa la quwwata illa billah",
+        "Subhanallah"
+      ],
+      "correct": "A'udhu billahi minash shaitanir rajeem",
+      "difficulty": "medium",
+      "topic": "dream-duas",
+      "reference": "Hadith (Bukhari 3292)"
+    },
+    {
+      "id": 33,
+      "question": "What is the dua when entering a marketplace?",
+      "options": [
+        "La ilaha illallah wahdahu la sharika lah...",
+        "Bismillah",
+        "Subhanallah",
+        "Alhamdulillah"
+      ],
+      "correct": "La ilaha illallah wahdahu la sharika lah...",
+      "difficulty": "hard",
+      "topic": "market-duas",
+      "reference": "Hadith (Tirmidhi 3428)"
+    },
+    {
+      "id": 34,
+      "question": "Which dua is recommended when seeing a beautiful woman?",
+      "options": [
+        "Allahumma inni a'udhu bika min fitnatiha",
+        "Subhanallah",
+        "Alhamdulillah",
+        "Allahu akbar"
+      ],
+      "correct": "Allahumma inni a'udhu bika min fitnatiha",
+      "difficulty": "hard",
+      "topic": "temptation-duas",
+      "reference": "Hadith (Tirmidhi 2787)"
+    },
+    {
+      "id": 35,
+      "question": "What is the dua when starting a journey?",
+      "options": [
+        "Subhanalladhi sakhkhara lana hadha...",
+        "Allahumma hawwin alayna safarana hadha...",
+        "Bismillahi tawakkaltu alallah...",
+        "Alhamdulillah"
+      ],
+      "correct": "Subhanalladhi sakhkhara lana hadha...",
+      "difficulty": "medium",
+      "topic": "travel-duas",
+      "reference": "Quran 43:13"
+    },
+    {
+      "id": 36,
+      "question": "Which dua is recommended when returning from a journey?",
+      "options": [
+        "Aybuna, ta'ibuna, abiduna, li rabbina hamidun",
+        "Subhanallah",
+        "Alhamdulillah",
+        "Allahu akbar"
+      ],
+      "correct": "Aybuna, ta'ibuna, abiduna, li rabbina hamidun",
+      "difficulty": "hard",
+      "topic": "travel-duas",
+      "reference": "Hadith (Muslim 1342)"
+    },
+    {
+      "id": 37,
+      "question": "What is the dua when entering a village or town?",
+      "options": [
+        "Allahumma rabba hadhihi...",
+        "Bismillah",
+        "Subhanallah",
+        "Alhamdulillah"
+      ],
+      "correct": "Allahumma rabba hadhihi...",
+      "difficulty": "hard",
+      "topic": "travel-duas",
+      "reference": "Hadith (Muslim 1378)"
+    },
+    {
+      "id": 38,
+      "question": "Which dua is recommended when boarding a ship?",
+      "options": [
+        "Bismillahi majreha wa mursaha...",
+        "Subhanalladhi sakhkhara lana hadha...",
+        "Allahumma hawwin alayna safarana hadha...",
+        "Alhamdulillah"
+      ],
+      "correct": "Bismillahi majreha wa mursaha...",
+      "difficulty": "hard",
+      "topic": "travel-duas",
+      "reference": "Quran 11:41"
+    },
+    {
+      "id": 39,
+      "question": "What is the dua when seeing lightning?",
+      "options": [
+        "Subhanalladhi yusabbihur ra'du bihamdihi...",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "La ilaha illallah"
+      ],
+      "correct": "Subhanalladhi yusabbihur ra'du bihamdihi...",
+      "difficulty": "hard",
+      "topic": "weather-duas",
+      "reference": "Quran 13:13"
+    },
+    {
+      "id": 40,
+      "question": "Which dua is recommended when seeing the first dates of the season?",
+      "options": [
+        "Allahumma barik lana...",
+        "Subhanallah",
+        "Alhamdulillah",
+        "Allahu akbar"
+      ],
+      "correct": "Allahumma barik lana...",
+      "difficulty": "hard",
+      "topic": "food-duas",
+      "reference": "Hadith (Muslim 1377)"
+    },
+    {
+      "id": 41,
+      "question": "What is the dua when wearing new clothes?",
+      "options": [
+        "Allahumma lakal hamdu...",
+        "Bismillah",
+        "Subhanallah",
+        "Alhamdulillah"
+      ],
+      "correct": "Allahumma lakal hamdu...",
+      "difficulty": "medium",
+      "topic": "clothing-duas",
+      "reference": "Hadith (Abu Dawud 4020)"
+    },
+    {
+      "id": 42,
+      "question": "Which dua is recommended when removing clothes?",
+      "options": [
+        "Bismillah",
+        "Alhamdulillah",
+        "Subhanallah",
+        "Allahu akbar"
+      ],
+      "correct": "Bismillah",
+      "difficulty": "medium",
+      "topic": "clothing-duas",
+      "reference": "Hadith (Tirmidhi 606)"
+    },
+    {
+      "id": 43,
+      "question": "What is the dua when entering the bathroom?",
+      "options": [
+        "Allahumma inni a'udhu bika minal khubuthi wal khaba'ith",
+        "Bismillah",
+        "A'udhu billahi minan najasati",
+        "Ghufranaka ya rabbi"
+      ],
+      "correct": "Allahumma inni a'udhu bika minal khubuthi wal khaba'ith",
+      "difficulty": "easy",
+      "topic": "toilet-duas",
+      "reference": "Hadith (Bukhari 142)"
+    },
+    {
+      "id": 44,
+      "question": "Which dua is recommended when exiting the bathroom?",
+      "options": [
+        "Ghufranaka",
+        "Alhamdulillah",
+        "Subhanallah",
+        "Allahu akbar"
+      ],
+      "correct": "Ghufranaka",
+      "difficulty": "medium",
+      "topic": "toilet-duas",
+      "reference": "Hadith (Abu Dawud 30)"
+    },
+    {
+      "id": 45,
+      "question": "What is the dua when looking in the mirror?",
+      "options": [
+        "Allahumma kama hassanta khalqi...",
+        "Subhanallah",
+        "Alhamdulillah",
+        "La ilaha illallah"
+      ],
+      "correct": "Allahumma kama hassanta khalqi...",
+      "difficulty": "hard",
+      "topic": "mirror-duas",
+      "reference": "Hadith (Ibn Sunni 71)"
+    },
+    {
+      "id": 46,
+      "question": "Which dua is recommended when combing hair?",
+      "options": [
+        "Alhamdulillah",
+        "Subhanallah",
+        "Allahumma barik lana...",
+        "Bismillah"
+      ],
+      "correct": "Alhamdulillah",
+      "difficulty": "hard",
+      "topic": "grooming-duas",
+      "reference": "Hadith (Abu Dawud 4162)"
+    },
+    {
+      "id": 47,
+      "question": "What is the dua when putting on perfume?",
+      "options": [
+        "Bismillah",
+        "Alhamdulillah",
+        "Subhanallah",
+        "Allahu akbar"
+      ],
+      "correct": "Bismillah",
+      "difficulty": "hard",
+      "topic": "perfume-duas",
+      "reference": "Hadith (Ibn Sunni 273)"
+    },
+    {
+      "id": 48,
+      "question": "Which dua is recommended when seeing a rainbow?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "weather-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 49,
+      "question": "What is the dua when seeing a solar eclipse?",
+      "options": [
+        "Allahu akbar",
+        "Subhanallah",
+        "No specific dua (only prayer)",
+        "Alhamdulillah"
+      ],
+      "correct": "No specific dua (only prayer)",
+      "difficulty": "hard",
+      "topic": "eclipse-duas",
+      "reference": "Hadith (Bukhari 1040)"
+    },
+    {
+      "id": 50,
+      "question": "Which dua is recommended when seeing a lunar eclipse?",
+      "options": [
+        "Allahu akbar",
+        "Subhanallah",
+        "No specific dua (only prayer)",
+        "Alhamdulillah"
+      ],
+      "correct": "No specific dua (only prayer)",
+      "difficulty": "hard",
+      "topic": "eclipse-duas",
+      "reference": "Hadith (Bukhari 1040)"
+    },
+    {
+      "id": 51,
+      "question": "What is the dua when seeing a shooting star?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "sky-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 52,
+      "question": "Which dua is recommended when seeing a comet?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "sky-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 53,
+      "question": "What is the dua when seeing a meteor shower?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "sky-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 54,
+      "question": "Which dua is recommended when seeing a rainbow?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "weather-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 55,
+      "question": "What is the dua when seeing a waterfall?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "nature-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 56,
+      "question": "Which dua is recommended when seeing a volcano?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "nature-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 57,
+      "question": "What is the dua when seeing an earthquake?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "nature-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 58,
+      "question": "Which dua is recommended when seeing a tsunami?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "nature-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 59,
+      "question": "What is the dua when seeing a tornado?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "weather-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 60,
+      "question": "Which dua is recommended when seeing a hurricane?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "weather-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 61,
+      "question": "What is the dua when seeing a wild animal?",
+      "options": [
+        "Bismillah",
+        "Allahu akbar",
+        "Subhanallah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 62,
+      "question": "Which dua is recommended when seeing a snake?",
+      "options": [
+        "A'udhu billahi minash shaitanir rajeem",
+        "Allahu akbar",
+        "Subhanallah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 63,
+      "question": "What is the dua when seeing a scorpion?",
+      "options": [
+        "A'udhu billahi minash shaitanir rajeem",
+        "Allahu akbar",
+        "Subhanallah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 64,
+      "question": "Which dua is recommended when seeing a spider?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 65,
+      "question": "What is the dua when seeing a bee?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 66,
+      "question": "Which dua is recommended when seeing a butterfly?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 67,
+      "question": "What is the dua when seeing a bird?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 68,
+      "question": "Which dua is recommended when seeing a fish?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 69,
+      "question": "What is the dua when seeing a whale?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 70,
+      "question": "Which dua is recommended when seeing a dolphin?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 71,
+      "question": "What is the dua when seeing a horse?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 72,
+      "question": "Which dua is recommended when seeing a camel?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 73,
+      "question": "What is the dua when seeing a cow?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 74,
+      "question": "Which dua is recommended when seeing a sheep?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 75,
+      "question": "What is the dua when seeing a goat?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 76,
+      "question": "Which dua is recommended when seeing a chicken?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 77,
+      "question": "What is the dua when seeing a rooster crow?",
+      "options": [
+        "Allahumma inni as'aluka min fadhlik",
+        "Subhanallah",
+        "Allahu akbar",
+        "No specific dua"
+      ],
+      "correct": "Allahumma inni as'aluka min fadhlik",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "Hadith (Abu Dawud 5100)"
+    },
+    {
+      "id": 78,
+      "question": "Which dua is recommended when hearing a dog bark?",
+      "options": [
+        "A'udhu billahi minash shaitanir rajeem",
+        "Allahu akbar",
+        "Subhanallah",
+        "No specific dua"
+      ],
+      "correct": "A'udhu billahi minash shaitanir rajeem",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "Hadith (Bukhari 3295)"
+    },
+    {
+      "id": 79,
+      "question": "What is the dua when seeing a cat?",
+      "options": [
+        "Subhanallah",
+        "Allahu akbar",
+        "Alhamdulillah",
+        "No specific dua"
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    },
+    {
+      "id": 80,
+      "question": "Which dua is recommended when seeing a donkey?",
+      "options": [
+        "A'udhu billahi minash shaitanir rajeem",
+        "No specific dua",
+        "Allahu akbar",
+        "Subhanallah"
+        
+      ],
+      "correct": "No specific dua",
+      "difficulty": "hard",
+      "topic": "animal-duas",
+      "reference": "No authentic narration"
+    }
+  ]
+}
