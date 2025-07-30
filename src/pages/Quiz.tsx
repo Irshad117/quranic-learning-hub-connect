@@ -18,7 +18,7 @@ const Quiz = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [showResults, setShowResults] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(180); // 3 minutes
+  const [timeLeft, setTimeLeft] = useState(420); // 7 minutes
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -121,7 +121,7 @@ const Quiz = () => {
     setAnswers({});
     setSelectedAnswer("");
     setShowResults(false);
-    setTimeLeft(180);
+    setTimeLeft(420);
     localStorage.removeItem(`quiz-${selectedQuiz}`);
   };
 
@@ -144,7 +144,7 @@ const Quiz = () => {
         const { answers, currentQuestion, timeLeft } = JSON.parse(saved);
         setAnswers(answers);
         setCurrentQuestion(currentQuestion);
-        setTimeLeft(timeLeft);
+        setTimeLeft(timeLeft >= 420 ? timeLeft : 420);
       }
     }
   }, [selectedQuiz]);
@@ -295,7 +295,7 @@ const Quiz = () => {
               <RadioGroup
                 value={selectedAnswer}
                 onValueChange={handleAnswerSelect}
-                className="space-y-4"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4"
               >
                 {currentQ.options.map((option, i) => (
                   <div
@@ -326,7 +326,7 @@ const Quiz = () => {
                 <Button
                   onClick={handleNextQuestion}
                   disabled={!selectedAnswer}
-                  className="bg-blue-600 hover:bg-blue-700"
+                  className="bg-blue-600 hover:bg-blue-700 px-6 py-3 text-lg"
                 >
                   {currentQuestion === quiz.questions.length - 1
                     ? "Submit"
@@ -364,8 +364,8 @@ const Quiz = () => {
               Choose Your Quiz
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Select a quiz topic below. Each quiz contains 40 multiple-choice
-              questions and has a 03-minute time limit.
+              Select a quiz topic below. Each quiz contains 80 multiple-choice
+              questions and has a 07-minute time limit.
             </p>
           </div>
 
@@ -392,8 +392,8 @@ const Quiz = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <span>40 Questions</span>
-                    <span>03 Minutes</span>
+                    <span>80 Questions</span>
+                    <span>07 Minutes</span>
                   </div>
                   <Button
                     onClick={() => setSelectedQuiz(key)}
@@ -424,7 +424,7 @@ const Quiz = () => {
               <div>
                 <h4 className="font-semibold text-gray-900">Time Limit</h4>
                 <p className="text-gray-600">
-                  You have 03 minutes to complete each quiz
+                  You have 07 minutes to complete each quiz
                 </p>
               </div>
             </div>
@@ -435,7 +435,7 @@ const Quiz = () => {
               <div>
                 <h4 className="font-semibold text-gray-900">Questions</h4>
                 <p className="text-gray-600">
-                  Each quiz contains 40 multiple-choice questions
+                  Each quiz contains 80 multiple-choice questions
                 </p>
               </div>
             </div>
