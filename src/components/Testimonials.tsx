@@ -6,23 +6,23 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Ahmad Ali',
-      location: 'Karachi, Pakistan',
+      location: 'New York, USA',
       course: 'Hifz Program',
       rating: 5,
-      comment: 'The teachers at Al-Sirat al-Mustaqim are incredibly knowledgeable and patient. My son has made tremendous progress in his Hifz journey.',
+      comment: 'The teachers at Sirat al-Mustaqim are incredibly knowledgeable and patient. My son has made tremendous progress in his Hifz journey.',
       image: '👨‍🎓'
     },
     {
       name: 'Fatima Khan',
       location: 'Lahore, Pakistan',
-      course: 'Tajweed Classes',
+      course: 'Australia',
       rating: 5,
       comment: 'Excellent teaching methodology! The online classes are well-structured and the teachers provide individual attention to each student.',
       image: '👩‍🎓'
     },
     {
       name: 'Muhammad Hassan',
-      location: 'Islamabad, Pakistan',
+      location: 'Mumbai, India',
       course: 'Quran Recitation',
       rating: 5,
       comment: 'I highly recommend this academy. The flexible timings and quality of education is outstanding. My Arabic pronunciation has improved significantly.',
@@ -30,7 +30,7 @@ const Testimonials = () => {
     },
     {
       name: 'Aisha Malik',
-      location: 'Faisalabad, Pakistan',
+      location: 'Ontario, Canada',
       course: 'Islamic Studies',
       rating: 5,
       comment: 'The comprehensive curriculum and dedicated teachers make learning enjoyable. My children look forward to their daily classes.',
@@ -38,7 +38,7 @@ const Testimonials = () => {
     },
     {
       name: 'Omar Sheikh',
-      location: 'Rawalpindi, Pakistan',
+      location: 'Islamabad, Pakistan', 
       course: 'Arabic Language',
       rating: 5,
       comment: 'Professional service with excellent results. The academy has helped me understand the Quran better through proper Arabic learning.',

@@ -12,7 +12,7 @@ const TopNavbar = () => {
     { name: 'Facebook', icon: <img src="/assets/socialMediaIcons/fb.svg" alt="FB" />, url: 'https://www.facebook.com/profile.php?id=61577423111420' },
     { name: 'Instagram', icon: <img src="/assets/socialMediaIcons/insta.svg" alt="Insta" />, url: 'https://www.instagram.com/alsiratalmustaqim0/' },
     { name: 'LinkedIn', icon: <img src="/assets/socialMediaIcons/linkedin.svg" alt="" />, url: 'https://www.linkedin.com/in/sirat-al-mustaqim-46107a375/' },
-    { name: 'YouTube', icon: <img src="/assets/socialMediaIcons/youtue.svg" alt="" />, url: 'https://www.youtube.com/@Al-Siratal-Mustaqim-o6k9y' },
+    { name: 'YouTube', icon: <img src="/assets/socialMediaIcons/youtue.svg" alt="" />, url: 'https://www.youtube.com/@SiratalMustaqimOnlineAcadmey' },
     { name: 'X (Twitter)', icon: <img src="/assets/socialMediaIcons/x.svg" alt="" />, url: 'https://x.com/sirat_almustqim' },
     { name: 'TikTok', icon: <img src="/assets/socialMediaIcons/tiktok.svg" alt="" />, url: 'https://www.tiktok.com/@alsiratalmustaqim0' }
   ];

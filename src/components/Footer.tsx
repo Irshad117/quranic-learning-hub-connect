@@ -205,7 +205,7 @@ const Footer = () => {
                   <a href='https://www.linkedin.com/in/sirat-al-mustaqim-46107a375/' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
                     <span className="text-lg"><img src="/assets/socialMediaIcons/linkedin.svg" alt="" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12  w-8 h-8 mt-1" /></span>
                   </a>
-                  <a href='https://www.youtube.com/@Al-Siratal-Mustaqim-o6k9y' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
+                  <a href='https://www.youtube.com/@SiratalMustaqimOnlineAcadmey' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">
                     <span className="text-lg"><img src="/assets/socialMediaIcons/youtue.svg" alt="" className="text-lg hover:text-blue-200 transition-all duration-300 transform hover:scale-125 hover:rotate-12  w-9 h-9" /></span>
                   </a>
                   <a href='https://x.com/sirat_almustqim' target="_blank" className="text-blue-200 hover:text-white transition-colors duration-300">

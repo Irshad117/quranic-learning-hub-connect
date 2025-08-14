@@ -8,25 +8,25 @@ const Payments = () => {
       name: "Visa",
       image: "💳",
       description: "Secure payment with your Visa card",
-      fee: "2.9% + $0.30"
+      
     },
     {
       name: "Mastercard", 
       image: "💳",
       description: "Pay securely with Mastercard",
-      fee: "2.9% + $0.30"
+      
     },
     {
       name: "PayPal",
       image: "🅿️",
       description: "Quick and secure PayPal payments",
-      fee: "3.5% + $0.30"
+      
     },
     {
       name: "Western Union",
       image: "💰",
       description: "International money transfer service",
-      fee: "Contact for rates"
+      
     }
   ];
 
@@ -89,9 +89,9 @@ const Payments = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{method.name}</h3>
                 <p className="text-gray-600 mb-4">{method.description}</p>
-                <div className="text-sm text-green-600 font-semibold">
+                {/* <div className="text-sm text-green-600 font-semibold">
                   Processing Fee: {method.fee}
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
