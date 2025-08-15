@@ -18,7 +18,8 @@ const Quiz = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [showResults, setShowResults] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(420); // 7 minutes
+  const [timeLeft, setTimeLeft] = useState(240); // 4 minutes for 40 questions
+  const [selectedDifficulty, setSelectedDifficulty] = useState<'easy' | 'medium' | 'hard' | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -97,7 +98,11 @@ const Quiz = () => {
         })
       );
 
-      if (currentQuestion < quizzes[selectedQuiz].questions.length - 1) {
+      const filteredQuestions = quizzes[selectedQuiz].questions
+        .filter(q => q.difficulty === selectedDifficulty)
+        .slice(0, 40);
+        
+      if (currentQuestion < filteredQuestions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
         setSelectedAnswer("");
       } else {
@@ -107,10 +112,14 @@ const Quiz = () => {
   };
 
   const calculateScore = () => {
-    if (!selectedQuiz || !quizzes) return 0;
+    if (!selectedQuiz || !quizzes || !selectedDifficulty) return 0;
+
+    const filteredQuestions = quizzes[selectedQuiz].questions
+      .filter(q => q.difficulty === selectedDifficulty)
+      .slice(0, 40);
 
     return Object.entries(answers).reduce((score, [index, answer]) => {
-      return answer === quizzes[selectedQuiz].questions[parseInt(index)].correct
+      return answer === filteredQuestions[parseInt(index)].correct
         ? score + 1
         : score;
     }, 0);
@@ -121,7 +130,8 @@ const Quiz = () => {
     setAnswers({});
     setSelectedAnswer("");
     setShowResults(false);
-    setTimeLeft(420);
+    setTimeLeft(240);
+    setSelectedDifficulty(null);
     localStorage.removeItem(`quiz-${selectedQuiz}`);
   };
 
@@ -144,7 +154,7 @@ const Quiz = () => {
         const { answers, currentQuestion, timeLeft } = JSON.parse(saved);
         setAnswers(answers);
         setCurrentQuestion(currentQuestion);
-        setTimeLeft(timeLeft >= 420 ? timeLeft : 420);
+        setTimeLeft(timeLeft >= 240 ? timeLeft : 240);
       }
     }
   }, [selectedQuiz]);
@@ -176,9 +186,9 @@ const Quiz = () => {
     );
   }
 
-  if (showResults && selectedQuiz && quizzes) {
+  if (showResults && selectedQuiz && quizzes && selectedDifficulty) {
     const score = calculateScore();
-    const totalQuestions = quizzes[selectedQuiz].questions.length;
+    const totalQuestions = 40; // Fixed to 40 questions
     const percentage = Math.round((score / totalQuestions) * 100);
 
     return (
@@ -256,10 +266,13 @@ const Quiz = () => {
     );
   }
 
-  if (selectedQuiz && quizzes && quizzes[selectedQuiz]) {
+  if (selectedQuiz && quizzes && quizzes[selectedQuiz] && selectedDifficulty) {
     const quiz = quizzes[selectedQuiz];
-    const currentQ = quiz.questions[currentQuestion];
-    const progress = ((currentQuestion + 1) / quiz.questions.length) * 100;
+    const filteredQuestions = quiz.questions
+      .filter(q => q.difficulty === selectedDifficulty)
+      .slice(0, 40); // Take only 40 questions
+    const currentQ = filteredQuestions[currentQuestion];
+    const progress = ((currentQuestion + 1) / filteredQuestions.length) * 100;
 
     return (
       <div className="min-h-screen bg-gray-50 py-8">
@@ -271,7 +284,7 @@ const Quiz = () => {
               <span className="font-mono text-lg">{formatTime(timeLeft)}</span>
             </div>
             <div className="text-sm text-gray-600">
-              Question {currentQuestion + 1} of {quiz.questions.length}
+              Question {currentQuestion + 1} of {filteredQuestions.length}
             </div>
           </div>
 
@@ -328,7 +341,7 @@ const Quiz = () => {
                   disabled={!selectedAnswer}
                   className="bg-blue-600 hover:bg-blue-700 px-6 py-3 text-lg"
                 >
-                  {currentQuestion === quiz.questions.length - 1
+                  {currentQuestion === filteredQuestions.length - 1
                     ? "Submit"
                     : "Next"}
                 </Button>
@@ -340,16 +353,94 @@ const Quiz = () => {
     );
   }
 
+  // Difficulty selection screen
+  if (selectedQuiz && !selectedDifficulty && quizzes) {
+    const quiz = quizzes[selectedQuiz];
+    const difficultyInfo = {
+      easy: { 
+        label: 'Easy', 
+        description: 'Basic questions for beginners', 
+        questionCount: quiz.questions.filter(q => q.difficulty === 'easy').length 
+      },
+      medium: { 
+        label: 'Medium', 
+        description: 'Intermediate level questions', 
+        questionCount: quiz.questions.filter(q => q.difficulty === 'medium').length 
+      },
+      hard: { 
+        label: 'Hard', 
+        description: 'Advanced knowledge required', 
+        questionCount: quiz.questions.filter(q => q.difficulty === 'hard').length 
+      }
+    };
+
+    return (
+      <div className="min-h-screen bg-background py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              Choose Difficulty Level
+            </h1>
+            <p className="text-lg text-muted-foreground mb-2">
+              {quiz.title}
+            </p>
+            <Button 
+              onClick={() => setSelectedQuiz(null)} 
+              variant="outline" 
+              size="sm"
+            >
+              ← Back to Quiz Selection
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {Object.entries(difficultyInfo).map(([level, info], index) => (
+              <Card
+                key={level}
+                className="quiz-card quiz-card-enter quiz-card-hover group cursor-pointer border-2"
+                style={{ animationDelay: `${index * 150}ms` }}
+                onClick={() => setSelectedDifficulty(level as 'easy' | 'medium' | 'hard')}
+              >
+                <CardHeader className="text-center">
+                  <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 difficulty-${level}`}>
+                    <BookOpen className="h-8 w-8" />
+                  </div>
+                  <CardTitle className="text-xl font-bold">
+                    {info.label}
+                  </CardTitle>
+                  <CardDescription>
+                    {info.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <div className="text-2xl font-bold text-primary mb-2">
+                    40
+                  </div>
+                  <div className="text-sm text-muted-foreground mb-4">
+                    Questions Available: {info.questionCount}
+                  </div>
+                  <Button className="w-full">
+                    Start {info.label} Quiz
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-gray-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Islamic <span className="text-blue-600">Knowledge Quiz</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Islamic <span className="text-primary">Knowledge Quiz</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Test your knowledge with our comprehensive Islamic studies quizzes
             </p>
           </div>
@@ -363,41 +454,42 @@ const Quiz = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Choose Your Quiz
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Select a quiz topic below. Each quiz contains 80 multiple-choice
-              questions and has a 07-minute time limit.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Select a quiz topic below. Each quiz contains 40 multiple-choice
+              questions with three difficulty levels and has a 04-minute time limit.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {Object.entries(quizzes).map(([key, quiz]) => (
+            {Object.entries(quizzes).map(([key, quiz], index) => (
               <Card
                 key={key}
-                className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-blue-200"
+                className="quiz-card quiz-card-enter quiz-card-hover group cursor-pointer border-2"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-blue-200 transition-colors">
-                      <BookOpen className="h-8 w-8 text-blue-600" />
+                    <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <BookOpen className="h-8 w-8 text-primary" />
                     </div>
                     <div>
-                      <CardTitle className="text-xl font-bold text-gray-900">
+                      <CardTitle className="text-xl font-bold">
                         {quiz.title}
                       </CardTitle>
-                      <CardDescription className="text-gray-600">
+                      <CardDescription>
                         {quiz.description}
                       </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <span>80 Questions</span>
-                    <span>07 Minutes</span>
+                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                    <span>40 Questions</span>
+                    <span>04 Minutes</span>
                   </div>
                   <Button
                     onClick={() => setSelectedQuiz(key)}
-                    className="w-full bg-blue-600 hover:bg-blue-700"
+                    className="w-full"
                   >
                     Start Quiz
                   </Button>
@@ -422,9 +514,9 @@ const Quiz = () => {
                 <Clock className="h-5 w-5 text-blue-600" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Time Limit</h4>
-                <p className="text-gray-600">
-                  You have 07 minutes to complete each quiz
+                <h4 className="font-semibold">Time Limit</h4>
+                <p className="text-muted-foreground">
+                  You have 04 minutes to complete each quiz
                 </p>
               </div>
             </div>
@@ -433,9 +525,9 @@ const Quiz = () => {
                 <BookOpen className="h-5 w-5 text-blue-600" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Questions</h4>
-                <p className="text-gray-600">
-                  Each quiz contains 80 multiple-choice questions
+                <h4 className="font-semibold">Questions</h4>
+                <p className="text-muted-foreground">
+                  Each quiz contains 40 multiple-choice questions
                 </p>
               </div>
             </div>

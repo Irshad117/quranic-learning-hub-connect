@@ -101,3 +101,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Quiz Card Animations */
+  .quiz-card {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl;
+  }
+  
+  .quiz-card-enter {
+    @apply animate-in fade-in slide-in-from-bottom-4 duration-500;
+  }
+  
+  .quiz-card-hover {
+    @apply hover:border-primary/20 hover:bg-accent/5;
+  }
+  
+  /* Difficulty Animations */
+  .difficulty-easy {
+    @apply bg-green-50 text-green-700 border-green-200;
+  }
+  
+  .difficulty-medium {
+    @apply bg-orange-50 text-orange-700 border-orange-200;
+  }
+  
+  .difficulty-hard {
+    @apply bg-red-50 text-red-700 border-red-200;
+  }
+}
