@@ -8,8 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { BookOpen, Clock, Award, RotateCcw } from "lucide-react";
+import { BookOpen, Clock, Award, RotateCcw, Download } from "lucide-react";
 import { QuizCollection, QuizData } from "@/types/quiz";
+import { CertificateModal } from "@/components/CertificateModal";
 
 const Quiz = () => {
   const [quizzes, setQuizzes] = useState<QuizCollection | null>(null);
@@ -20,6 +21,7 @@ const Quiz = () => {
   const [showResults, setShowResults] = useState(false);
   const [timeLeft, setTimeLeft] = useState(240); // 4 minutes for 40 questions
   const [selectedDifficulty, setSelectedDifficulty] = useState<'easy' | 'medium' | 'hard' | null>(null);
+  const [showCertificateModal, setShowCertificateModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -248,6 +250,13 @@ const Quiz = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
+                  onClick={() => setShowCertificateModal(true)}
+                  className="bg-green-600 hover:bg-green-700"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Download Certificate
+                </Button>
+                <Button
                   onClick={resetQuiz}
                   className="bg-blue-600 hover:bg-blue-700"
                 >
@@ -261,6 +270,16 @@ const Quiz = () => {
               </div>
             </CardContent>
           </Card>
+
+          <CertificateModal
+            isOpen={showCertificateModal}
+            onClose={() => setShowCertificateModal(false)}
+            quizTitle={quizzes[selectedQuiz].title}
+            score={score}
+            totalQuestions={totalQuestions}
+            percentage={percentage}
+            difficulty={selectedDifficulty || 'medium'}
+          />
         </div>
       </div>
     );
