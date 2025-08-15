@@ -28,7 +28,7 @@ const Quiz = () => {
   try {
     const quizFiles = [
       "duas", "islamic-knowledge", "kids-duas", "namaz",
-      "noorani-qaida", "quran-memorization", "quran-reading", "tajweed"
+      "noorani-qaida", "quran-memorization", "quran-reading", "tajweed-quiz"
     ];
 
     const loadedQuizzes: QuizCollection = {};
