@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
 import TopNavbar from "./components/TopNavbar";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ import Quiz from "./pages/Quiz";
 import Schedule from "./pages/Schedule";
 import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 import WhatsAppButton from "./components/watsApp";
 
@@ -28,32 +30,35 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <div className="min-h-screen bg-gray-50 w-full">
-          <TopNavbar />
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/packages" element={<Packages />} />
-            <Route path="/payments" element={<Payments />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/download" element={<Download />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <WhatsAppButton />
-          <Testimonials />
-          <Footer />
-        </div>
-      </BrowserRouter>
+      <AuthProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="min-h-screen bg-gray-50 w-full">
+            <TopNavbar />
+            <Navigation />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/packages" element={<Packages />} />
+              <Route path="/payments" element={<Payments />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/download" element={<Download />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/quiz" element={<Quiz />} />
+              <Route path="/schedule" element={<Schedule />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <WhatsAppButton />
+            <Testimonials />
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </AuthProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

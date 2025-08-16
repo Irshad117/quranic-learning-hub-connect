@@ -10,6 +10,7 @@ import { useCertificateDownload } from '@/hooks/useCertificateDownload';
 interface CertificateModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onDownload?: () => Promise<void>;
   quizTitle: string;
   score: number;
   totalQuestions: number;
@@ -20,6 +21,7 @@ interface CertificateModalProps {
 export const CertificateModal: React.FC<CertificateModalProps> = ({
   isOpen,
   onClose,
+  onDownload,
   quizTitle,
   score,
   totalQuestions,
@@ -45,11 +47,14 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
     difficulty,
   };
 
-  const handleDownload = (format: 'pdf' | 'png') => {
+  const handleDownload = async (format: 'pdf' | 'png') => {
     if (!userName.trim()) {
       return;
     }
     downloadCertificate(certificateRef, certificateData, format);
+    if (onDownload) {
+      await onDownload();
+    }
   };
 
   return (

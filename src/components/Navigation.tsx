@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X, BookOpen, User } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const currentPath = location.pathname;
+  const { user } = useAuth();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -87,6 +90,29 @@ const Navigation = () => {
                 )}
               </button>
             </div>
+
+            {/* Authentication buttons for desktop */}
+            <div className="hidden lg:flex items-center space-x-4 ml-4">
+              {user ? (
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-4 py-2 rounded-full font-medium transition-all duration-300"
+                >
+                  <Link to="/dashboard" className="flex items-center gap-2">
+                    <User className="h-4 w-4" />
+                    Dashboard
+                  </Link>
+                </Button>
+              ) : (
+                <Button
+                  asChild
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <Link to="/auth">Sign In</Link>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
 
@@ -115,6 +141,34 @@ const Navigation = () => {
                   </Link>
                 );
               })}
+              
+              {/* Authentication buttons for mobile */}
+              <div className="pt-4 border-t border-white/20">
+                {user ? (
+                  <Link
+                    to="/dashboard"
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-green-600 bg-white/30"
+                  >
+                    <User className="h-4 w-4" />
+                    Dashboard
+                  </Link>
+                ) : (
+                  <Link
+                    to="/auth"
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-white/30"
+                  >
+                    Sign In
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         )}

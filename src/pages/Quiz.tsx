@@ -11,8 +11,12 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { BookOpen, Clock, Award, RotateCcw, Download } from "lucide-react";
 import { QuizCollection, QuizData } from "@/types/quiz";
 import { CertificateModal } from "@/components/CertificateModal";
+import { useAuth } from "@/contexts/AuthContext";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const Quiz = () => {
+  const { user } = useAuth();
   const [quizzes, setQuizzes] = useState<QuizCollection | null>(null);
   const [selectedQuiz, setSelectedQuiz] = useState<string | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -24,6 +28,7 @@ const Quiz = () => {
   const [showCertificateModal, setShowCertificateModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [quizResultId, setQuizResultId] = useState<string | null>(null);
 
   useEffect(() => {
     const loadQuizzes = async () => {
@@ -108,7 +113,7 @@ const Quiz = () => {
         setCurrentQuestion(currentQuestion + 1);
         setSelectedAnswer("");
       } else {
-        setShowResults(true);
+        finishQuiz();
       }
     }
   };
@@ -127,6 +132,39 @@ const Quiz = () => {
     }, 0);
   };
 
+  const finishQuiz = async () => {
+    if (!selectedQuiz || !quizzes || !selectedDifficulty) return;
+
+    const score = calculateScore();
+    setShowResults(true);
+
+    // Save quiz result to database if user is logged in
+    if (user) {
+      try {
+        const { data, error } = await supabase
+          .from('quiz_results')
+          .insert({
+            user_id: user.id,
+            quiz_category: selectedQuiz,
+            quiz_title: quizzes[selectedQuiz].title,
+            score: score,
+            total_questions: 40,
+            difficulty: selectedDifficulty
+          })
+          .select()
+          .single();
+
+        if (error) {
+          console.error('Error saving quiz result:', error);
+        } else {
+          setQuizResultId(data.id);
+        }
+      } catch (error) {
+        console.error('Error saving quiz result:', error);
+      }
+    }
+  };
+
   const resetQuiz = () => {
     setCurrentQuestion(0);
     setAnswers({});
@@ -134,6 +172,7 @@ const Quiz = () => {
     setShowResults(false);
     setTimeLeft(240);
     setSelectedDifficulty(null);
+    setQuizResultId(null);
     localStorage.removeItem(`quiz-${selectedQuiz}`);
   };
 
@@ -274,6 +313,46 @@ const Quiz = () => {
           <CertificateModal
             isOpen={showCertificateModal}
             onClose={() => setShowCertificateModal(false)}
+            onDownload={async () => {
+              // Update quiz result to mark certificate as downloaded
+              if (user && quizResultId) {
+                try {
+                  await supabase
+                    .from('quiz_results')
+                    .update({ certificate_downloaded: true })
+                    .eq('id', quizResultId);
+
+                  // Store certificate data
+                  const certificateData = {
+                    quiz_title: quizzes[selectedQuiz].title,
+                    score,
+                    total_questions: totalQuestions,
+                    difficulty: selectedDifficulty || 'medium',
+                    completion_date: new Date().toISOString()
+                  };
+
+                  await supabase
+                    .from('certificates')
+                    .insert({
+                      user_id: user.id,
+                      quiz_result_id: quizResultId,
+                      certificate_data: certificateData
+                    });
+
+                  toast({
+                    title: "Certificate Downloaded!",
+                    description: "Your certificate has been saved to your profile.",
+                  });
+                } catch (error) {
+                  console.error('Error updating certificate status:', error);
+                  toast({
+                    title: "Certificate Downloaded!",
+                    description: "Your certificate has been downloaded successfully.",
+                  });
+                }
+              }
+              setShowCertificateModal(false);
+            }}
             quizTitle={quizzes[selectedQuiz].title}
             score={score}
             totalQuestions={totalQuestions}
