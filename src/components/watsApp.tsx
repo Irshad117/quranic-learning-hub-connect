@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import whatsappIcon from '@/assets/icons/whatsapp-icon.png';
 
 const WhatsAppButton = () => {
   const [showLabel, setShowLabel] = useState(true);
@@ -34,7 +35,7 @@ const WhatsAppButton = () => {
       aria-label="Chat on WhatsApp"
     >
       <img
-        src="/assets/Logo/whatsapp-icon.png"
+        src={whatsappIcon}
         alt="contact"
         className="w-12 h-12"
       />

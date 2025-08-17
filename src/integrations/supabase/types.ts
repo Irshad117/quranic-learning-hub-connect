@@ -46,6 +46,81 @@ export type Database = {
           },
         ]
       }
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+          subject: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+          subject: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+          subject?: string
+        }
+        Relationships: []
+      }
+      package_inquiries: {
+        Row: {
+          classes_per_week: number
+          created_at: string
+          currency: string
+          duration: number
+          email: string
+          id: string
+          message: string | null
+          name: string
+          phone: string | null
+          price: number
+          region: string
+          user_id: string | null
+        }
+        Insert: {
+          classes_per_week: number
+          created_at?: string
+          currency: string
+          duration: number
+          email: string
+          id?: string
+          message?: string | null
+          name: string
+          phone?: string | null
+          price: number
+          region: string
+          user_id?: string | null
+        }
+        Update: {
+          classes_per_week?: number
+          created_at?: string
+          currency?: string
+          duration?: number
+          email?: string
+          id?: string
+          message?: string | null
+          name?: string
+          phone?: string | null
+          price?: number
+          region?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null

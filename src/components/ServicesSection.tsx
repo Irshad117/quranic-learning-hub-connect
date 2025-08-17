@@ -10,6 +10,9 @@ import {
   Heart,
   Bookmark,
 } from 'lucide-react';
+import quranIcon from '@/assets/icons/quran-icon.png';
+import educationIcon from '@/assets/icons/education-icon.png';
+import certificateIcon from '@/assets/icons/certificate-icon.png';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 

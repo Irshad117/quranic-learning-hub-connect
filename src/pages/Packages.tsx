@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom"; // Make sure this is at the top
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { PackageInquiryModal } from "@/components/PackageInquiryModal";
+import { GraduationCap, Users, Clock, DollarSign } from "lucide-react";
 
 const durations = ["30", "45", "60"];
 const regions = ["EURO", "USA", "UK", "Pakistan"];
@@ -344,6 +346,19 @@ const currencySymbol: Record<string, string> = {
 const Packages: React.FC = () => {
   const [selectedRegion, setSelectedRegion] = useState("EURO");
   const [selectedDuration, setSelectedDuration] = useState("30");
+  const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<any>(null);
+
+  const handleGetTrial = (plan: any) => {
+    setSelectedPackage({
+      region: selectedRegion,
+      duration: parseInt(selectedDuration),
+      classesPerWeek: plan.classesPerWeek,
+      price: plan.price,
+      currency: currencySymbol[selectedRegion],
+    });
+    setIsInquiryModalOpen(true);
+  };
 
   const plans = pricingData[selectedRegion]?.[selectedDuration] || [];
 
@@ -421,29 +436,61 @@ const Packages: React.FC = () => {
             key={idx}
             className="border-2 border-orange-500 rounded-xl p-6 shadow-md bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-            <h3 className="text-xl font-bold text-orange-600 mb-2">
+            <div className="flex items-center justify-center mb-4">
+              <GraduationCap className="h-8 w-8 text-orange-500" />
+            </div>
+            <h3 className="text-xl font-bold text-orange-600 mb-2 text-center">
               {plan.classesPerWeek} Classes Per Week
             </h3>
-            <div className="text-5xl font-extrabold text-gray-800 mb-1">
-              {currencySymbol[selectedRegion]}
-              {plan.price}
+            <div className="text-center">
+              <div className="text-5xl font-extrabold text-gray-800 mb-1">
+                {currencySymbol[selectedRegion]}
+                {plan.price}
+              </div>
+              <p className="text-sm text-gray-500 mb-4">{plan.duration}</p>
             </div>
-            <p className="text-sm text-gray-500 mb-4">{plan.duration}</p>
-            <div className="text-gray-700 mb-1 text-base">
-              {selectedDuration} min /live session
+            
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-700">
+                <Clock className="h-4 w-4 mr-2 text-orange-500" />
+                <span>{selectedDuration} min per session</span>
+              </div>
+              <div className="flex items-center text-gray-700">
+                <Users className="h-4 w-4 mr-2 text-orange-500" />
+                <span>{plan.sessionsPerMonth} Classes per Month</span>
+              </div>
+              <div className="flex items-center text-gray-700">
+                <DollarSign className="h-4 w-4 mr-2 text-orange-500" />
+                <span>One-on-One Live Sessions</span>
+              </div>
             </div>
-            <div className="text-gray-700 mb-6 text-base">
-              {plan.sessionsPerMonth} Classes per Month
+            
+            <div className="space-y-2">
+              <button
+                onClick={() => handleGetTrial(plan)}
+                className="block w-full text-center bg-orange-500 text-white py-3 px-4 rounded-full font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Select Package
+              </button>
+              <Link
+                to="/schedule"
+                className="block w-full text-center bg-transparent border-2 border-orange-500 text-orange-500 py-2 px-4 rounded-full font-semibold hover:bg-orange-50 transition-all duration-300"
+              >
+                Free Trial First
+              </Link>
             </div>
-            <Link
-              to="/schedule"
-              className="block w-full text-center bg-orange-500 text-white py-2 px-4 rounded-full font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Free Trial
-            </Link>
           </div>
         ))}
       </div>
+
+      {/* Package Inquiry Modal */}
+      {selectedPackage && (
+        <PackageInquiryModal
+          isOpen={isInquiryModalOpen}
+          onClose={() => setIsInquiryModalOpen(false)}
+          packageData={selectedPackage}
+        />
+      )}
     </div>
   );
 };
