@@ -76,7 +76,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to admin
     const adminEmailResponse = await resend.emails.send({
       from: "Quran Learning Hub <noreply@yoursite.com>",
-      to: ["admin@yoursite.com"],
+      to: ["alsiratalmustaqim0@gmail.com"],
       subject: "New Package Inquiry",
       html: `
         <h2>New Package Inquiry</h2>

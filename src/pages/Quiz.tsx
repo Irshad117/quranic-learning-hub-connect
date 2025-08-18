@@ -107,7 +107,7 @@ const Quiz = () => {
 
       const filteredQuestions = quizzes[selectedQuiz].questions
         .filter(q => q.difficulty === selectedDifficulty)
-        .slice(0, 40);
+        .slice(0, 25);
         
       if (currentQuestion < filteredQuestions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
@@ -123,7 +123,7 @@ const Quiz = () => {
 
     const filteredQuestions = quizzes[selectedQuiz].questions
       .filter(q => q.difficulty === selectedDifficulty)
-      .slice(0, 40);
+      .slice(0, 25);
 
     return Object.entries(answers).reduce((score, [index, answer]) => {
       return answer === filteredQuestions[parseInt(index)].correct
@@ -148,7 +148,7 @@ const Quiz = () => {
             quiz_category: selectedQuiz,
             quiz_title: quizzes[selectedQuiz].title,
             score: score,
-            total_questions: 40,
+            total_questions: 25,
             difficulty: selectedDifficulty
           })
           .select()
@@ -229,7 +229,7 @@ const Quiz = () => {
 
   if (showResults && selectedQuiz && quizzes && selectedDifficulty) {
     const score = calculateScore();
-    const totalQuestions = 40; // Fixed to 40 questions
+    const totalQuestions = 25; // Fixed to 25 questions
     const percentage = Math.round((score / totalQuestions) * 100);
 
     return (

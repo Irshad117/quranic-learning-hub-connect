@@ -20,6 +20,7 @@ import Blog from "./pages/Blog";
 import Quiz from "./pages/Quiz";
 import Schedule from "./pages/Schedule";
 import Dashboard from "./pages/Dashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
@@ -49,6 +50,7 @@ const App = () => (
               <Route path="/quiz" element={<Quiz />} />
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="*" element={<NotFound />} />

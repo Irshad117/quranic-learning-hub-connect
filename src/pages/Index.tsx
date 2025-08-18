@@ -13,6 +13,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import ContactForm from "../components/ContactForm";
 
 const Index = () => {
   const stats = [
@@ -70,12 +71,12 @@ const Index = () => {
               Book a free trial class and begin your Quran learning journey with
               expert teachers.
             </p>
-            <Link
-              to="/schedule"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-all duration-200 transform hover:scale-105 mt-2"
-            >
-              Book Free Trial Now
-            </Link>
+            <ContactForm 
+              formType="admission"
+              defaultSubject="Free Trial Request"
+              buttonText="Book Free Trial Now"
+              className="max-w-4xl mx-auto"
+            />
           </div>
         </div>
       </section>
@@ -124,18 +125,12 @@ const Index = () => {
             Quran education
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/schedule"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
-            >
-              Book Free Trial Now
-            </Link>
-            <Link
-              to="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200 transform hover:scale-105"
-            >
-              Contact Us
-            </Link>
+            <ContactForm 
+              formType="free-trial"
+              defaultSubject="Free Trial Request"
+              buttonText="Start Free Trial"
+              className="bg-white/10 backdrop-blur-sm border border-white/20"
+            />
           </div>
         </div>
       </section>
