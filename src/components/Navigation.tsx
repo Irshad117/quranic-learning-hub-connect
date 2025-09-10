@@ -1,14 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, BookOpen, User } from "lucide-react";
+import { Menu, X, BookOpen, User, Bell } from "lucide-react";
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/integrations/supabase/client';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [unreadNotifications, setUnreadNotifications] = useState(0);
   const location = useLocation();
   const currentPath = location.pathname;
   const { user } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      checkUnreadNotifications();
+    }
+  }, [user]);
+
+  const checkUnreadNotifications = async () => {
+    try {
+      const { count } = await supabase
+        .from('notifications')
+        .select('*', { count: 'exact', head: true })
+        .eq('read', false);
+      
+      setUnreadNotifications(count || 0);
+    } catch (error) {
+      console.error('Error fetching notifications:', error);
+    }
+  };
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -93,6 +114,22 @@ const Navigation = () => {
 
             {/* Authentication buttons for desktop */}
             <div className="hidden lg:flex items-center space-x-4 ml-4">
+              {user && (
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="relative p-2 hover:bg-white/30 rounded-full"
+                >
+                  <Link to="/admin">
+                    <Bell className="h-5 w-5 text-gray-700" />
+                    {unreadNotifications > 0 && (
+                      <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                        {unreadNotifications > 9 ? '9+' : unreadNotifications}
+                      </span>
+                    )}
+                  </Link>
+                </Button>
+              )}
               {user ? (
                 <Button
                   asChild
