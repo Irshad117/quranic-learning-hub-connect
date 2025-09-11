@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
 import WhyChooseSection from "../components/WhyChooseSection";
 import BlogSection from "../components/BlogSection";
+import SEOHead from "../components/SEOHead";
 import {
   Star,
   MessageCircle,
@@ -23,9 +24,36 @@ const Index = () => {
     { number: "9+", label: "Years Experience", icon: BookOpen },
   ];
 
+  const homeStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Sirat Al-Mustaqim Academy",
+    "description": "Online Quran learning platform with certified teachers offering flexible scheduling and personalized Islamic education.",
+    "url": "https://online-quran1.vercel.app/",
+    "logo": "https://online-quran1.vercel.app/assets/Logo/2.svg",
+    "sameAs": ["https://twitter.com/Sirat_Al-mustaqimAcademy"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "alsiratalmustaqim0@gmail.com",
+      "contactType": "Customer Service"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    }
+  };
+
   return (
-    <div className="min-h-screen w-full">
-      <HeroSection />
+    <>
+      <SEOHead 
+        title="Sirat Al-Mustaqim - Online Quran Learning | Expert Teachers | Free Trial"
+        description="Learn Quran online with certified teachers at Sirat Al-Mustaqim Academy. 400+ students worldwide. Flexible scheduling, Tajweed, memorization. Start your free trial today!"
+        canonical="/"
+        structuredData={homeStructuredData}
+      />
+      <main className="min-h-screen w-full">
+        <HeroSection />
       <AboutSection />
       <ServicesSection />
       <WhyChooseSection />
@@ -134,7 +162,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
+      </main>
+    </>
   );
 };
 

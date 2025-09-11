@@ -1,4 +1,5 @@
 import React from "react";
+import SEOHead from "../components/SEOHead";
 import {
   BookOpen,
   Users,
@@ -82,8 +83,26 @@ const About = () => {
     },
   ];
 
+  const aboutStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "EducationalOrganization",
+      "name": "Sirat Al-Mustaqim Academy",
+      "foundingDate": "2016",
+      "description": "Leading global platform for Quranic education with over 400 students from 25+ countries"
+    }
+  };
+
   return (
-    <div className="min-h-screen">
+    <>
+      <SEOHead 
+        title="About Sirat Al-Mustaqim Academy | Our Mission & Story | Online Quran Learning"
+        description="Founded in 2016, Sirat Al-Mustaqim Academy serves 400+ students from 25+ countries. Learn about our mission, vision, and qualified Islamic scholars."
+        canonical="/about"
+        structuredData={aboutStructuredData}
+      />
+      <main className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-[url('/assets/socialMediaIcons/AboutHeroSection.jpg')] bg-cover bg-center py-16 lg:py-24">
         <div className="py-12 px-4 sm:px-6 lg:px-8">
@@ -293,7 +312,8 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+      </main>
+    </>
   );
 };
 

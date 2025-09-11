@@ -1,4 +1,5 @@
 import React from "react";
+import SEOHead from "../components/SEOHead";
 import { BookOpen, Users, Clock, Star, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -138,8 +139,32 @@ const Services = () => {
     },
   ];
 
+  const servicesStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": courses.map((course, index) => ({
+      "@type": "Course",
+      "position": index + 1,
+      "name": course.title,
+      "description": course.description,
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Sirat Al-Mustaqim Academy"
+      },
+      "courseMode": "online",
+      "educationalLevel": course.level
+    }))
+  };
+
   return (
-    <div className="min-h-screen">
+    <>
+      <SEOHead 
+        title="Online Quran Courses & Services | Tajweed, Memorization, Arabic | Sirat Al-Mustaqim"
+        description="Explore our comprehensive Quran courses: Recitation, Tajweed Mastery, Memorization (Hifz), Kids Programs, Arabic Language, and Islamic Studies. Expert teachers, flexible scheduling."
+        canonical="/services"
+        structuredData={servicesStructuredData}
+      />
+      <main className="min-h-screen">
       {/* Hero Section */}
       <section
         className="relative bg-gradient-to-br from-emerald-50 to-teal-50 min-h-[60vh] flex items-center justify-center text-center px-4"
@@ -407,7 +432,8 @@ const Services = () => {
           </div>
         </div>
       </section>
-    </div>
+      </main>
+    </>
   );
 };
 

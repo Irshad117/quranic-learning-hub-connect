@@ -13,6 +13,8 @@ const HeroSection = () => {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover object-center"
+        aria-label="Background video of Islamic architecture and Quran"
+        role="img"
       >
         <source src="/assets/socialMediaIcons/8165916-uhd_3840_2160_25fps.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -49,13 +51,15 @@ const HeroSection = () => {
         >
           <Link
             to="/schedule"
-            className="bg-blue-600 hover:bg-blue-700 px-8 py-4 text-lg rounded-lg font-semibold text-white shadow-xl transition-all transform hover:scale-105"
+            className="bg-blue-600 hover:bg-blue-700 px-8 py-4 text-lg rounded-lg font-semibold text-white shadow-xl transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            aria-label="Get admission to start learning Quran online"
           >
             Get Admission
           </Link>
           <Link
             to="/contact"
-            className="bg-white text-blue-700 border-2 border-white hover:bg-blue-100 px-8 py-4 text-lg rounded-lg font-semibold shadow-xl transition-all transform hover:scale-105"
+            className="bg-white text-blue-700 border-2 border-white hover:bg-blue-100 px-8 py-4 text-lg rounded-lg font-semibold shadow-xl transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            aria-label="Contact us for more information"
           >
             Contact
           </Link>
