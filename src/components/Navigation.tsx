@@ -47,7 +47,7 @@ const Navigation = () => {
   return (
     // ✅ set here logo and name of the company fixed to the top left corner
     <nav className="bg-transparent backdrop-blur-md sticky top-16 z-40">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-2">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-2">
         {/* Header */}
         <div className="flex justify-between items-center h-16 bg-white/20 backdrop-blur-xl rounded-2xl shadow-lg px-6 border border-white/30">
           {/* ✅ Left: Logo and Company Name */}
