@@ -14,6 +14,11 @@ const Footer = () => {
     { name: 'Contact', path: '/contact' }
   ];
 
+  const legalLinks = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
+  ];
+
   const courses = [
     'Quran Recitation',
     'Tajweed Classes',
@@ -220,10 +225,23 @@ const Footer = () => {
           </div>
 
           {/* Bottom Copyright */}
-          <div className="border-t border-blue-800 pt-8 text-center">
-            <p className="text-blue-300 text-lg">
-              © 2024 Sirat al-Mustaqim Academy. All rights reserved.
-            </p>
+          <div className="border-t border-blue-800 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-blue-300 text-lg mb-4 md:mb-0">
+                © 2024 Sirat al-Mustaqim Academy. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                {legalLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.path}
+                    className="text-blue-300 hover:text-white transition-colors duration-300"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </footer>

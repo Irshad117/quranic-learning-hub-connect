@@ -24,6 +24,9 @@ import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Health from "./pages/Health";
 import NotFound from "./pages/NotFound";
 import WhatsAppButton from "./components/watsApp";
 
@@ -55,6 +58,9 @@ const App = () => (
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/healthz" element={<Health />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <WhatsAppButton />
