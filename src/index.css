@@ -128,4 +128,48 @@
   .difficulty-hard {
     @apply bg-red-50 text-red-700 border-red-200;
   }
+
+  /* Certificate Print Styles */
+  @media print {
+    .certificate-container {
+      width: 297mm !important;
+      height: 210mm !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      background: white !important;
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* Ensure backgrounds and colors print */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
+
+  /* Professional Certificate Styling */
+  .certificate-seal {
+    background: radial-gradient(circle, #f59e0b 0%, #d97706 100%);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+  }
+  
+  .islamic-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, #f3f4f6 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, #f3f4f6 2px, transparent 2px);
+    background-size: 20px 20px;
+  }
 }

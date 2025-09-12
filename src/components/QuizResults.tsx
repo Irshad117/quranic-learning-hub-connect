@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Trophy, Clock, Star, Target, Award, Download } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Trophy, Clock, Star, Target, Award, Download, Crown, Medal, Zap, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { CertificateModal } from './CertificateModal';
+import { cn } from '@/lib/utils';
 
 interface QuizResultsProps {
   score: number;
@@ -16,6 +17,8 @@ interface QuizResultsProps {
   onNewQuiz: () => void;
   onDownloadCertificate?: () => void;
   canDownloadCertificate?: boolean;
+  maxStreak?: number;
+  achievements?: string[];
 }
 
 const QuizResults: React.FC<QuizResultsProps> = ({
@@ -28,14 +31,68 @@ const QuizResults: React.FC<QuizResultsProps> = ({
   onRetake,
   onNewQuiz,
   onDownloadCertificate,
-  canDownloadCertificate = false
+  canDownloadCertificate = false,
+  maxStreak = 0,
+  achievements = []
 }) => {
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [currentAchievement, setCurrentAchievement] = useState(0);
+
+  useEffect(() => {
+    if (percentage >= 80) {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 3000);
+    }
+  }, [percentage]);
   const getPerformanceLevel = () => {
-    if (percentage >= 90) return { level: 'Excellent', color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' };
-    if (percentage >= 80) return { level: 'Very Good', color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200' };
-    if (percentage >= 70) return { level: 'Good', color: 'text-yellow-600', bg: 'bg-yellow-50', border: 'border-yellow-200' };
-    if (percentage >= 60) return { level: 'Fair', color: 'text-orange-600', bg: 'bg-orange-50', border: 'border-orange-200' };
-    return { level: 'Needs Improvement', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-200' };
+    if (percentage >= 95) return { 
+      level: 'Legendary!', 
+      color: 'text-purple-600', 
+      bg: 'bg-gradient-to-br from-purple-50 to-pink-50', 
+      border: 'border-purple-300',
+      icon: Crown,
+      celebration: true
+    };
+    if (percentage >= 90) return { 
+      level: 'Excellent', 
+      color: 'text-green-600', 
+      bg: 'bg-gradient-to-br from-green-50 to-emerald-50', 
+      border: 'border-green-200',
+      icon: Trophy,
+      celebration: true
+    };
+    if (percentage >= 80) return { 
+      level: 'Very Good', 
+      color: 'text-blue-600', 
+      bg: 'bg-gradient-to-br from-blue-50 to-cyan-50', 
+      border: 'border-blue-200',
+      icon: Medal,
+      celebration: false
+    };
+    if (percentage >= 70) return { 
+      level: 'Good', 
+      color: 'text-yellow-600', 
+      bg: 'bg-gradient-to-br from-yellow-50 to-amber-50', 
+      border: 'border-yellow-200',
+      icon: Star,
+      celebration: false
+    };
+    if (percentage >= 60) return { 
+      level: 'Fair', 
+      color: 'text-orange-600', 
+      bg: 'bg-gradient-to-br from-orange-50 to-red-50', 
+      border: 'border-orange-200',
+      icon: Target,
+      celebration: false
+    };
+    return { 
+      level: 'Keep Learning', 
+      color: 'text-gray-600', 
+      bg: 'bg-gradient-to-br from-gray-50 to-slate-50', 
+      border: 'border-gray-200',
+      icon: Target,
+      celebration: false
+    };
   };
 
   const performance = getPerformanceLevel();
@@ -63,38 +120,143 @@ const QuizResults: React.FC<QuizResultsProps> = ({
       >
         <Card className="shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
           <CardContent className="p-8">
+            {/* Confetti Animation */}
+            <AnimatePresence>
+              {showConfetti && (
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                  {[...Array(20)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ 
+                        opacity: 1, 
+                        y: -100, 
+                        x: Math.random() * 100 + "%", 
+                        rotate: 0 
+                      }}
+                      animate={{ 
+                        y: window.innerHeight + 100, 
+                        rotate: 360,
+                        opacity: [1, 1, 0]
+                      }}
+                      transition={{ 
+                        duration: 3, 
+                        delay: Math.random() * 0.5,
+                        ease: "easeOut"
+                      }}
+                      className={cn(
+                        "absolute w-3 h-3 rounded-full",
+                        i % 4 === 0 && "bg-yellow-400",
+                        i % 4 === 1 && "bg-blue-400", 
+                        i % 4 === 2 && "bg-green-400",
+                        i % 4 === 3 && "bg-purple-400"
+                      )}
+                    />
+                  ))}
+                </div>
+              )}
+            </AnimatePresence>
+
             {/* Header */}
             <div className="text-center mb-8">
               <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.2, type: "spring" }}
-                className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ delay: 0.2, type: "spring", stiffness: 300 }}
+                className={cn(
+                  "w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center shadow-xl",
+                  performance.celebration 
+                    ? "bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 animate-pulse" 
+                    : "bg-gradient-to-br from-blue-400 to-purple-500"
+                )}
               >
-                <Trophy className="w-10 h-10 text-white" />
+                <performance.icon className="w-12 h-12 text-white drop-shadow-lg" />
               </motion.div>
               
-              <h1 className="text-3xl font-bold text-gray-800 mb-2">Quiz Complete!</h1>
-              <p className="text-gray-600">{categoryTitle} - {difficulty}</p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <h1 className="text-4xl font-bold text-gray-800 mb-2">
+                  {performance.celebration ? "🎉 Incredible! 🎉" : "Quiz Complete!"}
+                </h1>
+                <p className="text-gray-600 text-lg">{categoryTitle} - {difficulty}</p>
+              </motion.div>
             </div>
 
             {/* Score Display */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className={`text-center p-6 rounded-2xl ${performance.bg} ${performance.border} border-2 mb-6`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
+              className={cn(
+                "text-center p-8 rounded-3xl border-2 mb-6 relative overflow-hidden",
+                performance.bg,
+                performance.border
+              )}
             >
-              <div className="text-6xl font-bold mb-2">
-                <span className={performance.color}>{percentage}</span>
-                <span className="text-gray-400 text-3xl">%</span>
-              </div>
-              <div className="text-xl font-semibold text-gray-700 mb-1">
+              {/* Animated background elements */}
+              {performance.celebration && (
+                <>
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    className="absolute top-2 right-2"
+                  >
+                    <Sparkles className="w-6 h-6 text-yellow-400 opacity-60" />
+                  </motion.div>
+                  <motion.div
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                    className="absolute bottom-2 left-2"
+                  >
+                    <Sparkles className="w-4 h-4 text-purple-400 opacity-60" />
+                  </motion.div>
+                </>
+              )}
+              
+              <motion.div 
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.6, type: "spring", stiffness: 300 }}
+                className="text-7xl font-bold mb-3 relative z-10"
+              >
+                <span className={cn(performance.color, performance.celebration && "animate-pulse")}>{percentage}</span>
+                <span className="text-gray-400 text-4xl">%</span>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.7 }}
+                className="text-xl font-semibold text-gray-700 mb-2 relative z-10"
+              >
                 {score} out of {totalQuestions} correct
-              </div>
-              <div className={`text-lg font-medium ${performance.color}`}>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className={cn("text-2xl font-bold relative z-10", performance.color)}
+              >
                 {performance.level}
-              </div>
+              </motion.div>
+
+              {/* Max Streak Display */}
+              {maxStreak > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9 }}
+                  className="mt-4 flex items-center justify-center gap-2 relative z-10"
+                >
+                  <Zap className={cn("w-5 h-5", maxStreak >= 5 ? "text-orange-500" : "text-blue-500")} />
+                  <span className="text-sm font-medium text-gray-600">
+                    Best Streak: {maxStreak}
+                  </span>
+                </motion.div>
+              )}
             </motion.div>
 
             {/* Stats */}

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { Trophy, Clock, Star, Zap, Target } from 'lucide-react';
+import { Trophy, Clock, Star, Zap, Target, CheckCircle, XCircle, Flame } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface Question {
   question: string;
@@ -34,6 +35,10 @@ const QuizGameInterface: React.FC<QuizGameInterfaceProps> = ({
   const [streak, setStreak] = useState(0);
   const [maxStreak, setMaxStreak] = useState(0);
   const [timeStarted] = useState(Date.now());
+  const [showStreakAnimation, setShowStreakAnimation] = useState(false);
+  const [combo, setCombo] = useState(0);
+  const [achievements, setAchievements] = useState<string[]>([]);
+  const [showAchievement, setShowAchievement] = useState<string | null>(null);
 
   useEffect(() => {
     if (timeLeft > 0 && !isAnswered) {
@@ -53,10 +58,22 @@ const QuizGameInterface: React.FC<QuizGameInterfaceProps> = ({
     const isCorrect = answerIndex === questions[currentQuestion].correct;
     if (isCorrect) {
       setScore(score + 1);
-      setStreak(streak + 1);
-      setMaxStreak(Math.max(maxStreak, streak + 1));
+      const newStreak = streak + 1;
+      setStreak(newStreak);
+      setMaxStreak(Math.max(maxStreak, newStreak));
+      setCombo(combo + 1);
+      
+      // Show streak animation for streaks of 3 or more
+      if (newStreak >= 3) {
+        setShowStreakAnimation(true);
+        setTimeout(() => setShowStreakAnimation(false), 2000);
+      }
+      
+      // Check for achievements
+      checkAchievements(newStreak, score + 1);
     } else {
       setStreak(0);
+      setCombo(0);
     }
     
     setShowExplanation(true);
@@ -86,10 +103,40 @@ const QuizGameInterface: React.FC<QuizGameInterfaceProps> = ({
     return 'text-red-600';
   };
 
+  const checkAchievements = (currentStreak: number, currentScore: number) => {
+    const newAchievements: string[] = [];
+    
+    if (currentStreak === 5 && !achievements.includes('streak_5')) {
+      newAchievements.push('streak_5');
+      setShowAchievement('🔥 Fire Streak! 5 in a row!');
+    }
+    if (currentStreak === 10 && !achievements.includes('streak_10')) {
+      newAchievements.push('streak_10');
+      setShowAchievement('⚡ Lightning Fast! 10 in a row!');
+    }
+    if (currentScore === Math.ceil(questions.length / 2) && !achievements.includes('halfway')) {
+      newAchievements.push('halfway');
+      setShowAchievement('🎯 Halfway Hero!');
+    }
+    
+    if (newAchievements.length > 0) {
+      setAchievements([...achievements, ...newAchievements]);
+      setTimeout(() => setShowAchievement(null), 3000);
+    }
+  };
+
   const getStreakIcon = () => {
-    if (streak >= 5) return <Zap className="w-4 h-4 text-yellow-500" />;
+    if (streak >= 10) return <Flame className="w-4 h-4 text-red-500 animate-pulse" />;
+    if (streak >= 5) return <Zap className="w-4 h-4 text-yellow-500 animate-bounce" />;
     if (streak >= 3) return <Star className="w-4 h-4 text-blue-500" />;
     return <Target className="w-4 h-4 text-gray-400" />;
+  };
+
+  const getStreakText = () => {
+    if (streak >= 10) return 'LEGENDARY!';
+    if (streak >= 5) return 'ON FIRE!';
+    if (streak >= 3) return 'STREAK!';
+    return `Streak: ${streak}`;
   };
 
   return (
@@ -113,9 +160,12 @@ const QuizGameInterface: React.FC<QuizGameInterfaceProps> = ({
                 {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}
               </span>
             </div>
-            <div className="flex items-center gap-1">
+            <div className={cn(
+              "flex items-center gap-1 transition-all duration-300",
+              streak >= 3 && "text-orange-600 font-bold"
+            )}>
               {getStreakIcon()}
-              <span>Streak: {streak}</span>
+              <span className={streak >= 5 ? "animate-pulse" : ""}>{getStreakText()}</span>
             </div>
           </div>
         </motion.div>
@@ -185,15 +235,26 @@ const QuizGameInterface: React.FC<QuizGameInterfaceProps> = ({
                             {String.fromCharCode(65 + index)}
                           </span>
                           <span>{option}</span>
-                          {showResult && isCorrect && (
-                            <motion.div
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              className="ml-auto"
-                            >
-                              ✓
-                            </motion.div>
-                          )}
+                           {showResult && isCorrect && (
+                             <motion.div
+                               initial={{ scale: 0, rotate: -180 }}
+                               animate={{ scale: 1, rotate: 0 }}
+                               transition={{ type: "spring", stiffness: 300 }}
+                               className="ml-auto"
+                             >
+                               <CheckCircle className="w-5 h-5 text-green-600" />
+                             </motion.div>
+                           )}
+                           {showResult && isSelected && !isCorrect && (
+                             <motion.div
+                               initial={{ scale: 0, rotate: 180 }}
+                               animate={{ scale: 1, rotate: 0 }}
+                               transition={{ type: "spring", stiffness: 300 }}
+                               className="ml-auto"
+                             >
+                               <XCircle className="w-5 h-5 text-red-600" />
+                             </motion.div>
+                           )}
                         </div>
                       </motion.button>
                     );
@@ -236,17 +297,62 @@ const QuizGameInterface: React.FC<QuizGameInterfaceProps> = ({
           </motion.div>
         )}
 
+        {/* Streak Animation */}
+        <AnimatePresence>
+          {showStreakAnimation && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, y: 50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.5, y: -50 }}
+              className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
+            >
+              <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full shadow-2xl">
+                <div className="flex items-center gap-2 text-xl font-bold">
+                  <Flame className="w-6 h-6 animate-bounce" />
+                  <span>STREAK {streak}!</span>
+                  <Flame className="w-6 h-6 animate-bounce" />
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Achievement Notification */}
+        <AnimatePresence>
+          {showAchievement && (
+            <motion.div
+              initial={{ opacity: 0, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 300 }}
+              className="fixed top-4 right-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-xl z-50"
+            >
+              <div className="flex items-center gap-2">
+                <Trophy className="w-5 h-5" />
+                <span className="font-semibold">{showAchievement}</span>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* Time Warning */}
         <AnimatePresence>
           {timeLeft <= 10 && timeLeft > 0 && !isAnswered && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ 
+                opacity: 1, 
+                scale: [0.8, 1.1, 1],
+                rotate: [0, -5, 5, 0]
+              }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="fixed bottom-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg"
+              transition={{ 
+                scale: { repeat: Infinity, repeatType: "reverse", duration: 0.5 },
+                rotate: { repeat: Infinity, repeatType: "reverse", duration: 0.3 }
+              }}
+              className="fixed bottom-4 right-4 bg-gradient-to-r from-red-500 to-red-600 text-white p-4 rounded-lg shadow-xl"
             >
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5" />
+                <Clock className="w-5 h-5 animate-pulse" />
                 <span className="font-semibold">Time running out!</span>
               </div>
             </motion.div>

@@ -46,19 +46,22 @@ export const useCertificateDownload = () => {
         toast.success('Certificate downloaded as PNG!');
       } else {
         // Download as PDF
-        const imgData = canvas.toDataURL('image/png');
+        const imgData = canvas.toDataURL('image/png', 1.0); // High quality
         const pdf = new jsPDF({
           orientation: 'landscape',
           unit: 'mm',
-          format: 'a4'
+          format: 'a4',
+          compress: false // Better quality
         });
 
-        // Calculate dimensions to fit the certificate in PDF
+        // A4 landscape dimensions: 297mm x 210mm
         const pdfWidth = pdf.internal.pageSize.getWidth();
         const pdfHeight = pdf.internal.pageSize.getHeight();
         const imgWidth = canvas.width;
         const imgHeight = canvas.height;
-        const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+        
+        // Calculate scaling to fit while maintaining aspect ratio
+        const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight) * 0.95; // 95% to add margins
         const width = imgWidth * ratio;
         const height = imgHeight * ratio;
 
@@ -66,9 +69,21 @@ export const useCertificateDownload = () => {
         const x = (pdfWidth - width) / 2;
         const y = (pdfHeight - height) / 2;
 
-        pdf.addImage(imgData, 'PNG', x, y, width, height);
-        pdf.save(`${data.quizTitle.replace(/\s+/g, '-')}-certificate.pdf`);
-        toast.success('Certificate downloaded as PDF!');
+        // Add the image with high quality
+        pdf.addImage(imgData, 'PNG', x, y, width, height, undefined, 'FAST');
+        
+        // Add metadata
+        pdf.setProperties({
+          title: `${data.quizTitle} - Certificate of Achievement`,
+          subject: `Certificate for ${data.userName}`,
+          author: 'Sirat Al-Mustaqim Academy',
+          keywords: 'certificate, quran, islamic, education, achievement',
+          creator: 'Sirat Al-Mustaqim Online Academy'
+        });
+        
+        const fileName = `Sirat-Al-Mustaqim-${data.quizTitle.replace(/\s+/g, '-')}-Certificate.pdf`;
+        pdf.save(fileName);
+        toast.success('Professional certificate downloaded as PDF!');
       }
     } catch (error) {
       console.error('Error generating certificate:', error);
