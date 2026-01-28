@@ -127,6 +127,56 @@ export type Database = {
         }
         Relationships: []
       }
+      leaderboard: {
+        Row: {
+          average_time_seconds: number | null
+          best_score: number
+          category_id: string | null
+          created_at: string
+          id: string
+          last_quiz_at: string | null
+          streak_count: number | null
+          total_quizzes: number
+          total_score: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          average_time_seconds?: number | null
+          best_score?: number
+          category_id?: string | null
+          created_at?: string
+          id?: string
+          last_quiz_at?: string | null
+          streak_count?: number | null
+          total_quizzes?: number
+          total_score?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          average_time_seconds?: number | null
+          best_score?: number
+          category_id?: string | null
+          created_at?: string
+          id?: string
+          last_quiz_at?: string | null
+          streak_count?: number | null
+          total_quizzes?: number
+          total_score?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "leaderboard_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "question_categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       notifications: {
         Row: {
           created_at: string
@@ -229,6 +279,152 @@ export type Database = {
         }
         Relationships: []
       }
+      question_categories: {
+        Row: {
+          color: string | null
+          created_at: string
+          description: string | null
+          icon: string | null
+          id: string
+          is_active: boolean | null
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          color?: string | null
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          is_active?: boolean | null
+          name: string
+          updated_at?: string
+        }
+        Update: {
+          color?: string | null
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          is_active?: boolean | null
+          name?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      questions: {
+        Row: {
+          category_id: string
+          correct_answer: string
+          created_at: string
+          created_by: string | null
+          difficulty: string
+          explanation: string | null
+          id: string
+          is_active: boolean | null
+          media_url: string | null
+          options: Json
+          points: number
+          question_text: string
+          question_type: string
+          tags: string[] | null
+          time_limit: number | null
+          updated_at: string
+        }
+        Insert: {
+          category_id: string
+          correct_answer: string
+          created_at?: string
+          created_by?: string | null
+          difficulty?: string
+          explanation?: string | null
+          id?: string
+          is_active?: boolean | null
+          media_url?: string | null
+          options?: Json
+          points?: number
+          question_text: string
+          question_type?: string
+          tags?: string[] | null
+          time_limit?: number | null
+          updated_at?: string
+        }
+        Update: {
+          category_id?: string
+          correct_answer?: string
+          created_at?: string
+          created_by?: string | null
+          difficulty?: string
+          explanation?: string | null
+          id?: string
+          is_active?: boolean | null
+          media_url?: string | null
+          options?: Json
+          points?: number
+          question_text?: string
+          question_type?: string
+          tags?: string[] | null
+          time_limit?: number | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "questions_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "question_categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      quiz_attempts: {
+        Row: {
+          category_id: string | null
+          created_at: string
+          id: string
+          is_correct: boolean
+          points_earned: number | null
+          question_id: string
+          time_taken_seconds: number | null
+          user_id: string
+        }
+        Insert: {
+          category_id?: string | null
+          created_at?: string
+          id?: string
+          is_correct: boolean
+          points_earned?: number | null
+          question_id: string
+          time_taken_seconds?: number | null
+          user_id: string
+        }
+        Update: {
+          category_id?: string | null
+          created_at?: string
+          id?: string
+          is_correct?: boolean
+          points_earned?: number | null
+          question_id?: string
+          time_taken_seconds?: number | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "quiz_attempts_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "question_categories"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "quiz_attempts_question_id_fkey"
+            columns: ["question_id"]
+            isOneToOne: false
+            referencedRelation: "questions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       quiz_results: {
         Row: {
           certificate_downloaded: boolean | null
@@ -265,15 +461,43 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      is_admin: { Args: { _user_id: string }; Returns: boolean }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "student"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -400,6 +624,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "student"],
+    },
   },
 } as const
