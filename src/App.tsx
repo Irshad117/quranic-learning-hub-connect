@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,9 +18,12 @@ import Careers from "./pages/Careers";
 import Download from "./pages/Download";
 import Blog from "./pages/Blog";
 import Quiz from "./pages/Quiz";
+import DynamicQuiz from "./pages/DynamicQuiz";
 import Schedule from "./pages/Schedule";
 import Dashboard from "./pages/Dashboard";
+import StudentDashboard from "./pages/StudentDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminDashboardNew from "./pages/AdminDashboardNew";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
 import Privacy from "./pages/Privacy";
@@ -52,10 +54,12 @@ const App = () => (
               <Route path="/careers" element={<Careers />} />
               <Route path="/download" element={<Download />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/quiz" element={<Quiz />} />
+              <Route path="/quiz" element={<DynamicQuiz />} />
+              <Route path="/quiz-legacy" element={<Quiz />} />
               <Route path="/schedule" element={<Schedule />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/dashboard" element={<StudentDashboard />} />
+              <Route path="/admin" element={<AdminDashboardNew />} />
+              <Route path="/admin-legacy" element={<AdminDashboard />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/privacy" element={<Privacy />} />
